@@ -18,8 +18,15 @@ _Checkpoint: 2026-06-29 (evening). Homepage, Research, and Technologies built, Q
 ## Completed pages (continued)
 - **`/technologies` Technologies — DONE, QA-passed & FROZEN.** Compact `PageHero` + 2-paragraph intro + 5 anchor cards + 5 program blocks (Optical Imaging / Optical Clearing with KLEAR / 3D Molecular Pathology / Spatial Biology / AI & Computational Analysis). Real lab images; collaborator names link to Stanford Profiles (Winetraub, Hong, Liu — Liu lab moved to Stanford Pathology Summer 2025). Section images eager-loaded (fixes tablet/mobile blank-image bug). axe WCAG A/AA = 0 violations; no overflow 320–1440. New frozen component: `TechnologyDetail`. Anchors used by Research: `#optical-imaging`, `#3d-molecular-pathology`, `#ai-and-data-science`, `#spatial-biology`.
 
-## Current work — OVERNIGHT DRAFT BUILD (authorized 2026-06-29)
-- Branch **`feature/remaining-pages-draft`** (NOT `main`). Building DRAFT (not approved, not production) versions in order: **Publications → Team → Collaborators → Lab Photos → Contact**. Recognition deferred. Separate commit per page. See `OVERNIGHT_BUILD_REPORT.md` for the run log, open questions, and review order.
+## Current work — OVERNIGHT DRAFT BUILD (authorized 2026-06-29) — COMPLETE, awaiting review
+- Branch **`feature/remaining-pages-draft`** (NOT `main`, NOT merged, NOT deployed). DRAFT (not approved) versions built, one commit each:
+  - **Publications** (`350477c`) — search + area/year filters over 120 verified PubMed records; `?area=` deep links work.
+  - **Team** (`1708382`) — PI spotlight + category-filterable grid (initials avatars; no headshots yet); honest empty Alumni state.
+  - **Collaborators** (`41af400`) — 6 collaborators in two domain groups; Stanford Profiles links.
+  - **Lab Photos** (`fb8bc8d`) — accessible lightbox gallery of rights-cleared science images; live team snapshots withheld (consent).
+  - **Contact** (`d4e8219`) — 3 purpose sections, verified info, medical disclaimer, validated form (disabled/honest — no Formspree ID).
+- Each page: `next build` clean, axe WCAG A/AA = 0 violations (desktop+mobile), no overflow 320–1440. **Recognition deferred; custom 404 not built.**
+- Full run log, open questions, missing assets, and recommended review order: **`OVERNIGHT_BUILD_REPORT.md`**. New review items appended to `CONTENT_REVIEW_NEEDED.md`.
 
 ## Approved design decisions
 - Next.js static export → GitHub Pages; project kept outside Drive.

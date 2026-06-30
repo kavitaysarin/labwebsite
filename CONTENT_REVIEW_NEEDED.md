@@ -42,3 +42,36 @@ Items requiring **Dr. Sarin / lab-team verification or approval** before launch.
 
 ## Copy
 - Plain-language summaries / "why it matters" for featured publications — add only when supplied or approved.
+
+---
+
+## Overnight draft pages (built 2026-06-29 on `feature/remaining-pages-draft` — NOT approved)
+
+### Publications
+- **Research-area tags are auto-assigned by a keyword heuristic** and need human review. Current split of 120 records: Skin Cancer 51, Other 33, Autoimmune & Systemic 18, Neurofibromatosis 14, Non-Invasive Imaging 4. "Skin Cancer" is likely over-broad and "Non-Invasive Imaging" likely under-counts (imaging papers not keyworded). Re-tag as needed.
+- **Coverage:** shows the 120 most-recent of **138** PubMed records (term `Kavita Y Sarin[Author]`); the rest are reachable via the "complete list on PubMed" link. Confirm whether to include all 138 and/or add pagination (the all-pubs list is long on mobile).
+- **Journal names** are PubMed's `fulljournalname` verbatim (e.g. "The British journal of dermatology", not title-cased). Confirm display styling.
+- **Featured 3** reuse existing recent-work figures — confirm.
+
+### Team
+- **Headshots:** none bundled — every person shows an initials avatar (real person, photo pending). The live-site headshots include screenshots/low-res crops; supply clean headshots.
+- **Alumni roster:** live site shows Medicine / Industry / Research headings but **no retrievable names** — supply the alumni list (page shows an honest "being compiled" state).
+- **Title/role flags:** Dr. Sarin (Professor vs live "Associate Professor"); Marlayna Harris (no title on site); Haniya vs "Haniyah" spelling; Chenming Zhang vs email `czheng8@`; Audris Chang vs "Chiang" (image filename); Nethra Srinivasan (Case Western — confirm active); volunteers Glaser/Golod (no role/bio on site).
+- **Grouping** (Staff / Trainees / Students / Volunteers) is an editorial choice — confirm.
+
+### Collaborators
+- **Shared-project specifics for Aasi, Fiorentino, Rieger are NOT verified** (the live site states none) — currently described at the research-area level and flagged TODO: VERIFY. Supply the real shared projects or approve the framing.
+- **Profile links go to Stanford Profiles** (verified to exist) rather than the LinkedIn links on the live site — confirm these are the approved destinations.
+- **Titles:** Rieger shown as "Clinical Professor" (Stanford Profiles) vs live "Clinical Assistant Professor"; Winetraub shown with no title — confirm.
+- Confirm permission/wording to list each collaborator.
+
+### Lab Photos
+- **The live gallery (~34–37 images) was deliberately NOT used** — uncaptioned, low-res/screenshot team & event snapshots of identifiable people with no consent info (a stop condition). **Supply a curated, captioned, consent-cleared set of team/event photos.**
+- Current gallery uses the lab's own science images (already on approved pages). **`klear-oct.jpg` appears to be a journal figure** — confirm reuse rights. Categories ("Imaging & Microscopy", "Lab & Campus") are provisional.
+
+### Contact
+- **Form is intentionally disabled** (Formspree ID still `YOUR_FORMSPREE_ID`); it validates input but shows a "not connected — email us" message and never fakes a send. **Provide a real Formspree (or other) form ID to enable submissions.**
+- **`ahoj@stanford.edu` is admin assistant Juniper Aho's address** (not a placeholder — it's the lab inbox). Confirm OK as the public contact.
+- Patient/clinical card links to `med.stanford.edu/dermatology` — confirm the preferred clinical/appointment path.
+- Confirm the "Not for medical emergencies" disclaimer wording (added per spec; absent on live site).
+- Social: only **Instagram** shown (LinkedIn/X/Facebook were bare-domain placeholders on the live site — omitted). Provide real URLs to add them.
