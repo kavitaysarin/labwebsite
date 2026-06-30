@@ -1,3 +1,5 @@
+// FROZEN — homepage-approved component. Reuse as-is; do not modify without
+// re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Icon } from "./Icon";

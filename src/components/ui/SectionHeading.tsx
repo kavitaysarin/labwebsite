@@ -1,3 +1,5 @@
+// FROZEN — homepage-approved component (SectionContainer). Reuse as-is; do not
+// modify without re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import type { ReactNode } from "react";
 
 export function SectionHeading({

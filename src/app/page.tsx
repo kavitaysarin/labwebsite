@@ -60,16 +60,21 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Faded campus image — desktop only */}
-          <div className="relative hidden min-h-[200px] overflow-hidden rounded-[10px] border border-border lg:block">
+          {/* Stanford Medicine building — desktop only, left edge faded into the page */}
+          <div className="relative hidden min-h-[210px] overflow-hidden lg:block">
             <Image
               src="/images/intro/stanford-building.jpg"
               alt="Stanford Medicine building in Redwood City, California"
               fill
               sizes="25vw"
               className="object-cover"
+              style={{
+                objectPosition: "center 38%",
+                WebkitMaskImage:
+                  "linear-gradient(to right, transparent 0%, #000 42%)",
+                maskImage: "linear-gradient(to right, transparent 0%, #000 42%)",
+              }}
             />
-            <div className="absolute inset-0 bg-white/35" aria-hidden="true" />
           </div>
         </div>
       </section>

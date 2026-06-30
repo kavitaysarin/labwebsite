@@ -1,3 +1,5 @@
+// FROZEN — homepage-approved component (PublicationCard). Reuse as-is; do not
+// modify without re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import Image from "next/image";
 import { Icon } from "@/components/ui/Icon";
 import { Placeholder } from "@/components/ui/Placeholder";
@@ -49,8 +51,8 @@ export function PublicationCard({
           <span className="text-cardinal">{pub.researchArea}</span>
           {pub.date ? (
             <>
-              <span className="text-gray-light">•</span>
-              <span className="text-gray">{pub.date}</span>
+              <span className="text-gray" aria-hidden="true">•</span>
+              <span className="text-gray-dark">{pub.date}</span>
             </>
           ) : null}
         </p>

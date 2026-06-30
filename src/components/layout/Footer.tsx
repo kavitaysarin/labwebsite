@@ -1,3 +1,5 @@
+// FROZEN — homepage-approved component. Reuse as-is; do not modify without
+// re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import Link from "next/link";
 import { SITE } from "@/content/site";
 import { FOOTER_NAV } from "@/content/navigation";
@@ -67,7 +69,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col-reverse gap-2 border-t border-white/20 pt-5 text-[13px] text-white/75 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col-reverse gap-2 border-t border-white/20 pt-5 text-[14px] text-white/80 sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} Stanford University · Sarin Lab</p>
           <div className="flex gap-5">
             <a
