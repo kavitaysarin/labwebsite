@@ -59,18 +59,25 @@ export const RESEARCH_APPROACH: Feature[] = [
   },
 ];
 
-/** Research page framing intro (≈90 words). */
-export const RESEARCH_INTRO =
-  "The Sarin Lab reads the skin as a sensor for disease. Because skin is visible, accessible, and information-rich, it lets us detect, understand, and monitor disease through four complementary kinds of signal — genetic, molecular, imaging, and digital. We develop these approaches together and apply them across conditions from skin cancer and neurofibromatosis type 1 to autoimmune and inflammatory disease, translating discoveries into earlier detection, better monitoring, and new treatments. The diseases below are applications of one shared toolkit — not separate programs.";
+/** Research page framing intro (two short paragraphs). */
+export const RESEARCH_INTRO: string[] = [
+  "Skin is visible, accessible, and easy to study repeatedly. We use genetic, molecular, imaging, and digital tools to find disease signals in the skin and measure how they change over time.",
+  "These approaches support our work in skin cancer, neurofibromatosis, autoimmune disease, and other conditions in which the skin can reveal important information about health and disease.",
+];
 
 const PUBMED = (pmid: string) => `https://pubmed.ncbi.nlm.nih.gov/${pmid}/`;
 export { PUBMED };
 
 /**
- * Research pillars (spec §17 / Addendum). Every project, disease, technology,
- * and publication below is verified against the live site and PubMed.
- * Excluded by decision: "Skin as an Educational Interface", systemic sclerosis,
- * neurodegeneration (see CONTENT_REVIEW_NEEDED.md).
+ * Research pillars (spec §17 / Addendum).
+ *
+ * The Research PAGE renders only: image, eyebrow, title, lead, up to three
+ * projects, and a "View related publications" link (`pubHref`). The additional
+ * verified fields (applications, technologies, publications, collaborators,
+ * established/exploring) are PRESERVED here for the future Publications,
+ * Technologies, and Collaborators pages — not rendered on the Research page.
+ *
+ * Excluded by decision: "Skin as an Educational Interface", neurodegeneration.
  */
 export const RESEARCH_PILLARS: ResearchPillar[] = [
   {
@@ -81,13 +88,14 @@ export const RESEARCH_PILLARS: ResearchPillar[] = [
     image: "/images/research/genetic.jpg",
     imageAlt:
       "Stylized DNA double helix representing genetic analysis of the skin.",
-    lead: "The skin records inherited and acquired DNA changes that shape who develops disease and how it behaves. Because skin lesions are easy to sample and observe, they let us connect specific variants to visible, measurable outcomes — clarifying cancer risk and why some tumors grow or resist treatment.",
+    lead: "Genetic changes can shape a person's risk of developing skin disease and influence how tumors behave. We study patients, tumors, and visible skin findings to identify inherited and acquired variants associated with skin cancer, neurofibromatosis type 1, and treatment response.",
+    pubHref: "/publications?area=skin-cancer",
     projects: [
-      "Inherited skin-cancer risk: genome-wide and candidate-gene studies of basal and squamous cell carcinoma.",
-      "Tumor-suppressor variants — including loss-of-function PTPN14 — that raise cancer risk.",
-      "Neurofibromatosis type 1 (NF1) as a single-gene model of how one mutation drives skin tumors.",
-      "Translating genetic risk into prevention and surveillance strategies.",
+      "Identifying genetic factors associated with basal and squamous cell carcinoma risk",
+      "Studying genes that influence tumor development and treatment response",
+      "Defining genetic factors associated with cutaneous neurofibroma burden in NF1",
     ],
+    // Preserved for future pages (not rendered on the Research page):
     applications: ["Skin cancer", "Neurofibromatosis type 1"],
     technologies: [
       { label: "AI & Data Science", href: "/technologies#ai-and-data-science" },
@@ -126,20 +134,19 @@ export const RESEARCH_PILLARS: ResearchPillar[] = [
     image: "/images/technologies/molecular-pathology.jpg",
     imageAlt:
       "Multiplex fluorescence image of skin tissue revealing molecular and cellular organization.",
-    lead: "Molecular and immune signatures in the skin act as a readout of what is happening throughout the body. Profiling RNA, proteins, and immune pathways reveals disease activity, treatment response, and new therapeutic targets.",
+    lead: "Skin contains molecular and immune signals that can reflect disease activity and response to treatment. We analyze RNA, proteins, immune pathways, and tissue structure to identify biomarkers in autoimmune and inflammatory skin disease.",
+    pubHref: "/publications?area=autoimmune-and-systemic-disease",
     projects: [
-      "Interferon and immune signatures that track disease activity in dermatomyositis and lupus.",
-      "Transcriptomic profiling to repurpose existing drugs (for example, mTOR inhibition in epidermolysis bullosa simplex).",
-      "Comorbidity and biomarker studies in hidradenitis suppurativa.",
-      "Target discovery that feeds early-phase clinical trials.",
+      "Measuring molecular signatures in dermatomyositis, lupus, and systemic sclerosis",
+      "Studying inflammatory pathways in hidradenitis suppurativa and related disorders",
+      "Identifying tissue biomarkers associated with disease activity and treatment response",
     ],
     applications: [
       "Dermatomyositis",
       "Lupus",
+      "Systemic sclerosis",
       "Hidradenitis suppurativa",
       "Epidermolysis bullosa simplex",
-      "Skin cancer",
-      "NF1",
     ],
     technologies: [
       { label: "3D Molecular Pathology", href: "/technologies#3d-molecular-pathology" },
@@ -178,12 +185,12 @@ export const RESEARCH_PILLARS: ResearchPillar[] = [
     image: "/images/technologies/optical-imaging.jpg",
     imageAlt:
       "Optical coherence tomography cross-sectional scan showing the layered structure of skin.",
-    lead: "High-resolution optical imaging lets us see the living skin's structure and function without removing tissue — capturing detail from the cellular to the tissue scale and working toward non-invasive “virtual biopsies.”",
+    lead: "Non-invasive imaging allows us to examine skin structure and function without relying only on biopsy. We develop and apply optical imaging methods, including optical coherence tomography and KLEAR optical clearing, to visualize disease at cellular and tissue scales.",
+    pubHref: "/publications?area=non-invasive-imaging",
     projects: [
-      "Micro-registered optical coherence tomography (OCT) aligned with pathology to enable virtual biopsy.",
-      "Cellular-resolution OCT using engineered optics (metasurfaces and needle-shaped beams).",
-      "KLEAR optical clearing and 3D molecular pathology for volumetric views of tissue.",
-      "Image-quality methods and teledermatology to widen access to skin assessment.",
+      "Using OCT to detect and monitor skin cancer",
+      "Increasing optical imaging depth with KLEAR",
+      "Comparing non-invasive imaging with histology and 3D tissue pathology",
     ],
     applications: ["Skin cancer", "Neurofibromatosis type 1"],
     technologies: [
@@ -213,22 +220,22 @@ export const RESEARCH_PILLARS: ResearchPillar[] = [
     established:
       "OCT can image skin microstructure at near-cellular resolution.",
     exploring:
-      "Validating OCT-based “virtual biopsy” as a non-invasive alternative to tissue biopsy — a research goal, not yet a clinical replacement.",
+      "Validating OCT-based virtual biopsy to complement tissue biopsy (a research goal, not a clinical replacement).",
   },
   {
     slug: "digital",
     signal: "Digital Signals",
     title: "Skin as a Digital Sensor",
     icon: "chip",
-    image: "/images/technologies/ai-data-science.jpg",
+    image: "/images/research/digital.jpg",
     imageAlt:
-      "Abstract neural-network diagram representing artificial intelligence and data analysis.",
-    lead: "Artificial intelligence and quantitative analysis turn skin images and patient data into objective, repeatable measures of disease severity and change over time — supporting better monitoring and clinical-trial endpoints.",
+      "Optical coherence tomography scan of skin annotated with measurement markers and regions of interest.",
+    lead: "Digital tools can turn photographs and imaging data into quantitative measures of disease. We use artificial intelligence and image analysis to count lesions, measure disease burden, and develop more reliable outcomes for clinical research.",
+    pubHref: "/publications?area=neurofibromatosis",
     projects: [
-      "Quantitative measurement and severity scoring of cutaneous neurofibromas (the Nef-ASI).",
-      "Patient-reported measurement of stigma and burden (the cNF-PUSH-D).",
-      "AI-assisted image analysis and comparison of automated versus expert assessment.",
-      "Longitudinal monitoring and endpoints for clinical trials.",
+      "Developing cNF-Vision to measure cutaneous neurofibroma burden",
+      "Using longitudinal and whole-body imaging to track disease over time",
+      "Automating the measurement of skin lesions and treatment response",
     ],
     applications: ["Neurofibromatosis type 1", "Skin cancer"],
     technologies: [

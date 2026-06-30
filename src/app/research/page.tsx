@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { ResearchPillar } from "@/components/sections/ResearchPillar";
 import { CTABand } from "@/components/sections/CTABand";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
 import { RESEARCH_INTRO, RESEARCH_PILLARS } from "@/content/research";
 
 export const metadata: Metadata = {
   title: "Research",
   description:
-    "How the Sarin Lab reads genetic, molecular, imaging, and digital signals in the skin to detect, understand, and monitor disease.",
+    "How the Sarin Lab uses genetic, molecular, imaging, and digital tools to find disease signals in the skin.",
 };
 
 export default function ResearchPage() {
@@ -20,33 +21,33 @@ export default function ResearchPage() {
         image="/images/hero/hero-secondary.png"
       />
 
-      {/* Framing intro + signal legend */}
+      {/* Intro + signal anchor cards */}
       <section className="bg-white">
         <div className="container-wide section-pad">
           <div className="max-w-3xl">
-            <p className="eyebrow">Skin as a Sensor for Disease</p>
-            <p className="mt-3 text-lg leading-relaxed text-gray-dark">
-              {RESEARCH_INTRO}
-            </p>
+            <SectionHeading title="Skin as a Sensor for Disease" />
+            <div className="mt-4 space-y-3 text-[17px] leading-relaxed text-gray-dark">
+              {RESEARCH_INTRO.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
+            </div>
           </div>
 
-          <nav aria-label="Research signals" className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <nav
+            aria-label="Research signals"
+            className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
+          >
             {RESEARCH_PILLARS.map((p) => (
               <a
                 key={p.slug}
                 href={`#${p.slug}`}
                 className="card-surface flex items-center gap-3 p-4 transition-colors hover:border-cardinal/40"
               >
-                <span className="inline-flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-blue-light text-cardinal">
-                  <Icon name={p.icon} className="h-6 w-6" />
+                <span className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-blue-light text-cardinal">
+                  <Icon name={p.icon} className="h-5 w-5" />
                 </span>
-                <span className="min-w-0">
-                  <span className="block text-[12px] font-semibold uppercase tracking-wide text-cardinal">
-                    {p.signal}
-                  </span>
-                  <span className="block font-heading text-[15px] font-bold leading-tight text-navy">
-                    {p.title}
-                  </span>
+                <span className="font-heading text-[15px] font-bold text-navy">
+                  {p.signal}
                 </span>
               </a>
             ))}
@@ -61,7 +62,7 @@ export default function ResearchPage() {
           id={pillar.slug}
           className={i % 2 === 0 ? "bg-cream" : "bg-white"}
         >
-          <div className="container-wide section-pad">
+          <div className="container-wide section-pad-tight">
             <ResearchPillar pillar={pillar} reversed={i % 2 === 1} />
           </div>
         </section>

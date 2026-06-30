@@ -150,6 +150,8 @@ export type ResearchPillar = {
   image: string;
   imageAlt: string;
   lead: string;
+  /** Link to the Publications page with this pillar's research-area filter. */
+  pubHref?: string;
   projects: string[];
   applications: string[];
   technologies: { label: string; href: string }[];
