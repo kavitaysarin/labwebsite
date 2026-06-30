@@ -27,7 +27,7 @@ export default function Home() {
               eyebrow="Reading Disease Through the Skin"
               title="The Sarin Lab"
             />
-            <p className="mt-5 text-lg leading-relaxed text-gray-dark">
+            <p className="mt-4 text-lg leading-relaxed text-gray-dark">
               {LAB_INTRO}
             </p>
             <div className="mt-6">
@@ -41,9 +41,9 @@ export default function Home() {
             {SITE.metrics.map((m, i) => (
               <div
                 key={m.label}
-                className="rounded-xl border border-border bg-off-white p-6 text-center"
+                className="flex h-full flex-col items-center justify-center rounded-xl border border-border bg-off-white px-5 py-8 text-center"
               >
-                <span className="mx-auto inline-flex h-11 w-11 items-center justify-center rounded-lg bg-blue-light text-cardinal">
+                <span className="inline-flex h-[46px] w-[46px] items-center justify-center rounded-lg bg-blue-light text-cardinal">
                   <Icon name={METRIC_ICONS[i]} className="h-6 w-6" />
                 </span>
                 <p className="mt-3 font-heading text-4xl font-black text-navy">
@@ -66,7 +66,7 @@ export default function Home() {
             title="Why Skin?"
             intro="The skin is uniquely suited to reveal what is happening inside the body — and to do so again and again over time."
           />
-          <div className="mt-12">
+          <div className="mt-10">
             <FeatureGrid items={WHY_SKIN} variant="plain" />
           </div>
         </div>
@@ -80,7 +80,7 @@ export default function Home() {
             title="How We Read the Skin"
             intro="We integrate complementary signals — genetic, molecular, imaging, and digital — and translate them into meaningful insights about disease."
           />
-          <div className="mt-12">
+          <div className="mt-10">
             <FeatureGrid items={RESEARCH_APPROACH} variant="card" />
           </div>
         </div>
@@ -91,14 +91,14 @@ export default function Home() {
         <div className="container-wide section-pad">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <SectionHeading
-              eyebrow="Tools &amp; Technologies"
+              eyebrow="Tools & Technologies"
               title="Tools That Reveal What Matters"
             />
             <Button href="/technologies" variant="secondary">
               Explore Our Technologies
             </Button>
           </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {HOMEPAGE_TECH.map((t) => (
               <TechCard key={t.slug} tech={t} />
             ))}
@@ -108,7 +108,7 @@ export default function Home() {
 
       {/* Latest work */}
       <section className="bg-white">
-        <div className="container-wide section-pad">
+        <div className="container-wide section-pad-compact">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <SectionHeading
               eyebrow="Latest From the Lab"
@@ -118,7 +118,7 @@ export default function Home() {
               View All Publications
             </Button>
           </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {FEATURED_PUBLICATIONS.map((p) => (
               <PublicationCard key={p.title} pub={p} />
             ))}

@@ -22,7 +22,9 @@ export const TECHNOLOGIES: Technology[] = [
     longDescription:
       "A major focus of the lab is developing imaging platforms that visualize living skin at near-cellular resolution. KLEAR-OCT pairs high-definition optical coherence tomography with KLEAR, an optical clearing technology, to create “virtual biopsies” — non-invasive assessments of tissue that can be repeated over time without removing skin.",
     category: "Optical Imaging",
-    image: "/images/technologies/klear-oct.png",
+    image: "/images/technologies/klear-oct.jpg",
+    imageAlt:
+      "Optical coherence tomography, fluorescence, and histology panels from a virtual-biopsy imaging pipeline.",
     status: "research",
   },
   {
@@ -44,7 +46,9 @@ export const TECHNOLOGIES: Technology[] = [
     longDescription:
       "Developed in collaboration with the Jonathan Liu Lab, 3D molecular pathology studies intact tissue architecture alongside molecular and cellular data. Unlike traditional two-dimensional histopathology, it reveals how nerves, immune cells, blood vessels, tumors, and other structures are organized across larger tissue volumes.",
     category: "Molecular Pathology",
-    image: "/images/technologies/molecular-pathology.png",
+    image: "/images/technologies/molecular-pathology.jpg",
+    imageAlt:
+      "Multiplex fluorescence image of tissue revealing cellular and molecular organization.",
     status: "research",
   },
   {
@@ -55,7 +59,9 @@ export const TECHNOLOGIES: Technology[] = [
     longDescription:
       "The lab applies AI-based segmentation, quantitative imaging analysis, multimodal integration, and predictive modeling to handle the complexity of skin imaging. The emphasis is on quantitative disease measurement and longitudinal monitoring rather than simple automation.",
     category: "Computational Analysis",
-    image: "/images/technologies/ai.png",
+    image: "/images/technologies/ai-data-science.jpg",
+    imageAlt:
+      "Abstract neural-network diagram representing artificial intelligence and data analysis.",
     status: "research",
   },
   {

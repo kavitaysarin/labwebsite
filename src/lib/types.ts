@@ -23,6 +23,7 @@ export type Publication = {
   pubmedUrl?: string;
   doiUrl?: string;
   image?: string;
+  imageAlt?: string;
   featured?: boolean;
   plainLanguageSummary?: string;
   whyItMatters?: string;
@@ -91,6 +92,7 @@ export type Technology = {
   longDescription?: string;
   category: string;
   image?: string;
+  imageAlt?: string;
   relatedResearch?: string[];
   status?: "research" | "validated" | "clinical study" | "educational";
 };

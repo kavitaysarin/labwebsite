@@ -21,7 +21,7 @@ export const WHY_SKIN: Feature[] = [
     title: "Information-rich",
     description:
       "Skin contains molecular, cellular, neural, vascular, immune, and genetic signals.",
-    icon: "layers",
+    icon: "molecule",
   },
   {
     title: "Easy to monitor over time",

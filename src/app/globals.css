@@ -106,9 +106,13 @@
   .prose-narrow { max-width: var(--prose-max); }
 
   /* Section vertical rhythm: 80 / 60 / 44 px (desktop / tablet / mobile) */
-  .section-pad { padding-block: 80px; }
-  @media (max-width: 1023px) { .section-pad { padding-block: 60px; } }
-  @media (max-width: 767px)  { .section-pad { padding-block: 44px; } }
+  .section-pad { padding-block: 72px; }
+  @media (max-width: 1023px) { .section-pad { padding-block: 56px; } }
+  @media (max-width: 767px)  { .section-pad { padding-block: 40px; } }
+
+  /* Slightly tighter top when a section follows another light section */
+  .section-pad-compact { padding-block: 56px 72px; }
+  @media (max-width: 767px) { .section-pad-compact { padding-block: 40px; } }
 
   /* Eyebrow / kicker label */
   .eyebrow {

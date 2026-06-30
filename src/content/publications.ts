@@ -57,6 +57,9 @@ export const RECENT_PUBLICATIONS: Publication[] = [
     researchArea: "Neurofibromatosis",
     pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/41290043/",
     doiUrl: "https://doi.org/10.1093/bjd/ljaf479",
+    image: "/images/recent-work/cnf-push-d.jpg",
+    imageAlt:
+      "Correlation matrix of clinical features in neurofibromatosis type 1.",
     featured: true,
   },
   {
@@ -69,6 +72,9 @@ export const RECENT_PUBLICATIONS: Publication[] = [
     researchArea: "Skin Cancer",
     pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/41460725/",
     doiUrl: "https://doi.org/10.1158/0008-5472.CAN-25-1109",
+    image: "/images/recent-work/hedgehog.jpg",
+    imageAlt:
+      "Schematic showing how Hedgehog pathway signaling drives tumor growth and response to an SMO inhibitor.",
     featured: true,
   },
   {
@@ -81,6 +87,9 @@ export const RECENT_PUBLICATIONS: Publication[] = [
     researchArea: "Neurofibromatosis",
     pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/41061983/",
     doiUrl: "https://doi.org/10.1016/j.jaad.2025.10.025",
+    image: "/images/recent-work/nef-asi.jpg",
+    imageAlt:
+      "Bland–Altman plot comparing cutaneous neurofibroma measurements across raters.",
     featured: true,
   },
   {

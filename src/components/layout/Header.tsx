@@ -62,13 +62,13 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 aria-current={active ? "page" : undefined}
-                className={`relative px-2.5 py-2 text-[14px] font-medium transition-colors hover:text-white ${
+                className={`relative px-2 py-2 text-[14px] font-medium transition-colors hover:text-white ${
                   active ? "text-white" : "text-white/85"
                 }`}
               >
                 {item.label}
                 <span
-                  className={`absolute inset-x-2.5 -bottom-0.5 h-0.5 rounded bg-white transition-opacity ${
+                  className={`absolute inset-x-2 -bottom-0.5 h-0.5 rounded bg-white transition-opacity ${
                     active ? "opacity-100" : "opacity-0"
                   }`}
                   aria-hidden="true"

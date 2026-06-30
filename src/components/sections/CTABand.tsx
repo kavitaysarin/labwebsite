@@ -14,13 +14,15 @@ export function CTABand({
   secondary?: CTA;
 }) {
   return (
-    <section className="bg-navy text-white">
-      <div className="container-wide section-pad text-center">
-        <h2 className="text-2xl text-white sm:text-4xl">{heading}</h2>
+    <section className="bg-navy-deep text-white">
+      <div className="container-wide py-14 text-center md:py-16">
+        <h2 className="mx-auto max-w-4xl text-balance text-3xl text-white">
+          {heading}
+        </h2>
         {subtitle ? (
           <p className="mx-auto mt-4 max-w-2xl text-white/80">{subtitle}</p>
         ) : null}
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
+        <div className="mt-6 flex flex-wrap justify-center gap-4">
           <Button href={primary.href} external={primary.external} variant="primary">
             {primary.label}
           </Button>
