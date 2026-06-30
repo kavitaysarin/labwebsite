@@ -20,7 +20,7 @@ _Checkpoint: 2026-06-29 (evening). Homepage, Research, and Technologies built, Q
 
 ## Current work — OVERNIGHT DRAFT BUILD (authorized 2026-06-29) — COMPLETE, awaiting review
 - Branch **`feature/remaining-pages-draft`** (NOT `main`, NOT merged, NOT deployed). DRAFT (not approved) versions built, one commit each:
-  - **Publications** — REVISED to a curated **Selected Publications** model (launch): hero, intro + "View All Publications on PubMed", 3 featured cards, and 4 research-area sections (Optical Imaging / Skin Cancer and Genetics / Neurofibromatosis / Autoimmune, Inflammatory, and Systemic Disease) with section anchors. ~19 papers, all curated from the live site and verified against PubMed. Full database / search / filters / pagination removed and deferred. Research & Technologies "related publications" links repointed to `/publications#<section>`.
+  - **Publications** — **APPROVED & FINALIZED** (curated **Selected Publications** model): hero, intro + "View All Publications on PubMed", 3 featured cards, and 4 research-area sections (Optical Imaging / Skin Cancer and Genetics / Neurofibromatosis / Autoimmune, Inflammatory, and Systemic Disease) with section anchors. **20 papers**, all curated from the live site and verified against PubMed (PMID/DOI resolve; authors = first author + "et al."). Full database / search / filters / pagination intentionally excluded (post-launch). Research & Technologies "related publications" links point to `/publications#<section>` (verified in-view). Maintained by hand — see `PUBLICATIONS_MAINTENANCE.md`.
   - **Team** (`1708382`) — PI spotlight + category-filterable grid (initials avatars; no headshots yet); honest empty Alumni state.
   - **Collaborators** (`41af400`) — 6 collaborators in two domain groups; Stanford Profiles links.
   - **Lab Photos** (`fb8bc8d`) — accessible lightbox gallery of rights-cleared science images; live team snapshots withheld (consent).
@@ -52,7 +52,7 @@ _Checkpoint: 2026-06-29 (evening). Homepage, Research, and Technologies built, Q
 ## Post-launch enhancements (deferred — do NOT build before launch)
 Decided 2026-06-29 when the Publications page moved to a curated **Selected Publications** model:
 - Complete publication database / archive page (all ~138 records).
-- PubMed synchronization + a GitHub Actions publication updater (automated ingestion).
+- **Automated PubMed synchronization system** (a GitHub Actions updater that ingests new records from the lab's PubMed profile and refreshes the publication data automatically). **Post-launch enhancement only — NOT required for initial launch.** Until then the curated list is updated by hand (`PUBLICATIONS_MAINTENANCE.md`).
 - Publications **search field**, **year filter**, **topic/area filter UI**, **pagination**, and **"load more"**.
 - Until then, selected publications are maintained by hand in `src/content/publications.ts` (see `PUBLICATIONS_MAINTENANCE.md`).
 

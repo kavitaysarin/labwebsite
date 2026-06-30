@@ -10,6 +10,18 @@ src/content/publications.ts   →  the SELECTED_PUBLICATIONS list
 You edit that list by hand. No build scripts, PubMed sync, or database are involved
 for launch. After any change, rebuild the site (`npm run build`) to see it.
 
+## Manual update process (at a glance)
+
+This is the launch process — entirely manual, no automation:
+
+1. Open `src/content/publications.ts` and find the `SELECTED_PUBLICATIONS` list.
+2. Add, edit, remove, recategorize, feature, or reorder entries (see "Common tasks" below). Copy real values from PubMed — **never invent a citation, link, date, or image.**
+3. Save the file.
+4. Rebuild: from the repo, `npm run build` (output goes to `out/`).
+5. Eyeball the Publications page, then commit the change in git.
+
+That's the whole loop. (Automated PubMed synchronization is a deferred post-launch enhancement — see `PROJECT_STATUS.md`.)
+
 Each publication is one entry that looks like this:
 
 ```ts

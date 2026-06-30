@@ -47,11 +47,11 @@ Items requiring **Dr. Sarin / lab-team verification or approval** before launch.
 
 ## Overnight draft pages (built 2026-06-29 on `feature/remaining-pages-draft` — NOT approved)
 
-### Publications
-- **Research-area tags are auto-assigned by a keyword heuristic** and need human review. Current split of 120 records: Skin Cancer 51, Other 33, Autoimmune & Systemic 18, Neurofibromatosis 14, Non-Invasive Imaging 4. "Skin Cancer" is likely over-broad and "Non-Invasive Imaging" likely under-counts (imaging papers not keyworded). Re-tag as needed.
-- **Coverage:** shows the 120 most-recent of **138** PubMed records (term `Kavita Y Sarin[Author]`); the rest are reachable via the "complete list on PubMed" link. Confirm whether to include all 138 and/or add pagination (the all-pubs list is long on mobile).
-- **Journal names** are PubMed's `fulljournalname` verbatim (e.g. "The British journal of dermatology", not title-cased). Confirm display styling.
-- **Featured 3** reuse existing recent-work figures — confirm.
+### Publications — APPROVED (curated Selected Publications model)
+- **No remaining citation uncertainty.** All **20** selected publications are curated from the live Sarin Lab site and verified against PubMed; every PMID and DOI resolves (checked 2026-06-30). Authors shown as first author + "et al."; journal names normalized to standard display form. Featured 3 are image-free (no figure-permission items on this page).
+- **Curated subset (by design):** the page is a highlight (~20 papers), not the full archive; the complete list is the PubMed author link. The selection can be edited at any time via `PUBLICATIONS_MAINTENANCE.md`.
+- **Minor, optional:** review annually and when major papers publish; the "molecular-digital" section remains unused (no live-site grouping) and can be added later if desired.
+- Deferred (post-launch, not launch blockers): full database/archive, search/filters/pagination, and the automated PubMed sync system (see `PROJECT_STATUS.md`).
 
 ### Team
 - **Headshots:** none bundled — every person shows an initials avatar (real person, photo pending). The live-site headshots include screenshots/low-res crops; supply clean headshots.

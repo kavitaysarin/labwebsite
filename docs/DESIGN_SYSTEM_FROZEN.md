@@ -48,3 +48,12 @@ Reuse `PageHero` as-is for Technologies and every later interior page.
 | Technologies content | `src/content/technologies.ts` (`TECHNOLOGY_INTRO`, `TECHNOLOGY_PROGRAMS`) | Approved copy; collaborators link to Stanford Profiles |
 
 Section images on interior pages load `loading="eager"` (static export has no optimizer; lazy-load left tall-page images blank on tablet/mobile).
+
+## Also approved (added after the Publications page — 2026-06-30)
+| Concern | Location | Notes |
+|---|---|---|
+| Featured publication card | `src/components/cards/FeaturedPublicationCard.tsx` | Image-free; subtle border + thin cardinal top accent; fully clickable (stretched title link → PubMed) with DOI raised above; category label + journal·year + links |
+| Selected publication card | `src/components/cards/SelectedPublicationCard.tsx` | Compact; fully clickable; category + title + author (first + "et al.") + journal·year + PubMed/DOI links |
+| Publications page | `src/app/publications/page.tsx` | Approved curated **Selected Publications** layout; section anchors `#optical-imaging`, `#skin-cancer-genetics`, `#neurofibromatosis`, `#autoimmune-systemic` |
+
+The publication **list** (`SELECTED_PUBLICATIONS` in `src/content/publications.ts`) is intentionally content-managed (NOT frozen) — edit it by hand per `PUBLICATIONS_MAINTENANCE.md`.

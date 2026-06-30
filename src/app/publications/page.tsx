@@ -1,3 +1,6 @@
+// APPROVED — finalized Publications page (curated Selected Publications, 2026-06-30).
+// Layout/structure approved; do not redesign without re-approval. The publication
+// LIST is content-managed in src/content/publications.ts (see PUBLICATIONS_MAINTENANCE.md).
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";

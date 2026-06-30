@@ -1,3 +1,5 @@
+// APPROVED — finalized Publications-page component (2026-06-30). Reuse as-is;
+// do not redesign without re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import { Icon } from "@/components/ui/Icon";
 import { CATEGORY_LABELS } from "@/content/publications";
 import type { SelectedPublication } from "@/lib/types";
