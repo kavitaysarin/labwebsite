@@ -169,11 +169,10 @@ export type TechnologyProgram = {
   icon: IconName;
   image: string;
   imageAlt: string;
-  whatItIs: string;
-  signal: string;
-  connection: string;
+  fit?: "cover" | "contain";
+  lead: string;
+  whatItReveals: string;
   appliedTo: string[];
-  status: string;
   collaboration?: string;
   researchHref?: string;
   pubHref?: string;

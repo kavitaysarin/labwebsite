@@ -89,17 +89,19 @@ export const HOMEPAGE_TECH: Technology[] = [
   TECHNOLOGIES[3], // AI and Data Science
 ];
 
-/** Technologies page intro. */
-export const TECHNOLOGY_INTRO =
-  "We build and apply tools that let us see, measure, and interpret signals in the skin. Our methods span high-resolution optical imaging, optical clearing, three-dimensional molecular pathology, spatial biology, and artificial intelligence. Most are research tools used in our studies, not clinical tests.";
+/** Technologies page intro (two short paragraphs). */
+export const TECHNOLOGY_INTRO: string[] = [
+  "We develop and apply technologies that allow us to see, measure, and interpret signals in the skin. Our work spans optical imaging, optical clearing, three-dimensional tissue analysis, spatial biology, and artificial intelligence.",
+  "These technologies are used in research studies and are not clinical tests unless otherwise noted.",
+];
 
 /**
- * Technologies page programs (spec §14 / Addendum). Each states what it is,
- * the signal it measures, how it connects to skin, where it is applied, and
- * its status. Verified against the live site. Hyperspectral imaging and
- * "Science Simplified" are intentionally excluded (not part of the live work).
- * Kept separate from TECHNOLOGIES/HOMEPAGE_TECH so the frozen homepage is
- * unaffected.
+ * Technologies page programs (spec §14 / Addendum). Each has a short
+ * description, a single "what it reveals" line, up to three application tags,
+ * and an optional "In collaboration with …" line. Verified against the live
+ * site. Hyperspectral imaging and "Science Simplified" are intentionally
+ * excluded (not part of the live work). Kept separate from
+ * TECHNOLOGIES/HOMEPAGE_TECH so the frozen homepage is unaffected.
  */
 export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
   {
@@ -109,31 +111,30 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
     icon: "scan",
     image: "/images/technologies/optical-imaging.jpg",
     imageAlt: "Optical coherence tomography cross-sectional scan of skin.",
-    whatItIs:
-      "High-resolution optical imaging of living skin, including high-definition optical coherence tomography (OCT).",
-    signal: "Tissue microstructure and light scattering, at near-cellular resolution.",
-    connection: "Images living skin directly, without removing tissue.",
+    lead: "We use high-resolution optical imaging, including optical coherence tomography, to examine living skin without removing tissue.",
+    whatItReveals: "Skin structure and light scattering at near-cellular resolution.",
     appliedTo: ["Skin cancer", "Neurofibromatosis type 1"],
-    status: "Research",
-    collaboration: "High-definition OCT developed with Yonatan Winetraub.",
+    collaboration: "In collaboration with Yonatan Winetraub",
     researchHref: "/research#imaging",
     pubHref: "/publications?area=non-invasive-imaging",
   },
   {
     slug: "optical-transparency",
-    name: "Optical Transparency of Skin (KLEAR)",
-    shortName: "Optical Transparency",
+    name: "Optical Clearing with KLEAR",
+    shortName: "Optical Clearing",
     icon: "sparkles",
     image: "/images/technologies/klear.jpg",
     imageAlt:
-      "Three-dimensional optical coherence tomography volume of skin imaged in depth.",
-    whatItIs:
-      "KLEAR, an optical clearing approach that makes skin tissue more transparent so light can travel deeper.",
-    signal: "Improved light penetration and reduced scattering for deeper optical imaging.",
-    connection: "Lets optical methods see further into the skin than they otherwise could.",
-    appliedTo: ["Deeper non-invasive imaging", "Virtual biopsy"],
-    status: "Research",
-    collaboration: "Developed with Guosong Hong.",
+      "Before-and-after photographs of a skin sample made optically transparent by KLEAR clearing (5 mm scale).",
+    fit: "contain",
+    lead: "KLEAR temporarily reduces light scattering in skin, allowing optical imaging methods to visualize deeper tissue structures.",
+    whatItReveals: "Structures below the usual imaging depth of standard optical methods.",
+    appliedTo: [
+      "Deeper non-invasive imaging",
+      "Optical imaging research",
+      "Light-based therapy research",
+    ],
+    collaboration: "In collaboration with Guosong Hong",
     researchHref: "/research#imaging",
     pubHref: "/publications?area=non-invasive-imaging",
   },
@@ -143,15 +144,13 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
     shortName: "3D Molecular Pathology",
     icon: "microscope",
     image: "/images/technologies/molecular-3d.jpg",
-    imageAlt: "Three-dimensional reconstruction of skin tissue architecture.",
-    whatItIs:
-      "Volumetric tissue imaging that combines staining, three-dimensional imaging, and computational reconstruction.",
-    signal: "Tissue architecture with molecular and cellular detail, in three dimensions.",
-    connection:
-      "Reconstructs intact skin and tumor tissue beyond two-dimensional histopathology.",
-    appliedTo: ["Skin tumors", "Neurofibromas"],
-    status: "Research",
-    collaboration: "Developed with the Jonathan Liu Lab.",
+    imageAlt:
+      "Multiplex fluorescence image of skin tissue, with cell nuclei in red and nerve fibers in blue.",
+    lead: "We combine tissue staining, three-dimensional imaging, and computational reconstruction to study intact skin and tumor architecture.",
+    whatItReveals:
+      "The spatial organization of cells, structures, and molecular signals within tissue.",
+    appliedTo: ["Skin tumors", "Neurofibromas", "Imaging-pathology comparison"],
+    collaboration: "In collaboration with Jonathan Liu and the Liu Lab",
     researchHref: "/research#molecular",
     pubHref: "/publications?area=skin-cancer",
   },
@@ -163,29 +162,29 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
     image: "/images/technologies/molecular-pathology.jpg",
     imageAlt:
       "Multiplex fluorescence image mapping molecular signals within skin tissue.",
-    whatItIs:
-      "Spatial transcriptomics, single-cell analysis, multiplex imaging, and molecular profiling of skin tissue.",
-    signal: "Molecular signals mapped to their location within tissue.",
-    connection: "Reveals disease-associated biomarkers inside the skin.",
-    appliedTo: ["Autoimmune and inflammatory disease", "Skin cancer"],
-    status: "Research",
+    lead: "We use spatial transcriptomics, single-cell analysis, multiplex imaging, and molecular profiling to study how cells and biomarkers are organized within skin tissue.",
+    whatItReveals:
+      "The location and relationships of molecular and cellular signals within tissue.",
+    appliedTo: [
+      "Autoimmune and inflammatory disease",
+      "Skin cancer",
+      "Biomarker discovery",
+    ],
     researchHref: "/research#molecular",
     pubHref: "/publications?area=autoimmune-and-systemic-disease",
   },
   {
     slug: "ai-and-data-science",
-    name: "Artificial Intelligence & Computational Analysis",
+    name: "AI & Computational Analysis",
     shortName: "AI & Computation",
     icon: "chip",
     image: "/images/research/digital.jpg",
     imageAlt:
       "cNF-Vision output: cutaneous neurofibromas segmented on skin photographs, with depth maps and three-dimensional reconstructions.",
-    whatItIs:
-      "AI-based image segmentation, quantitative analysis, multimodal integration, and predictive modeling, including cNF-Vision for measuring cutaneous neurofibromas.",
-    signal: "Quantitative, repeatable measures derived from images and clinical data.",
-    connection: "Turns skin photographs and scans into objective measurements.",
+    lead: "We use artificial intelligence and quantitative image analysis to measure disease from clinical photographs, optical images, and pathology data.",
+    whatItReveals:
+      "Reproducible measurements of lesion number, disease burden, and treatment response.",
     appliedTo: ["Neurofibromatosis type 1", "Skin cancer", "Clinical-trial endpoints"],
-    status: "Research",
     researchHref: "/research#digital",
     pubHref: "/publications?area=neurofibromatosis",
   },
