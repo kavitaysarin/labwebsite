@@ -1,3 +1,5 @@
+// APPROVED — finalized Team-page component (2026-06-30). Reuse as-is; do not
+// redesign without re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import Image from "next/image";
 import { Icon } from "@/components/ui/Icon";
 import type { Person } from "@/lib/types";

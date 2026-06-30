@@ -1,3 +1,6 @@
+// APPROVED — finalized Team page (unified egalitarian grid, 2026-06-30). Layout
+// approved; do not redesign without re-approval. The member LIST is
+// content-managed in src/content/people.ts. See docs/DESIGN_SYSTEM_FROZEN.md.
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { TeamBrowser } from "@/components/sections/TeamBrowser";

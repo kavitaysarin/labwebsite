@@ -57,3 +57,12 @@ Section images on interior pages load `loading="eager"` (static export has no op
 | Publications page | `src/app/publications/page.tsx` | Approved curated **Selected Publications** layout; section anchors `#optical-imaging`, `#skin-cancer-genetics`, `#neurofibromatosis`, `#autoimmune-systemic` |
 
 The publication **list** (`SELECTED_PUBLICATIONS` in `src/content/publications.ts`) is intentionally content-managed (NOT frozen) — edit it by hand per `PUBLICATIONS_MAINTENANCE.md`.
+
+## Also approved (added after the Team page — 2026-06-30)
+| Concern | Location | Notes |
+|---|---|---|
+| Team member card | `src/components/cards/PersonCard.tsx` | Uniform card: 4:5 headshot (object-cover + per-person `objectPosition`) or initials fallback; name + credentials, role, concise bio, bottom-aligned email |
+| Team grid + filters | `src/components/sections/TeamBrowser.tsx` | One egalitarian grid (1/2/3/4 cols at base/md/lg/2xl); optional filter chips (default All), Alumni filter shows a "coming soon" note; filters never reorder |
+| Team page | `src/app/team/page.tsx` | Approved unified-grid layout (no PI spotlight, no stacked sections, no intro heading) |
+
+The member **list** (`PEOPLE` in `src/content/people.ts`) is content-managed (NOT frozen) — edit roles/bios/headshots/`objectPosition` there. Headshot sources: `docs/team-image-sources.md`.

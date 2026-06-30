@@ -82,7 +82,7 @@ export const PEOPLE: Person[] = [
   {
     slug: "sahar-caravan",
     name: "Sahar Caravan",
-    role: "Medical Student, Stanford School of Medicine",
+    role: "Medical Student",
     category: "Trainees",
     email: "caravan@stanford.edu",
     image: "/images/team/sahar-caravan.jpg",
@@ -93,7 +93,7 @@ export const PEOPLE: Person[] = [
   {
     slug: "haniya-shareef",
     name: "Haniya Shareef",
-    role: "Medical Student, Stanford School of Medicine",
+    role: "Medical Student",
     category: "Trainees",
     email: "haniyash@stanford.edu",
     image: "/images/team/haniya-shareef.jpg",
@@ -104,7 +104,7 @@ export const PEOPLE: Person[] = [
   {
     slug: "chenming-zhang",
     name: "Chenming Zhang",
-    role: "Medical Student, Stanford School of Medicine",
+    role: "Medical Student",
     category: "Trainees",
     email: "czheng8@stanford.edu",
     image: "/images/team/chenming-zhang.jpg",
@@ -115,7 +115,7 @@ export const PEOPLE: Person[] = [
   {
     slug: "michelle-lin",
     name: "Michelle Lin",
-    role: "Medical Student, Stanford School of Medicine",
+    role: "Medical Student",
     category: "Trainees",
     email: "michjlin@stanford.edu",
     image: "/images/team/michelle-lin.jpg",
@@ -126,7 +126,7 @@ export const PEOPLE: Person[] = [
   {
     slug: "victoria-harbour",
     name: "Victoria Harbour",
-    role: "Medical Student, Stanford School of Medicine",
+    role: "Medical Student",
     category: "Trainees",
     email: "vharbour@stanford.edu",
     image: "/images/team/victoria-harbour.jpg",
@@ -137,12 +137,12 @@ export const PEOPLE: Person[] = [
   {
     slug: "audris-chang",
     name: "Audris Chang",
-    role: "Dermatology Resident, Stanford (research track)",
+    role: "Postdoctoral Fellow",
     category: "Trainees",
     email: "audrisc@stanford.edu",
     image: "/images/team/audris-chang.jpg",
     objectPosition: "50% 40%",
-    bio: "Studying the genetics and epidemiology of skin cancers across the Sarin and Curtis labs. A dermatology resident, she trained in computer science and economics before earning her medical degree.",
+    bio: "Studying the genetics and epidemiology of skin cancers across the Sarin and Curtis labs. She trained in computer science and economics before earning her medical degree.",
     active: true,
   },
   {

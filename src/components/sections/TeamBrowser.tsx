@@ -1,5 +1,7 @@
 "use client";
 
+// APPROVED — finalized Team-page component (2026-06-30). Reuse as-is; do not
+// redesign without re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import { useState } from "react";
 import { PersonCard } from "@/components/cards/PersonCard";
 import type { Person } from "@/lib/types";
