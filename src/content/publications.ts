@@ -137,10 +137,10 @@ export const FEATURED_PUBLICATIONS = RECENT_PUBLICATIONS.filter(
  * Curated from the publications listed on the live Sarin Lab site
  * (sarinlab.stanford.edu research-area pages) and VERIFIED against PubMed
  * (title / authors / journal / year / PMID / DOI). Authors are abbreviated
- * to first three + "et al." (the live site shows no authors). Journal names
- * are normalized to their standard display form. Nothing here is invented.
+ * to the first author + "et al." (the live site shows no authors). Journal
+ * names are normalized to their standard display form. Nothing here is invented.
  *
- * This is a CURATED highlight (~19 papers), NOT the full archive. To add /
+ * This is a CURATED highlight (~20 papers), NOT the full archive. To add /
  * remove / recategorize / feature / reorder entries, see
  * PUBLICATIONS_MAINTENANCE.md. The complete list lives on PubMed
  * (SITE.pubmedUrl).
@@ -163,7 +163,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   {
     title:
       "Noninvasive virtual biopsy using micro-registered optical coherence tomography (OCT) in human subjects",
-    authors: "Winetraub Y, Van Vleck A, Yuan E, et al.",
+    authors: "Winetraub Y, et al.",
     journal: "Science Advances",
     year: 2024,
     category: "optical-imaging",
@@ -175,7 +175,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   {
     title:
       "Rapid Cellular-Resolution Skin Imaging with Optical Coherence Tomography Using All-Glass Multifocal Metasurfaces",
-    authors: "Zhao J, Van Vleck A, Winetraub Y, et al.",
+    authors: "Zhao J, et al.",
     journal: "ACS Nano",
     year: 2023,
     category: "optical-imaging",
@@ -186,7 +186,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   {
     title:
       "Flexible method for generating needle-shaped beams and its application in optical coherence tomography",
-    authors: "Zhao J, Winetraub Y, Du L, et al.",
+    authors: "Zhao J, et al.",
     journal: "Optica",
     year: 2022,
     category: "optical-imaging",
@@ -197,7 +197,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   {
     title:
       "Angular compounding for speckle reduction in optical coherence tomography using geometric image registration algorithm and digital focusing",
-    authors: "Zhao J, Winetraub Y, Yuan E, et al.",
+    authors: "Zhao J, et al.",
     journal: "Scientific Reports",
     year: 2020,
     category: "optical-imaging",
@@ -210,7 +210,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   {
     title:
       "Development of a MEK inhibitor, NFX-179, as a chemoprevention agent for squamous cell carcinoma",
-    authors: "Sarin KY, Kincaid J, Sell B, et al.",
+    authors: "Sarin KY, et al.",
     journal: "Science Translational Medicine",
     year: 2023,
     category: "skin-cancer-genetics",
@@ -221,7 +221,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   },
   {
     title: "Age-dependent cytokine surge in blood precedes cancer diagnosis",
-    authors: "Chen G, Mohsin A, Zheng H, et al.",
+    authors: "Chen G, et al.",
     journal: "Proceedings of the National Academy of Sciences",
     year: 2025,
     category: "skin-cancer-genetics",
@@ -232,7 +232,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   {
     title:
       "Single-cell analysis of human basal cell carcinoma reveals novel regulators of tumor growth and the tumor microenvironment",
-    authors: "Guerrero-Juarez CF, Lee GH, Liu Y, et al.",
+    authors: "Guerrero-Juarez CF, et al.",
     journal: "Science Advances",
     year: 2022,
     category: "skin-cancer-genetics",
@@ -242,7 +242,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   },
   {
     title: "Advances in cutaneous squamous cell carcinoma",
-    authors: "Winge MCG, Kellman LN, Guo K, et al.",
+    authors: "Winge MCG, et al.",
     journal: "Nature Reviews Cancer",
     year: 2023,
     category: "skin-cancer-genetics",
@@ -253,7 +253,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   {
     title:
       "Treatment of Cutaneous Squamous Cell Carcinoma With the Topical Histone Deacetylase Inhibitor Remetinostat",
-    authors: "Kilgour JM, Shah A, Eichstadt S, et al.",
+    authors: "Kilgour JM, et al.",
     journal: "JAMA Dermatology",
     year: 2022,
     category: "skin-cancer-genetics",
@@ -264,7 +264,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   {
     title:
       "Genome-wide meta-analysis identifies eight new susceptibility loci for cutaneous squamous cell carcinoma",
-    authors: "Sarin KY, Lin Y, Daneshjou R, et al.",
+    authors: "Sarin KY, et al.",
     journal: "Nature Communications",
     year: 2020,
     category: "skin-cancer-genetics",
@@ -277,7 +277,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   {
     title:
       "Stigmatization related to cutaneous neurofibromas in neurofibromatosis 1: development, validation and severity strata of the cNF-PUSH-D",
-    authors: "Fertitta L, Sarin KY, Romo CG, et al.",
+    authors: "Fertitta L, et al.",
     journal: "British Journal of Dermatology",
     year: 2026,
     category: "neurofibromatosis",
@@ -289,7 +289,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   {
     title:
       "Measurement of the severity related to cutaneous neurofibromas in neurofibromatosis type 1: Development and validation of the Nef-ASI",
-    authors: "Fertitta L, Jannic A, Bergqvist C, et al.",
+    authors: "Fertitta L, et al.",
     journal: "Journal of the American Academy of Dermatology",
     year: 2026,
     category: "neurofibromatosis",
@@ -300,7 +300,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   {
     title:
       "Cutaneous Neurofibromas and Quality of Life in Adults With Neurofibromatosis Type 1",
-    authors: "Lin MJ, Yao H, Vera K, et al.",
+    authors: "Lin MJ, et al.",
     journal: "JAMA Dermatology",
     year: 2024,
     category: "neurofibromatosis",
@@ -311,7 +311,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   {
     title:
       "A core outcome domain set to assess cutaneous neurofibromas related to neurofibromatosis type 1 in clinical trials",
-    authors: "Fertitta L, Bergqvist C, Sarin KY, et al.",
+    authors: "Fertitta L, et al.",
     journal: "British Journal of Dermatology",
     year: 2024,
     category: "neurofibromatosis",
@@ -322,7 +322,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   {
     title:
       "Phenotypic heterogeneity of neurofibromatosis type 1 in a large international registry",
-    authors: "Tabata MM, Li S, Knight P, et al.",
+    authors: "Tabata MM, et al.",
     journal: "JCI Insight",
     year: 2020,
     category: "neurofibromatosis",
@@ -335,7 +335,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   {
     title:
       "The Type I Interferon Signature Reflects Multiple Phenotypic and Activity Measures in Dermatomyositis",
-    authors: "Tabata MM, Hodgkinson LM, Wu TT, et al.",
+    authors: "Tabata MM, et al.",
     journal: "Arthritis & Rheumatology",
     year: 2023,
     category: "autoimmune-systemic",
@@ -346,7 +346,7 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   {
     title:
       "Impaired innate and adaptive immune responses to BNT162b2 SARS-CoV-2 vaccination in systemic lupus erythematosus",
-    authors: "Sarin KY, Zheng H, Chaichian Y, et al.",
+    authors: "Sarin KY, et al.",
     journal: "JCI Insight",
     year: 2024,
     category: "autoimmune-systemic",
@@ -356,25 +356,36 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
   },
   {
     title:
+      "Characterization of comorbidity heterogeneity among 13,667 patients with hidradenitis suppurativa",
+    authors: "Hua VJ, et al.",
+    journal: "JCI Insight",
+    year: 2021,
+    category: "autoimmune-systemic",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/34546979/",
+    doiUrl: "https://doi.org/10.1172/jci.insight.151872",
+    displayOrder: 3,
+  },
+  {
+    title:
       "A phase 2, double-blinded, placebo-controlled trial of toll-like receptor 7/8/9 antagonist, IMO-8400, in dermatomyositis",
-    authors: "Kim YJ, Schiopu E, Dankó K, et al.",
+    authors: "Kim YJ, et al.",
     journal: "Journal of the American Academy of Dermatology",
     year: 2021,
     category: "autoimmune-systemic",
     pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/32781178/",
     doiUrl: "https://doi.org/10.1016/j.jaad.2020.07.122",
-    displayOrder: 3,
+    displayOrder: 4,
   },
   {
     title:
       "Transcriptomic Repositioning Analysis Identifies mTOR Inhibitor as Potential Therapy for Epidermolysis Bullosa Simplex",
-    authors: "Lee GH, Lekwuttikarn R, Tafoya E, et al.",
+    authors: "Lee GH, et al.",
     journal: "Journal of Investigative Dermatology",
     year: 2022,
     category: "autoimmune-systemic",
     pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/34536484/",
     doiUrl: "https://doi.org/10.1016/j.jid.2021.07.170",
-    displayOrder: 4,
+    displayOrder: 5,
   },
 ];
 

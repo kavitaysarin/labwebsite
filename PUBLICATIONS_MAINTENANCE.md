@@ -15,7 +15,7 @@ Each publication is one entry that looks like this:
 ```ts
 {
   title: "Noninvasive virtual biopsy using micro-registered OCT in human subjects",
-  authors: "Winetraub Y, ... Sarin KY, et al.",
+  authors: "Winetraub Y, et al.",   // first author + "et al."
   journal: "Science Advances",
   year: 2024,
   category: "optical-imaging",          // which section it appears in

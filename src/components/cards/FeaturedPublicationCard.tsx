@@ -14,11 +14,11 @@ import type { SelectedPublication } from "@/lib/types";
 export function FeaturedPublicationCard({ pub }: { pub: SelectedPublication }) {
   const label = CATEGORY_LABELS[pub.category] ?? pub.category;
   return (
-    <article className="card-surface-strong group relative flex h-full flex-col border-t-4 border-cardinal p-6 transition-[transform,border-color,box-shadow] duration-150 hover:-translate-y-0.5 hover:shadow-card-strong focus-within:ring-2 focus-within:ring-cardinal/50 focus-within:ring-offset-2">
-      <p className="text-[13px] font-semibold uppercase tracking-wide text-cardinal">
+    <article className="card-surface-strong group relative flex h-full flex-col border-t-[3px] border-t-cardinal p-5 transition-[transform,box-shadow] duration-150 hover:-translate-y-0.5 hover:shadow-card-strong focus-within:ring-2 focus-within:ring-cardinal/50 focus-within:ring-offset-2">
+      <p className="text-[12px] font-semibold uppercase tracking-wide text-cardinal">
         {label}
       </p>
-      <h3 className="mt-2 text-[18px] font-bold leading-snug text-navy">
+      <h3 className="mt-1.5 text-[18px] font-bold leading-snug text-navy">
         <a
           href={pub.pubmedUrl}
           target="_blank"
@@ -29,13 +29,13 @@ export function FeaturedPublicationCard({ pub }: { pub: SelectedPublication }) {
           {pub.title}
         </a>
       </h3>
-      <p className="mt-2 text-[15px] italic text-gray-dark">
+      <p className="mt-1 text-[15px] italic text-gray-dark">
         {pub.journal} · {pub.year}
       </p>
       {pub.summary ? (
         <p className="mt-2 text-[15px] leading-relaxed text-gray-dark">{pub.summary}</p>
       ) : null}
-      <div className="mt-auto flex flex-wrap items-center gap-x-5 pt-4 text-[15px] font-semibold">
+      <div className="mt-auto flex flex-wrap items-center gap-x-5 pt-3 text-[15px] font-semibold">
         <span
           aria-hidden="true"
           className="inline-flex min-h-[44px] items-center gap-1.5 text-cardinal group-hover:text-cardinal-dark"

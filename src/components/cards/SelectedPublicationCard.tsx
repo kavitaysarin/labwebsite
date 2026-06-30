@@ -26,13 +26,13 @@ export function SelectedPublicationCard({ pub }: { pub: SelectedPublication }) {
           {pub.title}
         </a>
       </h3>
-      <p className="mt-1.5 text-[14px] font-normal leading-snug text-gray-dark">
+      <p className="mt-1.5 text-[15px] font-normal leading-snug text-gray-dark">
         {pub.authors}
       </p>
       <p className="mt-1 text-[15px] italic text-gray-dark">
         {pub.journal} · {pub.year}
       </p>
-      <div className="mt-auto flex flex-wrap items-center gap-x-5 pt-2 text-[15px] font-semibold">
+      <div className="mt-auto flex flex-wrap items-center gap-x-5 pt-3 text-[15px] font-semibold">
         <span
           aria-hidden="true"
           className="inline-flex min-h-[44px] items-center gap-1.5 text-cardinal group-hover:text-cardinal-dark"

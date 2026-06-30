@@ -73,7 +73,7 @@ export default function PublicationsPage() {
           >
             <div className="container-wide section-pad-tight">
               <SectionHeading title={section.heading} />
-              <div className="mt-6 grid gap-4 lg:mt-8 lg:grid-cols-2 lg:gap-x-6 lg:gap-y-5">
+              <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-8 lg:gap-x-6 lg:gap-y-5 xl:grid-cols-3">
                 {pubs.map((pub) => (
                   <SelectedPublicationCard key={pub.pubmedUrl} pub={pub} />
                 ))}
