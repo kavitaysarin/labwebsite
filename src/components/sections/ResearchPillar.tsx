@@ -43,12 +43,12 @@ export function ResearchPillar({
         </p>
 
         <h3 className="mt-5 text-[15px] font-semibold text-navy">
-          Current projects
+          Selected projects
         </h3>
-        <ul className="mt-2 space-y-1.5 text-[16px] text-gray-dark">
+        <ul className="mt-3 space-y-2.5 text-[16px] leading-relaxed text-gray-dark">
           {pillar.projects.slice(0, 3).map((p) => (
-            <li key={p} className="flex gap-2.5">
-              <span className="mt-2.5 h-1.5 w-1.5 flex-none rounded-full bg-cardinal" aria-hidden="true" />
+            <li key={p} className="flex gap-3">
+              <span className="mt-[9px] h-1.5 w-1.5 flex-none rounded-full bg-cardinal" aria-hidden="true" />
               <span>{p}</span>
             </li>
           ))}

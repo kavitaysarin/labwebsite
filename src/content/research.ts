@@ -61,8 +61,8 @@ export const RESEARCH_APPROACH: Feature[] = [
 
 /** Research page framing intro (two short paragraphs). */
 export const RESEARCH_INTRO: string[] = [
-  "Skin is visible, accessible, and easy to study repeatedly. We use genetic, molecular, imaging, and digital tools to find disease signals in the skin and measure how they change over time.",
-  "These approaches support our work in skin cancer, neurofibromatosis, autoimmune disease, and other conditions in which the skin can reveal important information about health and disease.",
+  "Skin is visible, accessible, and easy to study over time. We use genetic, molecular, imaging, and digital tools to find disease signals in the skin and measure how they change.",
+  "These approaches guide our work in skin cancer, neurofibromatosis, autoimmune disease, and other conditions where the skin reveals important information about health.",
 ];
 
 const PUBMED = (pmid: string) => `https://pubmed.ncbi.nlm.nih.gov/${pmid}/`;
@@ -88,7 +88,7 @@ export const RESEARCH_PILLARS: ResearchPillar[] = [
     image: "/images/research/genetic.jpg",
     imageAlt:
       "Stylized DNA double helix representing genetic analysis of the skin.",
-    lead: "Genetic changes can shape a person's risk of developing skin disease and influence how tumors behave. We study patients, tumors, and visible skin findings to identify inherited and acquired variants associated with skin cancer, neurofibromatosis type 1, and treatment response.",
+    lead: "Genetic changes shape a person's risk of skin disease and how tumors behave. We study patients, tumors, and skin findings to identify inherited and acquired variants linked to skin cancer, neurofibromatosis type 1, and treatment response.",
     pubHref: "/publications?area=skin-cancer",
     projects: [
       "Identifying genetic factors associated with basal and squamous cell carcinoma risk",

@@ -40,19 +40,19 @@ export function Footer() {
           <div className="md:text-right">
             <nav
               aria-label="Footer"
-              className="grid grid-cols-2 gap-x-5 gap-y-2 sm:flex sm:flex-wrap md:justify-end"
+              className="grid grid-cols-2 gap-x-6 gap-y-3 sm:flex sm:flex-wrap md:justify-end"
             >
               {FOOTER_NAV.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-[15px] font-medium text-white/85 hover:text-white"
+                  className="inline-block py-1 text-[15px] font-medium text-white/85 hover:text-white"
                 >
                   {item.label}
                 </Link>
               ))}
             </nav>
-            <div className="mt-4 flex gap-4 md:justify-end">
+            <div className="mt-5 flex gap-5 md:justify-end">
               {SITE.social.map((s) => (
                 <a
                   key={s.label}
@@ -60,7 +60,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="text-white/85 hover:text-white"
+                  className="inline-flex p-1 text-white/85 hover:text-white"
                 >
                   <Icon name={s.icon} className="h-6 w-6" />
                 </a>
@@ -69,9 +69,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col-reverse gap-2 border-t border-white/20 pt-5 text-[14px] text-white/80 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col-reverse gap-3 border-t border-white/20 pt-5 text-[15px] text-white/85 sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} Stanford University · Sarin Lab</p>
-          <div className="flex gap-5">
+          <div className="flex gap-6">
             <a
               href="https://www.stanford.edu/site/privacy/"
               target="_blank"

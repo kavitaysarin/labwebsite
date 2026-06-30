@@ -35,13 +35,13 @@ export default function ResearchPage() {
 
           <nav
             aria-label="Research signals"
-            className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
+            className="mt-8 grid grid-cols-2 gap-3 max-[359px]:grid-cols-1 sm:gap-4 lg:grid-cols-4"
           >
             {RESEARCH_PILLARS.map((p) => (
               <a
                 key={p.slug}
                 href={`#${p.slug}`}
-                className="card-surface flex items-center gap-3 p-4 transition-colors hover:border-cardinal/40"
+                className="card-surface flex items-center gap-3 p-4 transition-[transform,border-color,box-shadow] duration-150 hover:-translate-y-0.5 hover:border-cardinal/40 hover:shadow-card-strong"
               >
                 <span className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-blue-light text-cardinal">
                   <Icon name={p.icon} className="h-5 w-5" />
