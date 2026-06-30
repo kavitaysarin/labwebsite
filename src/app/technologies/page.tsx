@@ -1,3 +1,5 @@
+// FROZEN — approved Technologies page (QA-passed 2026-06-29). Reuse as-is; do
+// not modify without re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { TechnologyDetail } from "@/components/sections/TechnologyDetail";

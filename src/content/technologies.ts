@@ -89,6 +89,11 @@ export const HOMEPAGE_TECH: Technology[] = [
   TECHNOLOGIES[3], // AI and Data Science
 ];
 
+/**
+ * FROZEN (QA-passed 2026-06-29) — Technologies page content below
+ * (TECHNOLOGY_INTRO + TECHNOLOGY_PROGRAMS). Approved copy; do not edit without
+ * re-approval. See docs/DESIGN_SYSTEM_FROZEN.md.
+ */
 /** Technologies page intro (two short paragraphs). */
 export const TECHNOLOGY_INTRO: string[] = [
   "We develop and apply technologies that allow us to see, measure, and interpret signals in the skin. Our work spans optical imaging, optical clearing, three-dimensional tissue analysis, spatial biology, and artificial intelligence.",

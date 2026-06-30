@@ -1,6 +1,6 @@
 # Project status — Sarin Lab website
 
-_Checkpoint: 2026-06-29. Homepage built & frozen; Research page planned (approved), not yet coded._
+_Checkpoint: 2026-06-29 (evening). Homepage, Research, and Technologies built, QA-passed & FROZEN. Starting an authorized overnight DRAFT build of the remaining core pages on a feature branch (not approved, not production)._
 
 ## Snapshot
 - **Branch:** `main` · **Remote:** github.com/kavitaysarin/labwebsite — **nothing pushed yet** (local-first per user).
@@ -15,8 +15,11 @@ _Checkpoint: 2026-06-29. Homepage built & frozen; Research page planned (approve
 ## Completed pages (continued)
 - **`/research` Research — DONE & FROZEN.** Compact `PageHero` + four signal pillars (genetic / molecular / imaging / digital); simplified and polished; axe WCAG A/AA = 0 violations; no overflow 320–1440. Digital pillar uses the real cNF-Vision image. New frozen components: `PageHero`, `ResearchPillar`.
 
-## Current page
-- **Technologies (`/technologies`) — content outline stage** (awaiting approval before coding). Will reuse the frozen `PageHero` + design system. Anchors referenced from Research: `#optical-imaging`, `#3d-molecular-pathology`, `#ai-and-data-science`, `#spatial-biology`.
+## Completed pages (continued)
+- **`/technologies` Technologies — DONE, QA-passed & FROZEN.** Compact `PageHero` + 2-paragraph intro + 5 anchor cards + 5 program blocks (Optical Imaging / Optical Clearing with KLEAR / 3D Molecular Pathology / Spatial Biology / AI & Computational Analysis). Real lab images; collaborator names link to Stanford Profiles (Winetraub, Hong, Liu — Liu lab moved to Stanford Pathology Summer 2025). Section images eager-loaded (fixes tablet/mobile blank-image bug). axe WCAG A/AA = 0 violations; no overflow 320–1440. New frozen component: `TechnologyDetail`. Anchors used by Research: `#optical-imaging`, `#3d-molecular-pathology`, `#ai-and-data-science`, `#spatial-biology`.
+
+## Current work — OVERNIGHT DRAFT BUILD (authorized 2026-06-29)
+- Branch **`feature/remaining-pages-draft`** (NOT `main`). Building DRAFT (not approved, not production) versions in order: **Publications → Team → Collaborators → Lab Photos → Contact**. Recognition deferred. Separate commit per page. See `OVERNIGHT_BUILD_REPORT.md` for the run log, open questions, and review order.
 
 ## Approved design decisions
 - Next.js static export → GitHub Pages; project kept outside Drive.

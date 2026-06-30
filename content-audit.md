@@ -4,6 +4,8 @@ Inventory of content from `sarinlab.stanford.edu` and how it is handled in the r
 
 **Status key:** **Reuse** (use as written / lightly edited) · **Rewrite** (reframe per the Addendum) · **Verify** (flagged in `CONTENT_REVIEW_NEEDED.md`) · **Drop** (not carried over).
 
+**Build status (2026-06-29):** Home, Research, Technologies — built & FROZEN. Publications / Team / Collaborators / Lab Photos / Contact — DRAFT in progress on `feature/remaining-pages-draft` (overnight build; not approved). Recognition — deferred.
+
 ## Homepage
 | Live content | Handling | Status |
 |---|---|---|
