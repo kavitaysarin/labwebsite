@@ -1,65 +1,136 @@
-import Image from "next/image";
+import { HomeHero } from "@/components/sections/HomeHero";
+import { FeatureGrid } from "@/components/sections/FeatureGrid";
+import { CTABand } from "@/components/sections/CTABand";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { TechCard } from "@/components/cards/TechCard";
+import { PublicationCard } from "@/components/cards/PublicationCard";
+import { ArrowLink, Button } from "@/components/ui/Button";
+import { Icon } from "@/components/ui/Icon";
+import { SITE } from "@/content/site";
+import { LAB_INTRO, WHY_SKIN, RESEARCH_APPROACH } from "@/content/research";
+import { HOMEPAGE_TECH } from "@/content/technologies";
+import { FEATURED_PUBLICATIONS } from "@/content/publications";
+import type { IconName } from "@/lib/types";
+
+const METRIC_ICONS: IconName[] = ["document", "stethoscope", "graduation"];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <main id="main-content">
+      <HomeHero />
+
+      {/* Lab introduction + statistics */}
+      <section className="bg-white">
+        <div className="container-wide section-pad grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+          <div>
+            <SectionHeading
+              eyebrow="Reading Disease Through the Skin"
+              title="The Sarin Lab"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <p className="mt-5 text-lg leading-relaxed text-gray-dark">
+              {LAB_INTRO}
+            </p>
+            <div className="mt-6">
+              <ArrowLink href="/research">
+                Learn more about our research
+              </ArrowLink>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {SITE.metrics.map((m, i) => (
+              <div
+                key={m.label}
+                className="rounded-xl border border-border bg-off-white p-6 text-center"
+              >
+                <span className="mx-auto inline-flex h-11 w-11 items-center justify-center rounded-lg bg-blue-light text-cardinal">
+                  <Icon name={METRIC_ICONS[i]} className="h-6 w-6" />
+                </span>
+                <p className="mt-3 font-heading text-4xl font-black text-navy">
+                  {m.value}
+                </p>
+                <p className="mt-1 text-sm font-medium text-gray-dark">
+                  {m.label}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Why Skin? */}
+      <section className="bg-cream">
+        <div className="container-wide section-pad">
+          <SectionHeading
+            eyebrow="Skin as a Sensor"
+            title="Why Skin?"
+            intro="The skin is uniquely suited to reveal what is happening inside the body — and to do so again and again over time."
+          />
+          <div className="mt-12">
+            <FeatureGrid items={WHY_SKIN} variant="plain" />
+          </div>
+        </div>
+      </section>
+
+      {/* Research approach */}
+      <section className="bg-white">
+        <div className="container-wide section-pad">
+          <SectionHeading
+            eyebrow="Our Research Approach"
+            title="How We Read the Skin"
+            intro="We integrate complementary signals — genetic, molecular, imaging, and digital — and translate them into meaningful insights about disease."
+          />
+          <div className="mt-12">
+            <FeatureGrid items={RESEARCH_APPROACH} variant="card" />
+          </div>
+        </div>
+      </section>
+
+      {/* Featured technologies */}
+      <section className="bg-cream">
+        <div className="container-wide section-pad">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <SectionHeading
+              eyebrow="Tools &amp; Technologies"
+              title="Tools That Reveal What Matters"
+            />
+            <Button href="/technologies" variant="secondary">
+              Explore Our Technologies
+            </Button>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {HOMEPAGE_TECH.map((t) => (
+              <TechCard key={t.slug} tech={t} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Latest work */}
+      <section className="bg-white">
+        <div className="container-wide section-pad">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <SectionHeading
+              eyebrow="Latest From the Lab"
+              title="Recent Work"
+            />
+            <Button href="/publications" variant="secondary">
+              View All Publications
+            </Button>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {FEATURED_PUBLICATIONS.map((p) => (
+              <PublicationCard key={p.title} pub={p} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CTABand
+        heading="Interested in collaborating or learning more?"
+        primary={{ label: "Contact Us", href: "/contact" }}
+        secondary={{ label: "Collaborate With Us", href: "/collaborators" }}
+      />
+    </main>
   );
 }

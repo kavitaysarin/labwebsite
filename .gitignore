@@ -39,3 +39,41 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ==========================================================================
+# SAFETY: never commit research / clinical / genomic data (defense-in-depth).
+# To intentionally commit a blocked file type, use:  git add -f <file>
+# ==========================================================================
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.xlsm
+*.bed
+*.bim
+*.fam
+*.vcf
+*.vcf.gz
+*.bam
+*.sam
+*.cram
+*.RData
+*.rds
+*.sav
+*.dta
+*.pkl
+*.npy
+*.h5
+*.hdf5
+*.pptx
+*.ppt
+*.docx
+*.doc
+Thumbs.db
+desktop.ini
+
+# editor / OS
+.idea/
+.vscode/
+*~
+*.swp

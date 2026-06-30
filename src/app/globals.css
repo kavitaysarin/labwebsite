@@ -1,26 +1,126 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   Sarin Lab design system — "Skin as a Sensor"
+   Tokens follow the redesign spec (Section 6). Colors are exposed both as
+   Tailwind theme tokens (utilities like bg-cardinal, text-navy, font-heading)
+   and as raw CSS variables for hand-written CSS.
+   ========================================================================== */
+
+@theme {
+  /* Stanford cardinal */
+  --color-cardinal: #8c1515;
+  --color-cardinal-dark: #6f1010;
+  --color-cardinal-light: #b83a3a;
+
+  /* Navy (heroes, CTA bands) */
+  --color-navy: #061a33;
+  --color-navy-deep: #031326;
+  --color-navy-soft: #12395e;
+
+  /* Scientific blue */
+  --color-blue: #2a6ea6;
+  --color-blue-light: #dceaf5;
+
+  /* Neutrals */
+  --color-cream: #f7f5f1;
+  --color-off-white: #fbfaf8;
+  --color-charcoal: #252525;
+  --color-gray-dark: #555555;
+  --color-gray: #7a7a7a;
+  --color-gray-light: #e6e3de;
+  --color-border: rgba(6, 26, 51, 0.14);
+
+  /* Typography */
+  --font-heading: var(--font-merriweather), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-inter), system-ui, Arial, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --border: rgba(6, 26, 51, 0.14);
+  --content-max: 1280px;
+  --prose-max: 680px;
+  --header-h: 76px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* --------------------------------------------------------------------------
+   Base element styles
+   -------------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-h) + 16px);
+    -webkit-text-size-adjust: 100%;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background: var(--color-white);
+    color: var(--color-charcoal);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-heading);
+    color: var(--color-navy);
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  /* Visible keyboard focus everywhere */
+  :focus-visible {
+    outline: 3px solid var(--color-blue);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  /* Respect reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* --------------------------------------------------------------------------
+   Reusable layout helpers
+   -------------------------------------------------------------------------- */
+@layer components {
+  .container-wide {
+    max-width: var(--content-max);
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+
+  .prose-narrow { max-width: var(--prose-max); }
+
+  /* Section vertical rhythm: 80 / 60 / 44 px (desktop / tablet / mobile) */
+  .section-pad { padding-block: 80px; }
+  @media (max-width: 1023px) { .section-pad { padding-block: 60px; } }
+  @media (max-width: 767px)  { .section-pad { padding-block: 44px; } }
+
+  /* Eyebrow / kicker label */
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-cardinal);
+  }
+}
+
+@media (max-width: 767px) {
+  :root { --header-h: 64px; }
 }
