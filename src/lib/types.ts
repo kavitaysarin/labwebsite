@@ -13,6 +13,8 @@ export type Feature = {
 };
 
 export type Publication = {
+  /** PubMed identifier (stable key); present on PubMed-sourced records. */
+  pmid?: string;
   title: string;
   authors: string;
   journal: string;
@@ -131,7 +133,10 @@ export type IconName =
   | "x"
   | "facebook"
   | "microscope"
-  | "sparkles";
+  | "sparkles"
+  | "search"
+  | "users"
+  | "link";
 
 /** A minimal, verified publication reference (links to PubMed). */
 export type PubRef = {

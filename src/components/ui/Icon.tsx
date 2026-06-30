@@ -136,6 +136,26 @@ const ICONS: Record<IconName, ReactNode> = {
       <path d="M5 15l.7 1.7L7.5 17l-1.8.8L5 19.5l-.7-1.7L2.5 17l1.8-.8z" />
     </>
   ),
+  search: (
+    <>
+      <circle cx="11" cy="11" r="7" />
+      <path d="M16 16l4.5 4.5" />
+    </>
+  ),
+  users: (
+    <>
+      <circle cx="9" cy="8" r="3.2" />
+      <path d="M3.5 19a5.5 5.5 0 0 1 11 0" />
+      <path d="M16 5.2a3 3 0 0 1 0 5.8" />
+      <path d="M17 14.2A5.5 5.5 0 0 1 20.5 19" />
+    </>
+  ),
+  link: (
+    <>
+      <path d="M9.5 14.5a3.5 3.5 0 0 1 0-5l2-2a3.5 3.5 0 0 1 5 5l-1 1" />
+      <path d="M14.5 9.5a3.5 3.5 0 0 1 0 5l-2 2a3.5 3.5 0 0 1-5-5l1-1" />
+    </>
+  ),
 };
 
 export function Icon({

@@ -1,4 +1,7 @@
 import type { Publication, ResearchArea } from "@/lib/types";
+import { ALL_PUBLICATIONS } from "./publications-all";
+
+export { ALL_PUBLICATIONS };
 
 /**
  * Research areas — verbatim descriptions from the live Publications page.
@@ -130,3 +133,35 @@ export const RECENT_PUBLICATIONS: Publication[] = [
 export const FEATURED_PUBLICATIONS = RECENT_PUBLICATIONS.filter(
   (p) => p.featured,
 );
+
+/* ---- Publications page helpers (derived from ALL_PUBLICATIONS) ---- */
+
+/** Map a research-area display name to its filter slug (matches the `?area=`
+ * deep links used by Research and Technologies). Falls back to a kebab slug
+ * (e.g. "Other" -> "other"). */
+export function areaSlug(name: string): string {
+  const a = RESEARCH_AREAS.find((r) => r.name === name);
+  return a
+    ? a.slug
+    : name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+/** Filter chips for the Publications page: the canonical areas that actually
+ * have publications, in spec order, then "Other" if present. */
+export const PUBLICATION_FILTER_AREAS: { slug: string; name: string }[] = (() => {
+  const present = new Set(ALL_PUBLICATIONS.map((p) => p.researchArea));
+  const ordered = RESEARCH_AREAS.filter((a) => present.has(a.name)).map((a) => ({
+    slug: a.slug,
+    name: a.name,
+  }));
+  if (present.has("Other")) ordered.push({ slug: "other", name: "Other" });
+  return ordered;
+})();
+
+/** Distinct publication years, newest first (for the year filter). */
+export const PUBLICATION_YEARS: number[] = Array.from(
+  new Set(ALL_PUBLICATIONS.map((p) => p.year).filter(Boolean)),
+).sort((a, b) => b - a);
+
+/** Featured publications drawn from the full list (with figures). */
+export const FEATURED_FROM_ALL = ALL_PUBLICATIONS.filter((p) => p.featured);
