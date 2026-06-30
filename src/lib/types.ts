@@ -132,3 +132,29 @@ export type IconName =
   | "facebook"
   | "microscope"
   | "sparkles";
+
+/** A minimal, verified publication reference (links to PubMed). */
+export type PubRef = {
+  title: string;
+  journal: string;
+  year: number;
+  pmid: string;
+};
+
+/** A research "signal" pillar on the Research page. */
+export type ResearchPillar = {
+  slug: string;
+  signal: string; // eyebrow, e.g. "Genetic Signals"
+  title: string; // e.g. "Skin as a Genetic Sensor"
+  icon: IconName;
+  image: string;
+  imageAlt: string;
+  lead: string;
+  projects: string[];
+  applications: string[];
+  technologies: { label: string; href: string }[];
+  publications: PubRef[];
+  collaborators: { label: string; href: string };
+  established: string;
+  exploring: string;
+};
