@@ -19,6 +19,8 @@ const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
   images: { unoptimized: true },
+  // Hide the dev-mode indicator (the small floating circle in the corner).
+  devIndicators: false,
   ...(basePath ? { basePath, assetPrefix: basePath } : {}),
 };
 

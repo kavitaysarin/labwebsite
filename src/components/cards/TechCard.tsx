@@ -4,6 +4,7 @@ import { Placeholder } from "@/components/ui/Placeholder";
 import type { Technology, IconName } from "@/lib/types";
 
 const TECH_ICON: Record<string, IconName> = {
+  "optical-imaging": "eye",
   "klear-oct": "scan",
   "high-resolution-optical-imaging": "eye",
   "3d-molecular-pathology": "microscope",
@@ -13,14 +14,15 @@ const TECH_ICON: Record<string, IconName> = {
 
 export function TechCard({ tech }: { tech: Technology }) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-white">
+    <article className="card-surface-strong group flex h-full flex-col overflow-hidden">
       {tech.image ? (
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-navy">
+        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-light">
           <Image
             src={tech.image}
             alt={tech.imageAlt ?? ""}
             fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            loading="eager"
+            sizes="(max-width: 767px) 100vw, (max-width: 1023px) 90vw, 33vw"
             className="object-cover"
           />
         </div>

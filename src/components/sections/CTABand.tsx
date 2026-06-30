@@ -15,15 +15,20 @@ export function CTABand({
 }) {
   return (
     <section className="bg-navy-deep text-white">
-      <div className="container-wide py-14 text-center md:py-16">
-        <h2 className="mx-auto max-w-4xl text-balance text-3xl text-white">
+      <div className="container-wide py-12 text-center md:py-[60px]">
+        <h2 className="mx-auto max-w-[320px] text-balance text-[1.8rem] leading-tight text-white sm:max-w-2xl sm:text-[2rem]">
           {heading}
         </h2>
         {subtitle ? (
           <p className="mx-auto mt-4 max-w-2xl text-white/80">{subtitle}</p>
         ) : null}
-        <div className="mt-6 flex flex-wrap justify-center gap-4">
-          <Button href={primary.href} external={primary.external} variant="primary">
+        <div className="mt-6 flex flex-col items-center justify-center gap-3.5 sm:flex-row sm:gap-4">
+          <Button
+            href={primary.href}
+            external={primary.external}
+            variant="primary"
+            className="w-full sm:w-auto"
+          >
             {primary.label}
           </Button>
           {secondary ? (
@@ -31,6 +36,7 @@ export function CTABand({
               href={secondary.href}
               external={secondary.external}
               variant="secondary-light"
+              className="w-full sm:w-auto"
             >
               {secondary.label}
             </Button>

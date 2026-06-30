@@ -11,21 +11,24 @@ export function Footer() {
   return (
     <footer className="bg-cardinal text-white">
       <div className="container-wide py-10">
-        <div className="grid gap-8 md:grid-cols-[1.6fr_1fr] md:items-start">
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr] md:items-start">
           {/* Identity + contact */}
           <div>
             <Brand tone="light" />
-            <p className="mt-3 text-sm text-white/80">
+            <p className="mt-3 text-[15px] text-white/85">
               {SITE.department}, {SITE.parentOrg}
             </p>
-            <address className="mt-2 text-sm not-italic text-white/80">
+            <address className="mt-1.5 text-[15px] not-italic text-white/85">
               {address.line1}, {address.city}, {address.state} {address.zip}
               <br />
               <a className="hover:text-white hover:underline" href={`mailto:${SITE.email}`}>
                 {SITE.email}
               </a>
               <span className="px-1.5 text-white/40">·</span>
-              <a className="hover:text-white hover:underline" href={`tel:${SITE.phone.replace(/[^\d+]/g, "")}`}>
+              <a
+                className="hover:text-white hover:underline"
+                href={`tel:${SITE.phone.replace(/[^\d+]/g, "")}`}
+              >
                 {SITE.phone}
               </a>
             </address>
@@ -33,12 +36,15 @@ export function Footer() {
 
           {/* Links + social */}
           <div className="md:text-right">
-            <nav aria-label="Footer" className="flex flex-wrap gap-x-5 gap-y-2 md:justify-end">
+            <nav
+              aria-label="Footer"
+              className="flex flex-wrap gap-x-5 gap-y-2 md:justify-end"
+            >
               {FOOTER_NAV.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-sm font-medium text-white/85 hover:text-white"
+                  className="text-[15px] font-medium text-white/85 hover:text-white"
                 >
                   {item.label}
                 </Link>
@@ -54,14 +60,14 @@ export function Footer() {
                   aria-label={s.label}
                   className="text-white/85 hover:text-white"
                 >
-                  <Icon name={s.icon} className="h-5 w-5" />
+                  <Icon name={s.icon} className="h-6 w-6" />
                 </a>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col gap-2 border-t border-white/20 pt-5 text-sm text-white/75 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col-reverse gap-2 border-t border-white/20 pt-5 text-[13px] text-white/75 sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} Stanford University · Sarin Lab</p>
           <div className="flex gap-5">
             <a

@@ -28,14 +28,16 @@ export const TECHNOLOGIES: Technology[] = [
     status: "research",
   },
   {
-    slug: "high-resolution-optical-imaging",
-    name: "High-Resolution Optical Imaging",
+    slug: "optical-imaging",
+    name: "Optical Imaging",
     shortDescription:
-      "Imaging platforms that visualize the structure of living skin non-invasively, working toward virtual biopsies.",
+      "High-resolution, non-invasive imaging technologies that reveal skin structure and disease at cellular and tissue scales.",
     longDescription:
-      "Beyond KLEAR-OCT, the lab develops a range of high-resolution optical imaging approaches to assess skin structure and function without traditional biopsy, supporting earlier detection and longitudinal monitoring of disease.",
+      "The lab develops high-resolution optical imaging to assess living skin without traditional biopsy. This program spans optical coherence tomography (OCT), high-definition OCT, KLEAR-OCT, optical clearing, and imaging–pathology correlation, working toward non-invasive “virtual biopsies” for earlier detection and longitudinal monitoring.",
     category: "Optical Imaging",
-    image: "/images/technologies/optical-imaging.png",
+    image: "/images/technologies/optical-imaging.jpg",
+    imageAlt:
+      "Three-dimensional optical coherence tomography volume and cross-sectional scan of skin.",
     status: "research",
   },
   {
@@ -59,6 +61,9 @@ export const TECHNOLOGIES: Technology[] = [
     longDescription:
       "The lab applies AI-based segmentation, quantitative imaging analysis, multimodal integration, and predictive modeling to handle the complexity of skin imaging. The emphasis is on quantitative disease measurement and longitudinal monitoring rather than simple automation.",
     category: "Computational Analysis",
+    // PLACEHOLDER IMAGE (spec §11): licensed iStock neural-network graphic
+    // reused from the live site. Replace with a real lab AI / skin-analysis
+    // visual (e.g. segmentation overlay, digital-pathology feature map) when available.
     image: "/images/technologies/ai-data-science.jpg",
     imageAlt:
       "Abstract neural-network diagram representing artificial intelligence and data analysis.",
@@ -79,7 +84,7 @@ export const TECHNOLOGIES: Technology[] = [
 
 /** Three cards featured on the homepage "Tools & Technologies" section. */
 export const HOMEPAGE_TECH: Technology[] = [
-  TECHNOLOGIES[0], // KLEAR-OCT
+  TECHNOLOGIES[1], // Optical Imaging (broader program; features KLEAR-OCT)
   TECHNOLOGIES[2], // 3D Molecular Pathology
   TECHNOLOGIES[3], // AI and Data Science
 ];

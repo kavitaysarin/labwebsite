@@ -5,14 +5,15 @@ import type { Publication } from "@/lib/types";
 
 export function PublicationCard({ pub }: { pub: Publication }) {
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-white">
+    <article className="card-surface-strong flex h-full flex-col overflow-hidden">
       {pub.image ? (
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-navy">
+        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gray-light">
           <Image
             src={pub.image}
             alt={pub.imageAlt ?? ""}
             fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            loading="eager"
+            sizes="(max-width: 767px) 100vw, (max-width: 1023px) 90vw, 33vw"
             className="object-cover"
           />
         </div>
@@ -20,7 +21,7 @@ export function PublicationCard({ pub }: { pub: Publication }) {
         <Placeholder ratio="aspect-[16/9]" icon="document" />
       )}
       <div className="flex flex-1 flex-col p-5">
-        <p className="flex flex-wrap items-center gap-x-2 text-[11px] font-semibold uppercase tracking-wide">
+        <p className="flex flex-wrap items-center gap-x-2 text-[12px] font-semibold uppercase tracking-wide">
           <span className="text-cardinal">{pub.researchArea}</span>
           {pub.date ? (
             <>
@@ -29,7 +30,7 @@ export function PublicationCard({ pub }: { pub: Publication }) {
             </>
           ) : null}
         </p>
-        {/* Reserve ~4 lines so the journal + link align across cards */}
+        {/* Clamp to 4 lines; reserve the height so journal + link align across cards */}
         <h3 className="mt-3 line-clamp-4 min-h-[5.5rem] text-[17px] leading-snug">
           {pub.title}
         </h3>

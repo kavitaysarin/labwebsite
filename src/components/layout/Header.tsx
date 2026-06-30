@@ -62,7 +62,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 aria-current={active ? "page" : undefined}
-                className={`relative px-2 py-2 text-[14px] font-medium transition-colors hover:text-white ${
+                className={`relative px-2 py-2 text-[15px] font-medium transition-colors hover:text-white ${
                   active ? "text-white" : "text-white/85"
                 }`}
               >
@@ -85,7 +85,7 @@ export function Header() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
-          className="rounded p-2 text-white xl:hidden"
+          className="-mr-1.5 flex h-11 w-11 items-center justify-center rounded text-white xl:hidden"
         >
           <Icon name={open ? "close" : "menu"} className="h-7 w-7" />
         </button>

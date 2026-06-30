@@ -22,15 +22,15 @@ export function Brand({
       aria-label="Sarin Lab — home"
     >
       <span className="flex flex-col leading-none">
-        <span className={`font-heading text-[19px] font-bold tracking-tight ${main}`}>
+        <span className={`font-heading text-[22px] font-bold tracking-tight ${main}`}>
           Stanford
         </span>
-        <span className={`text-[10px] font-semibold uppercase tracking-[0.18em] ${sub}`}>
+        <span className={`mt-0.5 text-[11px] font-semibold uppercase tracking-[0.18em] ${sub}`}>
           Medicine
         </span>
       </span>
-      <span className={`h-8 w-px ${rule}`} aria-hidden="true" />
-      <span className={`font-heading text-[19px] font-bold tracking-tight ${main}`}>
+      <span className={`h-9 w-px ${rule}`} aria-hidden="true" />
+      <span className={`font-heading text-[22px] font-bold tracking-tight ${main}`}>
         Sarin Lab
       </span>
     </Link>

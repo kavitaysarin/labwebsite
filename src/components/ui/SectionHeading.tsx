@@ -17,7 +17,12 @@ export function SectionHeading({
   return (
     <div className={`${center ? "text-center" : ""} ${className}`}>
       {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-      <h2 className="mt-2 text-3xl sm:text-4xl">{title}</h2>
+      <h2
+        className="mt-2"
+        style={{ fontSize: "clamp(1.6rem, 5vw, 2.4rem)" }}
+      >
+        {title}
+      </h2>
       {intro ? (
         <p
           className={`prose-narrow mt-4 text-[17px] leading-relaxed text-gray-dark ${
