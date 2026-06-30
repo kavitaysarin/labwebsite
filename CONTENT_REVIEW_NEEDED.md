@@ -24,7 +24,8 @@ Items requiring **Dr. Sarin / lab-team verification or approval** before launch.
 
 ## Images & reuse rights
 - **Official Stanford / Sarin Lab logo** — needed (currently a text lockup).
-- **AI & Data Science** card image is a **provisional iStock** neural-network graphic — replace with a real lab AI / skin-analysis visual, or confirm the license covers web use.
+- **AI & Data Science** card image (homepage Technologies) is a **provisional iStock** neural-network graphic — replace with a real lab AI / skin-analysis visual, or confirm the license covers web use.
+- **cNF-Vision image** (Research → Digital Sensor) is a static frame extracted from the lab's `cnfvision.gif`, showing **patient skin photographs** with segmented cutaneous neurofibromas. **Confirm patient consent / de-identification for public display.** Also confirm the full 3×3 montage is the preferred presentation versus a single cleaner segmentation panel.
 - **3D Molecular Pathology** image ("Spatial Phenotyping") may be a vendor/marketing image — confirm reuse rights.
 - **Recent Work thumbnails are representative research-area figures**, NOT the exact 2026-paper figures (see `docs/recent-work-image-map.md`). Confirm acceptable, or provide each paper's own figure. Journal figures from Cancer Cell/Elsevier need reuse confirmation; Science Advances & JCI Insight are CC-BY (attribution advised).
 - **Stanford Medicine building photo** (intro band) — confirm approved for use.

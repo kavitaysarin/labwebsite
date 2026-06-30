@@ -229,7 +229,7 @@ export const RESEARCH_PILLARS: ResearchPillar[] = [
     icon: "chip",
     image: "/images/research/digital.jpg",
     imageAlt:
-      "Optical coherence tomography scan of skin annotated with measurement markers and regions of interest.",
+      "cNF-Vision output: cutaneous neurofibromas segmented in green on skin photographs, with depth maps and three-dimensional reconstructions.",
     lead: "Digital tools can turn photographs and imaging data into quantitative measures of disease. We use artificial intelligence and image analysis to count lesions, measure disease burden, and develop more reliable outcomes for clinical research.",
     pubHref: "/publications?area=neurofibromatosis",
     projects: [
