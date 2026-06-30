@@ -169,9 +169,6 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
     category: "optical-imaging",
     pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/38598626/",
     doiUrl: "https://doi.org/10.1126/sciadv.adi5794",
-    image: "/images/technologies/klear-oct.jpg",
-    imageAlt:
-      "Virtual-biopsy imaging pipeline: an OCT volume scan aligned to matched fluorescence and histology sections.",
     featured: true,
     displayOrder: 1,
   },

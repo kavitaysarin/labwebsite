@@ -51,7 +51,7 @@ export default function PublicationsPage() {
         <section className="bg-cream">
           <div className="container-wide section-pad-tight">
             <SectionHeading eyebrow="Highlights" title="Featured Publications" />
-            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
               {FEATURED_SELECTED.map((pub) => (
                 <FeaturedPublicationCard key={pub.pubmedUrl} pub={pub} />
               ))}
@@ -73,7 +73,7 @@ export default function PublicationsPage() {
           >
             <div className="container-wide section-pad-tight">
               <SectionHeading title={section.heading} />
-              <div className="mt-8 grid gap-5 lg:grid-cols-2">
+              <div className="mt-6 grid gap-4 lg:mt-8 lg:grid-cols-2 lg:gap-x-6 lg:gap-y-5">
                 {pubs.map((pub) => (
                   <SelectedPublicationCard key={pub.pubmedUrl} pub={pub} />
                 ))}
