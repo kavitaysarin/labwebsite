@@ -53,11 +53,13 @@ Items requiring **Dr. Sarin / lab-team verification or approval** before launch.
 - **Minor, optional:** review annually and when major papers publish; the "molecular-digital" section remains unused (no live-site grouping) and can be added later if desired.
 - Deferred (post-launch, not launch blockers): full database/archive, search/filters/pagination, and the automated PubMed sync system (see `PROJECT_STATUS.md`).
 
-### Team
-- **Headshots:** none bundled — every person shows an initials avatar (real person, photo pending). The live-site headshots include screenshots/low-res crops; supply clean headshots.
-- **Alumni roster:** live site shows Medicine / Industry / Research headings but **no retrievable names** — supply the alumni list (page shows an honest "being compiled" state).
-- **Title/role flags:** Dr. Sarin (Professor vs live "Associate Professor"); Marlayna Harris (no title on site); Haniya vs "Haniyah" spelling; Chenming Zhang vs email `czheng8@`; Audris Chang vs "Chiang" (image filename); Nethra Srinivasan (Case Western — confirm active); volunteers Glaser/Golod (no role/bio on site).
-- **Grouping** (Staff / Trainees / Students / Volunteers) is an editorial choice — confirm.
+### Team (redesigned 2026-06-30 — unified egalitarian grid)
+- **Headshots migrated** from the live site for all 14 members (matched by page order; full inventory in `docs/team-image-sources.md`). **All source images are low-resolution** (Squarespace originals; e.g. Kavita 300×381, **Juniper 150×244 very low-res**) — request higher-res originals where available. **Sharon Loa & Valerie Ta are screenshot-derived** images — confirm or replace.
+- **No headshot (initials fallback):** Sally Glaser, Margarita Golod (volunteers; live site used a placeholder).
+- **Uncertain image→person matches:** none flagged — positional matches are anchored by self-identifying filenames; still, a human should confirm faces match names before launch.
+- **Alumni roster:** live site shows Medicine / Industry / Research headings but **no retrievable names** — supply the alumni list (the Alumni filter shows an honest "coming soon" note).
+- **Title/role flags:** Dr. Sarin (now **Principal Investigator · Professor of Dermatology**, MD, PhD; live site said Associate Professor / Lab Director); Marlayna Harris (no title on site); Haniya vs "Haniyah" spelling; Chenming Zhang vs email `czheng8@`; Audris Chang vs "Chiang" (image filename); Nethra Srinivasan (Case Western — confirm active); volunteers Glaser/Golod (no role/bio on site).
+- **Filter labels** to review: "Faculty" maps to the PI; confirm wording (All / Faculty / Staff / Trainees / Students / Volunteers / Alumni).
 
 ### Collaborators
 - **Shared-project specifics for Aasi, Fiorentino, Rieger are NOT verified** (the live site states none) — currently described at the research-area level and flagged TODO: VERIFY. Supply the real shared projects or approve the framing.

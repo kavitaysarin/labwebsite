@@ -54,6 +54,8 @@ export type RecognitionItem = {
 export type Person = {
   slug: string;
   name: string;
+  /** Post-nominal credentials shown after the name (e.g. "MD, PhD"). */
+  credentials?: string;
   role: string;
   category:
     | "Principal Investigator"

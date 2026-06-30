@@ -10,70 +10,59 @@ function initials(name: string): string {
 }
 
 /**
- * Profile card for a lab member. Uses the person's headshot when one is
- * supplied; otherwise shows a neutral initials avatar (a placeholder for a real
- * person — NOT an invented headshot). Composes the frozen `.card-surface`.
+ * Uniform team-grid card: a 4:5 headshot (or a neutral initials avatar for a
+ * real person with no photo yet — never an invented headshot), name +
+ * optional credentials, role, a concise bio, and an email link. `lead` adds a
+ * subtle cardinal top accent for the PI (findable without a separate section).
+ * Composes the frozen `.card-surface`.
  */
-export function PersonCard({ person, featured = false }: { person: Person; featured?: boolean }) {
+export function PersonCard({ person, lead = false }: { person: Person; lead?: boolean }) {
   return (
     <article
-      className={`card-surface flex h-full flex-col p-5 ${
-        featured ? "sm:flex-row sm:items-start sm:gap-6 sm:p-6" : ""
+      className={`card-surface group flex h-full flex-col overflow-hidden transition-[border-color,box-shadow] duration-150 hover:border-cardinal/30 hover:shadow-card-strong focus-within:border-cardinal/50 ${
+        lead ? "border-t-[3px] border-t-cardinal" : ""
       }`}
     >
-      <div className={`flex items-center gap-4 ${featured ? "sm:block sm:flex-none" : ""}`}>
-        <div
-          className={`relative flex flex-none items-center justify-center overflow-hidden rounded-full bg-blue-light font-heading font-bold text-cardinal ${
-            featured ? "h-20 w-20 text-2xl" : "h-14 w-14 text-lg"
-          }`}
-          aria-hidden={person.image ? undefined : true}
-        >
-          {person.image ? (
-            <Image
-              src={person.image}
-              alt={`${person.name} headshot`}
-              fill
-              sizes="80px"
-              className="object-cover"
-            />
-          ) : (
-            <span>{initials(person.name)}</span>
-          )}
-        </div>
-
-        <div className={featured ? "sm:hidden" : ""}>
-          <h3 className="font-heading text-[17px] font-bold leading-tight text-navy">
-            {person.name}
-          </h3>
-          <p className="mt-0.5 text-[13px] font-semibold text-cardinal">{person.role}</p>
-        </div>
+      <div className="relative aspect-[4/5] w-full overflow-hidden bg-blue-light">
+        {person.image ? (
+          <Image
+            src={person.image}
+            alt={`${person.name}, ${person.role}`}
+            fill
+            loading="eager"
+            sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, (max-width: 1279px) 33vw, 25vw"
+            className="object-cover"
+          />
+        ) : (
+          <div
+            aria-hidden="true"
+            className="flex h-full w-full items-center justify-center font-heading text-4xl font-bold text-cardinal"
+          >
+            {initials(person.name)}
+          </div>
+        )}
       </div>
 
-      <div className={featured ? "mt-4 sm:mt-0 sm:flex-1" : "mt-3"}>
-        {featured ? (
-          <div className="hidden sm:block">
-            <h3 className="font-heading text-[22px] font-bold leading-tight text-navy">
-              {person.name}
-            </h3>
-            <p className="mt-1 text-[14px] font-semibold text-cardinal">{person.role}</p>
-          </div>
-        ) : null}
-
-        <p
-          className={`text-[14px] leading-relaxed text-gray-dark ${
-            featured ? "sm:mt-3 sm:text-[15px]" : ""
-          }`}
-        >
+      <div className="flex flex-1 flex-col p-4">
+        <h3 className="font-heading text-[16px] font-bold leading-tight text-navy">
+          {person.name}
+          {person.credentials ? (
+            <span className="font-semibold text-gray-dark">, {person.credentials}</span>
+          ) : null}
+        </h3>
+        <p className="mt-1 text-[13px] font-semibold leading-snug text-cardinal">
+          {person.role}
+        </p>
+        <p className="mt-2 line-clamp-3 text-[14px] leading-relaxed text-gray-dark">
           {person.bio}
         </p>
-
         {person.email ? (
           <a
             href={`mailto:${person.email}`}
-            className="mt-3 inline-flex items-center gap-1.5 text-[14px] font-semibold text-cardinal hover:text-cardinal-dark hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cardinal/50"
+            className="mt-auto inline-flex w-fit items-center gap-1.5 pt-3 text-[14px] font-semibold text-cardinal hover:text-cardinal-dark hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cardinal/50"
           >
             <Icon name="mail" className="h-4 w-4" />
-            {person.email}
+            Email
           </a>
         ) : null}
       </div>

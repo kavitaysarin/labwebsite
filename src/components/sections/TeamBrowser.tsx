@@ -5,21 +5,28 @@ import { PersonCard } from "@/components/cards/PersonCard";
 import type { Person } from "@/lib/types";
 
 /**
- * Filterable current-team grid. "All" shows every category grouped with
- * subheadings; selecting a category narrows to that group.
+ * Unified, egalitarian team grid. All current members appear together in one
+ * grid (PI first, then alphabetical). Optional filter chips narrow the SAME
+ * grid without creating stacked sections. Default = "all". "Alumni" is a filter
+ * category (kept out of the default current-team view); with no verified alumni
+ * yet it shows a concise "coming soon" note.
  */
 export function TeamBrowser({
   people,
-  categoryOrder,
+  filters,
+  alumni,
 }: {
   people: Person[];
-  categoryOrder: { category: Person["category"]; heading: string }[];
+  filters: { key: string; label: string }[];
+  alumni: Person[];
 }) {
-  const present = categoryOrder.filter((c) =>
-    people.some((p) => p.category === c.category),
-  );
-  const [cat, setCat] = useState<string>("all");
-  const shown = cat === "all" ? present : present.filter((c) => c.category === cat);
+  const [filter, setFilter] = useState<string>("all");
+  const isAlumni = filter === "Alumni";
+  const shown = isAlumni
+    ? alumni
+    : filter === "all"
+      ? people
+      : people.filter((p) => p.category === filter);
 
   const chipBase =
     "rounded-full border px-4 py-1.5 text-[14px] font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cardinal/50 focus-visible:ring-offset-1";
@@ -32,50 +39,47 @@ export function TeamBrowser({
 
   return (
     <div>
-      <div
-        role="group"
-        aria-label="Filter team by category"
-        className="flex flex-wrap gap-2"
-      >
-        <button
-          type="button"
-          onClick={() => setCat("all")}
-          aria-pressed={cat === "all"}
-          className={chipClass(cat === "all")}
-        >
-          All
-        </button>
-        {present.map((c) => (
+      {/* Optional filter controls */}
+      <div role="group" aria-label="Filter team by role" className="flex flex-wrap gap-2">
+        {filters.map((f) => (
           <button
-            key={c.category}
+            key={f.key}
             type="button"
-            onClick={() => setCat(c.category)}
-            aria-pressed={cat === c.category}
-            className={chipClass(cat === c.category)}
+            onClick={() => setFilter(f.key)}
+            aria-pressed={filter === f.key}
+            className={chipClass(filter === f.key)}
           >
-            {c.heading}
+            {f.label}
           </button>
         ))}
       </div>
 
-      {shown.map((c) => {
-        const members = people.filter((p) => p.category === c.category);
-        return (
-          <section key={c.category} className="mt-10" aria-label={c.heading}>
-            <h3 className="font-heading text-[20px] font-bold text-navy">
-              {c.heading}
-              <span className="ml-2 text-[15px] font-semibold text-gray-dark">
-                ({members.length})
-              </span>
-            </h3>
-            <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {members.map((m) => (
-                <PersonCard key={m.slug} person={m} />
-              ))}
-            </div>
-          </section>
-        );
-      })}
+      {!isAlumni ? (
+        <p aria-live="polite" className="mt-4 text-[14px] text-gray-dark">
+          {filter === "all" ? "All current members" : `${shown.length} member${shown.length === 1 ? "" : "s"}`}
+        </p>
+      ) : null}
+
+      {/* One cohesive grid */}
+      {isAlumni && alumni.length === 0 ? (
+        <div className="mt-6 max-w-3xl">
+          <p className="text-[15px] leading-relaxed text-gray-dark">
+            Our alumni have gone on to careers across medicine, industry, and
+            research. A full alumni roster is being compiled and will appear here
+            soon.
+          </p>
+        </div>
+      ) : (
+        <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {shown.map((p) => (
+            <PersonCard
+              key={p.slug}
+              person={p}
+              lead={p.category === "Principal Investigator"}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
