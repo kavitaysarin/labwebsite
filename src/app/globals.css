@@ -55,7 +55,7 @@
     color: var(--color-charcoal);
     font-family: var(--font-body);
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.55;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
@@ -92,10 +92,10 @@
 @layer components {
   /* Single shared content container (spec §23) */
   .container-wide {
-    width: min(100% - 40px, 1280px);
+    width: min(100% - 48px, 1280px);
     margin-inline: auto;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 639px) {
     .container-wide { width: min(100% - 32px, 1280px); }
   }
 
@@ -107,9 +107,9 @@
   @media (max-width: 767px)  { .section-pad { padding-block: 48px; } }
 
   /* Tighter top when following another light section */
-  .section-pad-compact { padding-block: 52px 72px; }
-  @media (max-width: 1023px) { .section-pad-compact { padding-block: 44px 56px; } }
-  @media (max-width: 767px)  { .section-pad-compact { padding-block: 40px 48px; } }
+  .section-pad-compact { padding-block: 56px 72px; }
+  @media (max-width: 1023px) { .section-pad-compact { padding-block: 48px 60px; } }
+  @media (max-width: 767px)  { .section-pad-compact { padding-block: 44px 48px; } }
 
   /* Slightly reduced rhythm for the Why Skin section (spec §6) */
   .section-pad-tight { padding-block: 60px; }

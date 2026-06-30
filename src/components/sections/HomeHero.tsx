@@ -27,7 +27,7 @@ export function HomeHero() {
         <div className="absolute inset-0 bg-navy-deep/40 lg:bg-transparent" />
       </div>
 
-      <div className="container-wide flex min-h-[clamp(520px,68vh,610px)] items-center pb-11 pt-[72px] sm:py-20 lg:py-16">
+      <div className="container-wide flex min-h-[clamp(520px,68vh,610px)] items-center pb-[46px] pt-[78px] sm:py-20 lg:py-16">
         <div className="max-w-[520px] lg:max-w-[640px]">
           <p className="text-[13px] font-semibold uppercase tracking-[0.1em] text-blue-light">
             {SITE.parentOrg}

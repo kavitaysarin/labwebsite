@@ -50,7 +50,8 @@ export default function Home() {
                   {m.value}
                 </p>
                 <p className="mt-1 text-[12px] font-medium leading-tight text-gray-dark sm:text-sm">
-                  {m.label}
+                  <span className="sm:hidden">{m.shortLabel ?? m.label}</span>
+                  <span className="hidden sm:inline">{m.label}</span>
                 </p>
               </div>
             ))}
@@ -66,7 +67,7 @@ export default function Home() {
             title="Why Skin?"
             intro="The skin is uniquely suited to reveal what is happening inside the body — and to do so again and again over time."
           />
-          <div className="mt-8">
+          <div className="mt-6 sm:mt-8">
             <FeatureGrid items={WHY_SKIN} variant="plain" />
           </div>
         </div>
@@ -98,9 +99,13 @@ export default function Home() {
               Explore Our Technologies
             </Button>
           </div>
-          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
-            {HOMEPAGE_TECH.map((t) => (
-              <TechCard key={t.slug} tech={t} />
+          <div className="mt-10 grid grid-cols-1 gap-6 min-[640px]:grid-cols-2 min-[900px]:grid-cols-3">
+            {HOMEPAGE_TECH.map((t, i) => (
+              <TechCard
+                key={t.slug}
+                tech={t}
+                wide={i === HOMEPAGE_TECH.length - 1}
+              />
             ))}
           </div>
         </div>
@@ -118,9 +123,13 @@ export default function Home() {
               View All Publications
             </Button>
           </div>
-          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
-            {FEATURED_PUBLICATIONS.map((p) => (
-              <PublicationCard key={p.title} pub={p} />
+          <div className="mt-10 grid grid-cols-1 gap-6 min-[640px]:grid-cols-2 min-[900px]:grid-cols-3">
+            {FEATURED_PUBLICATIONS.map((p, i) => (
+              <PublicationCard
+                key={p.title}
+                pub={p}
+                wide={i === FEATURED_PUBLICATIONS.length - 1}
+              />
             ))}
           </div>
         </div>

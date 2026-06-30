@@ -15,6 +15,8 @@ export type SocialLink = {
 export type Metric = {
   value: string;
   label: string;
+  /** Shorter label shown on narrow mobile screens. */
+  shortLabel?: string;
 };
 
 export const SITE = {
@@ -65,8 +67,12 @@ export const SITE = {
 
   // Homepage metrics — REVIEW ANNUALLY. (spec §9: store in one place + flag)
   metrics: [
-    { value: "140+", label: "Publications" },
-    { value: "18+", label: "Years in Patient Care" },
-    { value: "40+", label: "Students and Trainees Mentored" },
+    { value: "140+", label: "Publications", shortLabel: "Publications" },
+    { value: "18+", label: "Years in Patient Care", shortLabel: "Years in Care" },
+    {
+      value: "40+",
+      label: "Students and Trainees Mentored",
+      shortLabel: "Trainees Mentored",
+    },
   ] as Metric[],
 } as const;

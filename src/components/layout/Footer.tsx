@@ -38,7 +38,7 @@ export function Footer() {
           <div className="md:text-right">
             <nav
               aria-label="Footer"
-              className="flex flex-wrap gap-x-5 gap-y-2 md:justify-end"
+              className="grid grid-cols-2 gap-x-5 gap-y-2 sm:flex sm:flex-wrap md:justify-end"
             >
               {FOOTER_NAV.map((item) => (
                 <Link

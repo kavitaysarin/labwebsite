@@ -31,13 +31,13 @@ export const TECHNOLOGIES: Technology[] = [
     slug: "optical-imaging",
     name: "Optical Imaging",
     shortDescription:
-      "High-resolution, non-invasive imaging technologies that reveal skin structure and disease at cellular and tissue scales.",
+      "High-resolution, non-invasive optical imaging technologies—including OCT and KLEAR optical clearing—to reveal skin structure and disease at cellular and tissue scales.",
     longDescription:
       "The lab develops high-resolution optical imaging to assess living skin without traditional biopsy. This program spans optical coherence tomography (OCT), high-definition OCT, KLEAR-OCT, optical clearing, and imaging–pathology correlation, working toward non-invasive “virtual biopsies” for earlier detection and longitudinal monitoring.",
     category: "Optical Imaging",
     image: "/images/technologies/optical-imaging.jpg",
     imageAlt:
-      "Three-dimensional optical coherence tomography volume and cross-sectional scan of skin.",
+      "Optical coherence tomography cross-sectional scan showing the layered structure of skin.",
     status: "research",
   },
   {
@@ -55,9 +55,9 @@ export const TECHNOLOGIES: Technology[] = [
   },
   {
     slug: "ai-and-data-science",
-    name: "Artificial Intelligence and Data Science",
+    name: "Artificial Intelligence & Data Science",
     shortDescription:
-      "AI-based segmentation, quantitative imaging analysis, multimodal integration, and predictive modeling for measuring disease.",
+      "AI-based image analysis, quantitative phenotyping, multimodal integration, and predictive modeling for measuring disease.",
     longDescription:
       "The lab applies AI-based segmentation, quantitative imaging analysis, multimodal integration, and predictive modeling to handle the complexity of skin imaging. The emphasis is on quantitative disease measurement and longitudinal monitoring rather than simple automation.",
     category: "Computational Analysis",
