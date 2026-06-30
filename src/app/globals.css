@@ -101,18 +101,18 @@
 
   .prose-narrow { max-width: var(--prose-max); }
 
-  /* Section vertical rhythm: 72 / 56 / 48 px (desktop / tablet / mobile) */
-  .section-pad { padding-block: 72px; }
+  /* Section vertical rhythm: 62 / 56 / 48 px (desktop / tablet / mobile) */
+  .section-pad { padding-block: 62px; }
   @media (max-width: 1023px) { .section-pad { padding-block: 56px; } }
   @media (max-width: 767px)  { .section-pad { padding-block: 48px; } }
 
   /* Tighter top when following another light section */
-  .section-pad-compact { padding-block: 56px 72px; }
+  .section-pad-compact { padding-block: 48px 64px; }
   @media (max-width: 1023px) { .section-pad-compact { padding-block: 48px 60px; } }
   @media (max-width: 767px)  { .section-pad-compact { padding-block: 44px 48px; } }
 
   /* Slightly reduced rhythm for the Why Skin section (spec §6) */
-  .section-pad-tight { padding-block: 60px; }
+  .section-pad-tight { padding-block: 52px; }
   @media (max-width: 1023px) { .section-pad-tight { padding-block: 48px; } }
   @media (max-width: 767px)  { .section-pad-tight { padding-block: 44px; } }
 

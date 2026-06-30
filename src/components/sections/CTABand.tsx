@@ -15,7 +15,7 @@ export function CTABand({
 }) {
   return (
     <section className="bg-navy-deep text-white">
-      <div className="container-wide py-11 text-center md:py-[54px]">
+      <div className="container-wide py-10 text-center md:py-[48px]">
         <h2 className="mx-auto max-w-[320px] text-balance text-[1.8rem] leading-tight text-white sm:max-w-2xl sm:text-[2rem]">
           {heading}
         </h2>

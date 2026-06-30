@@ -15,7 +15,7 @@ export function FeatureGrid({
         {items.map((f) => (
           <article
             key={f.title}
-            className="card-surface flex h-full flex-col p-[18px] sm:p-6"
+            className="card-surface flex h-full flex-col p-[18px] sm:p-5"
           >
             <span className="inline-flex h-[44px] w-[44px] items-center justify-center rounded-lg bg-blue-light text-cardinal">
               <Icon name={f.icon} className="h-[21px] w-[21px]" strokeWidth={1.7} />
