@@ -58,7 +58,7 @@ Items requiring **Dr. Sarin / lab-team verification or approval** before launch.
 - **No headshot (initials fallback):** Sally Glaser, Margarita Golod (volunteers; live site used a placeholder).
 - **Uncertain image→person matches:** none flagged — positional matches are anchored by self-identifying filenames; still, a human should confirm faces match names before launch.
 - **Alumni roster:** live site shows Medicine / Industry / Research headings but **no retrievable names** — supply the alumni list (the Alumni filter shows an honest "coming soon" note).
-- **Title/role flags:** Dr. Sarin (now **Principal Investigator · Professor of Dermatology**, MD, PhD; live site said Associate Professor / Lab Director); Marlayna Harris (no title on site); Haniya vs "Haniyah" spelling; Chenming Zhang vs email `czheng8@`; Audris Chang vs "Chiang" (image filename); Nethra Srinivasan (Case Western — confirm active); volunteers Glaser/Golod (no role/bio on site).
+- **Title/role flags:** Dr. Sarin (now **Principal Investigator · Professor of Dermatology**, MD, PhD; live site said Associate Professor / Lab Director); Marlayna Harris (set to **Clinical Research Coordinator** per request — not stated on live site, confirm); Haniya vs "Haniyah" spelling; Chenming Zhang vs email `czheng8@`; Audris Chang vs "Chiang" (image filename); Nethra Srinivasan (set to **Medical Student** per request — live site said B.S. candidate at Case Western; confirm current program).
 - **Filter labels** to review: "Faculty" maps to the PI; confirm wording (All / Faculty / Staff / Trainees / Students / Volunteers / Alumni).
 
 ### Collaborators

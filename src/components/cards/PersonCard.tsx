@@ -10,19 +10,15 @@ function initials(name: string): string {
 }
 
 /**
- * Uniform team-grid card: a 4:5 headshot (or a neutral initials avatar for a
- * real person with no photo yet — never an invented headshot), name +
- * optional credentials, role, a concise bio, and an email link. `lead` adds a
- * subtle cardinal top accent for the PI (findable without a separate section).
+ * Uniform team-grid card — identical styling for every member. A 4:5 headshot
+ * (object-cover, per-person object-position) or a neutral initials avatar for a
+ * real person with no photo yet (never an invented headshot). Name + optional
+ * credentials, role, a concise bio, and an email link aligned to the bottom.
  * Composes the frozen `.card-surface`.
  */
-export function PersonCard({ person, lead = false }: { person: Person; lead?: boolean }) {
+export function PersonCard({ person }: { person: Person }) {
   return (
-    <article
-      className={`card-surface group flex h-full flex-col overflow-hidden transition-[border-color,box-shadow] duration-150 hover:border-cardinal/30 hover:shadow-card-strong focus-within:border-cardinal/50 ${
-        lead ? "border-t-[3px] border-t-cardinal" : ""
-      }`}
-    >
+    <article className="card-surface group flex h-full flex-col overflow-hidden transition-[border-color,box-shadow] duration-150 hover:border-cardinal/30 hover:shadow-card-strong focus-within:border-cardinal/50">
       <div className="relative aspect-[4/5] w-full overflow-hidden bg-blue-light">
         {person.image ? (
           <Image
@@ -30,8 +26,9 @@ export function PersonCard({ person, lead = false }: { person: Person; lead?: bo
             alt={`${person.name}, ${person.role}`}
             fill
             loading="eager"
-            sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, (max-width: 1279px) 33vw, 25vw"
+            sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, (max-width: 1535px) 33vw, 25vw"
             className="object-cover"
+            style={{ objectPosition: person.objectPosition ?? "50% 30%" }}
           />
         ) : (
           <div
@@ -53,9 +50,7 @@ export function PersonCard({ person, lead = false }: { person: Person; lead?: bo
         <p className="mt-1 text-[13px] font-semibold leading-snug text-cardinal">
           {person.role}
         </p>
-        <p className="mt-2 line-clamp-3 text-[14px] leading-relaxed text-gray-dark">
-          {person.bio}
-        </p>
+        <p className="mt-2 text-[14px] leading-relaxed text-gray-dark">{person.bio}</p>
         {person.email ? (
           <a
             href={`mailto:${person.email}`}

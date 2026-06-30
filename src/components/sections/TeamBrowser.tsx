@@ -70,13 +70,9 @@ export function TeamBrowser({
           </p>
         </div>
       ) : (
-        <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {shown.map((p) => (
-            <PersonCard
-              key={p.slug}
-              person={p}
-              lead={p.category === "Principal Investigator"}
-            />
+            <PersonCard key={p.slug} person={p} />
           ))}
         </div>
       )}

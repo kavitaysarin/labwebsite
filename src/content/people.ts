@@ -3,19 +3,20 @@ import type { Person } from "@/lib/types";
 /**
  * Lab members — facts verified against the live site's /team page
  * (names, roles, emails, training background). Bios are rewritten concisely
- * (1–2 sentences), not copied. Headshots were migrated from the live site to
- * public/images/team/<slug>.jpg (originals preserved in /originals); the live
- * source images are low-resolution — see CONTENT_REVIEW_NEEDED.md.
+ * (~25–45 words, "Studying …" summaries), not copied. Headshots were migrated
+ * from the live site to public/images/team/<slug>.jpg (aspect-preserved;
+ * originals in /originals); the live source images are low-resolution and each
+ * crop is framed with a per-person `objectPosition` — see
+ * docs/team-image-sources.md and CONTENT_REVIEW_NEEDED.md.
  *
  * Flagged uncertainties (TODO: VERIFY):
- * - Marlayna Harris: role/title not stated on the live site; active status TBC.
- * - Haniya Shareef: heading reads "Haniya", bio text reads "Haniyah" on the
- *   live site — confirm spelling.
- * - Chenming Zhang: name is "Zhang" but the listed email is czheng8@ — confirm.
- * - Audris Chang: heading reads "Chang", image filename reads "Chiang" — confirm.
- * - Nethra Srinivasan: enrolled at Case Western — confirm current/active status.
- * - Alumni: the live site lists Medicine / Industry / Research headings but no
- *   names are retrievable — roster pending (no names invented).
+ * - Nethra Srinivasan: role set to "Medical Student" per request (live site
+ *   said B.S. candidate, Case Western) — confirm current program.
+ * - Marlayna Harris: role set to "Clinical Research Coordinator" per request
+ *   (not stated on the live site) — confirm.
+ * - Haniya vs "Haniyah" spelling; Chenming Zhang vs email czheng8@; Audris
+ *   Chang vs "Chiang" (image filename); Dr. Sarin title (live: Associate Prof).
+ * - Alumni: live site lists Medicine/Industry/Research headings but no names.
  */
 export const PEOPLE: Person[] = [
   {
@@ -26,7 +27,8 @@ export const PEOPLE: Person[] = [
     category: "Principal Investigator",
     email: "ksarin@stanford.edu",
     image: "/images/team/kavita-sarin.jpg",
-    bio: "Trained in computer science before earning an M.D. and a Ph.D. in genetics at Stanford. Her work reads the skin as a sensor for disease, with a focus on the genetics of skin cancer and inherited cancer risk.",
+    objectPosition: "50% 25%",
+    bio: "Leads the lab, studying the genetics of skin cancer and inherited cancer risk and reading the skin as a sensor for disease. She trained in computer science before earning an M.D. and a Ph.D. in genetics at Stanford.",
     active: true,
   },
 
@@ -38,17 +40,19 @@ export const PEOPLE: Person[] = [
     category: "Research Staff",
     email: "ahoj@stanford.edu",
     image: "/images/team/juniper-aho.jpg",
-    bio: "Supports the lab's operations and administration. A Bay Area native, she joined Stanford in 2022.",
+    objectPosition: "50% 22%",
+    bio: "Keeps the lab running day to day, supporting its operations and administration. A Bay Area native, she studied strategic communications and joined Stanford in 2022.",
     active: true,
   },
   {
     slug: "marlayna-harris",
     name: "Marlayna Harris",
-    role: "Researcher", // TODO: VERIFY exact title (not stated on live site)
+    role: "Clinical Research Coordinator",
     category: "Research Staff",
     email: "marlayna@stanford.edu",
     image: "/images/team/marlayna-harris.jpg",
-    bio: "Works on computational and systems approaches to biology, building on undergraduate research modeling cellular senescence and epithelial–mesenchymal transition.",
+    objectPosition: "50% 35%",
+    bio: "Coordinates the lab's clinical research while studying computational, systems-level approaches to biology, building on undergraduate work that modeled cellular senescence and epithelial change in disease.",
     active: true,
   },
 
@@ -60,7 +64,8 @@ export const PEOPLE: Person[] = [
     category: "Trainees",
     email: "loa@stanford.edu",
     image: "/images/team/sharon-loa.jpg",
-    bio: "Develops physics-driven light therapies and sensors and applies three-dimensional pathology to the skin. A Knight-Hennessy Scholar and Paul & Daisy Soros Fellow.",
+    objectPosition: "50% 28%",
+    bio: "Studying physics-driven light therapies and sensors and applying three-dimensional pathology to the skin. A Knight-Hennessy Scholar and Paul & Daisy Soros Fellow with a background in biochemistry.",
     active: true,
   },
   {
@@ -70,7 +75,8 @@ export const PEOPLE: Person[] = [
     category: "Trainees",
     email: "sagunjp@stanford.edu",
     image: "/images/team/jeffrey-sagun.jpg",
-    bio: "Studies the genetics of rare and complex disease. He previously spent three years at the NIH/NCI studying xeroderma pigmentosum.",
+    objectPosition: "50% 16%",
+    bio: "Studying the genetics of rare and complex disease as a postbaccalaureate scholar. He earned a degree in neuroscience and spent three years at the NIH studying xeroderma pigmentosum.",
     active: true,
   },
   {
@@ -80,7 +86,8 @@ export const PEOPLE: Person[] = [
     category: "Trainees",
     email: "caravan@stanford.edu",
     image: "/images/team/sahar-caravan.jpg",
-    bio: "A medical student studying hidradenitis suppurativa, large-scale clinical data, and refugee health.",
+    objectPosition: "50% 38%",
+    bio: "Studying hidradenitis suppurativa, large-scale clinical data, and refugee health as a medical student. Her work connects population-scale data with everyday clinical care, building on a background in biochemistry and geography.",
     active: true,
   },
   {
@@ -90,7 +97,8 @@ export const PEOPLE: Person[] = [
     category: "Trainees",
     email: "haniyash@stanford.edu",
     image: "/images/team/haniya-shareef.jpg",
-    bio: "Studies the genetics of skin disease. She trained in biological engineering and computer science at MIT.",
+    objectPosition: "50% 40%",
+    bio: "Studying the genetics of skin disease as a medical student. She trained in biological engineering and computer science at MIT, with earlier research on liver tissue regeneration.",
     active: true,
   },
   {
@@ -100,7 +108,8 @@ export const PEOPLE: Person[] = [
     category: "Trainees",
     email: "czheng8@stanford.edu",
     image: "/images/team/chenming-zhang.jpg",
-    bio: "Known as Angel, she studies genetic and clinical risk factors in patients with multiple melanomas.",
+    objectPosition: "50% 16%",
+    bio: "Studying genetic and clinical risk factors in patients who develop multiple melanomas. Known as Angel, she studied molecular biology at the University of Pittsburgh before medical school.",
     active: true,
   },
   {
@@ -110,7 +119,8 @@ export const PEOPLE: Person[] = [
     category: "Trainees",
     email: "michjlin@stanford.edu",
     image: "/images/team/michelle-lin.jpg",
-    bio: "Studies the genetics of skin disease. She previously built next-generation sequencing tools for viral genomics.",
+    objectPosition: "50% 40%",
+    bio: "Studying the genetics of skin disease as a medical student. She previously built next-generation sequencing tools for viral genomics, including COVID-19 surveillance and vaccine trials.",
     active: true,
   },
   {
@@ -120,7 +130,8 @@ export const PEOPLE: Person[] = [
     category: "Trainees",
     email: "vharbour@stanford.edu",
     image: "/images/team/victoria-harbour.jpg",
-    bio: "An NSF Graduate Research Fellow studying immunological markers and environmental risk factors for hidradenitis suppurativa flares. (Goes by Tori.)",
+    objectPosition: "50% 35%",
+    bio: "Studying immunological markers and environmental risk factors that trigger hidradenitis suppurativa flares. An NSF Graduate Research Fellow and former chemical engineer, she goes by Tori.",
     active: true,
   },
   {
@@ -130,7 +141,19 @@ export const PEOPLE: Person[] = [
     category: "Trainees",
     email: "audrisc@stanford.edu",
     image: "/images/team/audris-chang.jpg",
-    bio: "Works across the Sarin and Curtis labs on the genetics and epidemiology of skin cancers.",
+    objectPosition: "50% 40%",
+    bio: "Studying the genetics and epidemiology of skin cancers across the Sarin and Curtis labs. A dermatology resident, she trained in computer science and economics before earning her medical degree.",
+    active: true,
+  },
+  {
+    slug: "nethra-srinivasan",
+    name: "Nethra Srinivasan",
+    role: "Medical Student", // TODO: VERIFY (live site: B.S. candidate, Case Western)
+    category: "Trainees",
+    email: "nsriniv@stanford.edu",
+    image: "/images/team/nethra-srinivasan.jpg",
+    objectPosition: "50% 30%",
+    bio: "Studying epidemiological patterns in dermatological conditions to understand how skin diseases affect different populations. A Bay Area native, she founded the youth science nonprofit The NeuroKidz.",
     active: true,
   },
 
@@ -142,7 +165,8 @@ export const PEOPLE: Person[] = [
     category: "Students",
     email: "vsta@stanford.edu",
     image: "/images/team/valerie-ta.jpg",
-    bio: "Studies non-invasive tissue imaging and skin-clearing agents for light-based therapies.",
+    objectPosition: "50% 25%",
+    bio: "Studying non-invasive tissue imaging and skin-clearing agents for light-based therapies, contributing to the lab's effort to see deeper into living skin without a biopsy.",
     active: true,
   },
   {
@@ -152,17 +176,8 @@ export const PEOPLE: Person[] = [
     category: "Students",
     email: "louizaz@stanford.edu",
     image: "/images/team/louiza-zughbaba.jpg",
-    bio: "Interested in the intersection of science and technology to better understand disease and improve patient care.",
-    active: true,
-  },
-  {
-    slug: "nethra-srinivasan",
-    name: "Nethra Srinivasan",
-    role: "Research Student, Neuroscience (Case Western Reserve University)",
-    category: "Students",
-    email: "nsriniv@stanford.edu",
-    image: "/images/team/nethra-srinivasan.jpg",
-    bio: "Examines epidemiological patterns in dermatological conditions and founded the youth science nonprofit The NeuroKidz.",
+    objectPosition: "50% 32%",
+    bio: "Studying how science and technology can come together to better understand disease and improve patient care. A Bay Area native working in the lab as an undergraduate researcher in human biology.",
     active: true,
   },
 
@@ -172,7 +187,7 @@ export const PEOPLE: Person[] = [
     name: "Sally Glaser",
     role: "Volunteer", // TODO: VERIFY (no role/bio stated on live site)
     category: "Volunteers",
-    bio: "Volunteer with the lab.",
+    bio: "A volunteer supporting the lab's research and day-to-day activities.",
     active: true,
   },
   {
@@ -180,7 +195,7 @@ export const PEOPLE: Person[] = [
     name: "Margarita Golod",
     role: "Volunteer", // TODO: VERIFY (no role/bio stated on live site)
     category: "Volunteers",
-    bio: "Volunteer with the lab.",
+    bio: "A volunteer supporting the lab's research and day-to-day activities.",
     active: true,
   },
 ];
@@ -188,7 +203,8 @@ export const PEOPLE: Person[] = [
 /**
  * Optional filter controls for the unified team grid. `key` matches a Person
  * `category` (or "all"). The grid is one cohesive grid; filters narrow it
- * without creating separate stacked sections. Default = "all".
+ * without creating separate stacked sections and without reordering members.
+ * Default = "all".
  */
 export const TEAM_FILTERS: { key: string; label: string }[] = [
   { key: "all", label: "All" },
@@ -202,7 +218,8 @@ export const TEAM_FILTERS: { key: string; label: string }[] = [
 
 /**
  * Current members for the unified grid: the PI first (easy to find), then
- * everyone else alphabetically — roles intentionally mixed, not stacked.
+ * everyone else alphabetically — roles intentionally mixed, not stacked. This
+ * fixed order is preserved under filtering (filters hide, never reorder).
  */
 export const CURRENT_TEAM: Person[] = (() => {
   const current = PEOPLE.filter((p) => p.active && p.category !== "Alumni");

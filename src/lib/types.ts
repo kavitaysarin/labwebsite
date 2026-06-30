@@ -67,6 +67,9 @@ export type Person = {
   email?: string;
   profileUrl?: string;
   image?: string;
+  /** CSS object-position for the headshot crop (e.g. "50% 25%"); per-person so
+   * each face can be framed individually. Defaults to "50% 30%". */
+  objectPosition?: string;
   currentProject?: string;
   bio: string;
   interests?: string;

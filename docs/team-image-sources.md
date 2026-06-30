@@ -1,8 +1,12 @@
 # Team headshot — asset inventory & sources
 
 Headshots migrated from the live Sarin Lab `/team` page (Squarespace) on 2026-06-30.
-Originals preserved in `public/images/team/originals/`; consistent 4:5 face-centered
-display crops (800×1000 JPG, `object-fit: cover`) in `public/images/team/<slug>.jpg`.
+Originals preserved in `public/images/team/originals/`. Display images in
+`public/images/team/<slug>.jpg` are aspect-preserved (resized to fit, never
+upscaled). Each is framed in a 4:5 card via CSS `object-fit: cover` plus a
+per-person `objectPosition` (set in `people.ts`) so eyes sit in the upper third
+and hair/chins/shoulders are not cut — tune an individual crop by editing that
+person's `objectPosition`.
 
 **Matching:** each image was paired to its person by the live page's DOM order,
 which is anchored by self-identifying filenames (Louiza, Jeffrey, Srinivasan_Nethra,
