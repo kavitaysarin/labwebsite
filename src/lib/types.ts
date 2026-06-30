@@ -160,3 +160,21 @@ export type ResearchPillar = {
   established: string;
   exploring: string;
 };
+
+/** A technology program shown on the Technologies page. */
+export type TechnologyProgram = {
+  slug: string;
+  name: string;
+  shortName: string;
+  icon: IconName;
+  image: string;
+  imageAlt: string;
+  whatItIs: string;
+  signal: string;
+  connection: string;
+  appliedTo: string[];
+  status: string;
+  collaboration?: string;
+  researchHref?: string;
+  pubHref?: string;
+};

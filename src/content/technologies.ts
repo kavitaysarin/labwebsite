@@ -1,4 +1,4 @@
-import type { Technology } from "@/lib/types";
+import type { Technology, TechnologyProgram } from "@/lib/types";
 
 /**
  * Technologies — descriptions adapted (lightly edited for clarity) from the
@@ -87,4 +87,106 @@ export const HOMEPAGE_TECH: Technology[] = [
   TECHNOLOGIES[1], // Optical Imaging (broader program; features KLEAR-OCT)
   TECHNOLOGIES[2], // 3D Molecular Pathology
   TECHNOLOGIES[3], // AI and Data Science
+];
+
+/** Technologies page intro. */
+export const TECHNOLOGY_INTRO =
+  "We build and apply tools that let us see, measure, and interpret signals in the skin. Our methods span high-resolution optical imaging, optical clearing, three-dimensional molecular pathology, spatial biology, and artificial intelligence. Most are research tools used in our studies, not clinical tests.";
+
+/**
+ * Technologies page programs (spec §14 / Addendum). Each states what it is,
+ * the signal it measures, how it connects to skin, where it is applied, and
+ * its status. Verified against the live site. Hyperspectral imaging and
+ * "Science Simplified" are intentionally excluded (not part of the live work).
+ * Kept separate from TECHNOLOGIES/HOMEPAGE_TECH so the frozen homepage is
+ * unaffected.
+ */
+export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
+  {
+    slug: "optical-imaging",
+    name: "Optical Imaging",
+    shortName: "Optical Imaging",
+    icon: "scan",
+    image: "/images/technologies/optical-imaging.jpg",
+    imageAlt: "Optical coherence tomography cross-sectional scan of skin.",
+    whatItIs:
+      "High-resolution optical imaging of living skin, including high-definition optical coherence tomography (OCT).",
+    signal: "Tissue microstructure and light scattering, at near-cellular resolution.",
+    connection: "Images living skin directly, without removing tissue.",
+    appliedTo: ["Skin cancer", "Neurofibromatosis type 1"],
+    status: "Research",
+    collaboration: "High-definition OCT developed with Yonatan Winetraub.",
+    researchHref: "/research#imaging",
+    pubHref: "/publications?area=non-invasive-imaging",
+  },
+  {
+    slug: "optical-transparency",
+    name: "Optical Transparency of Skin (KLEAR)",
+    shortName: "Optical Transparency",
+    icon: "sparkles",
+    image: "/images/technologies/klear.jpg",
+    imageAlt:
+      "Three-dimensional optical coherence tomography volume of skin imaged in depth.",
+    whatItIs:
+      "KLEAR, an optical clearing approach that makes skin tissue more transparent so light can travel deeper.",
+    signal: "Improved light penetration and reduced scattering for deeper optical imaging.",
+    connection: "Lets optical methods see further into the skin than they otherwise could.",
+    appliedTo: ["Deeper non-invasive imaging", "Virtual biopsy"],
+    status: "Research",
+    collaboration: "Developed with Guosong Hong.",
+    researchHref: "/research#imaging",
+    pubHref: "/publications?area=non-invasive-imaging",
+  },
+  {
+    slug: "3d-molecular-pathology",
+    name: "3D Molecular Pathology",
+    shortName: "3D Molecular Pathology",
+    icon: "microscope",
+    image: "/images/technologies/molecular-3d.jpg",
+    imageAlt: "Three-dimensional reconstruction of skin tissue architecture.",
+    whatItIs:
+      "Volumetric tissue imaging that combines staining, three-dimensional imaging, and computational reconstruction.",
+    signal: "Tissue architecture with molecular and cellular detail, in three dimensions.",
+    connection:
+      "Reconstructs intact skin and tumor tissue beyond two-dimensional histopathology.",
+    appliedTo: ["Skin tumors", "Neurofibromas"],
+    status: "Research",
+    collaboration: "Developed with the Jonathan Liu Lab.",
+    researchHref: "/research#molecular",
+    pubHref: "/publications?area=skin-cancer",
+  },
+  {
+    slug: "spatial-biology",
+    name: "Spatial Biology & Molecular Discovery",
+    shortName: "Spatial Biology",
+    icon: "molecule",
+    image: "/images/technologies/molecular-pathology.jpg",
+    imageAlt:
+      "Multiplex fluorescence image mapping molecular signals within skin tissue.",
+    whatItIs:
+      "Spatial transcriptomics, single-cell analysis, multiplex imaging, and molecular profiling of skin tissue.",
+    signal: "Molecular signals mapped to their location within tissue.",
+    connection: "Reveals disease-associated biomarkers inside the skin.",
+    appliedTo: ["Autoimmune and inflammatory disease", "Skin cancer"],
+    status: "Research",
+    researchHref: "/research#molecular",
+    pubHref: "/publications?area=autoimmune-and-systemic-disease",
+  },
+  {
+    slug: "ai-and-data-science",
+    name: "Artificial Intelligence & Computational Analysis",
+    shortName: "AI & Computation",
+    icon: "chip",
+    image: "/images/research/digital.jpg",
+    imageAlt:
+      "cNF-Vision output: cutaneous neurofibromas segmented on skin photographs, with depth maps and three-dimensional reconstructions.",
+    whatItIs:
+      "AI-based image segmentation, quantitative analysis, multimodal integration, and predictive modeling, including cNF-Vision for measuring cutaneous neurofibromas.",
+    signal: "Quantitative, repeatable measures derived from images and clinical data.",
+    connection: "Turns skin photographs and scans into objective measurements.",
+    appliedTo: ["Neurofibromatosis type 1", "Skin cancer", "Clinical-trial endpoints"],
+    status: "Research",
+    researchHref: "/research#digital",
+    pubHref: "/publications?area=neurofibromatosis",
+  },
 ];
