@@ -1,7 +1,4 @@
-import type { Publication, ResearchArea } from "@/lib/types";
-import { ALL_PUBLICATIONS } from "./publications-all";
-
-export { ALL_PUBLICATIONS };
+import type { Publication, ResearchArea, SelectedPublication } from "@/lib/types";
 
 /**
  * Research areas — verbatim descriptions from the live Publications page.
@@ -134,34 +131,271 @@ export const FEATURED_PUBLICATIONS = RECENT_PUBLICATIONS.filter(
   (p) => p.featured,
 );
 
-/* ---- Publications page helpers (derived from ALL_PUBLICATIONS) ---- */
+/* ===================================================================
+ * SELECTED PUBLICATIONS  (the curated Publications page — launch model)
+ * -------------------------------------------------------------------
+ * Curated from the publications listed on the live Sarin Lab site
+ * (sarinlab.stanford.edu research-area pages) and VERIFIED against PubMed
+ * (title / authors / journal / year / PMID / DOI). Authors are abbreviated
+ * to first three + "et al." (the live site shows no authors). Journal names
+ * are normalized to their standard display form. Nothing here is invented.
+ *
+ * This is a CURATED highlight (~19 papers), NOT the full archive. To add /
+ * remove / recategorize / feature / reorder entries, see
+ * PUBLICATIONS_MAINTENANCE.md. The complete list lives on PubMed
+ * (SITE.pubmedUrl).
+ * =================================================================== */
 
-/** Map a research-area display name to its filter slug (matches the `?area=`
- * deep links used by Research and Technologies). Falls back to a kebab slug
- * (e.g. "Other" -> "other"). */
-export function areaSlug(name: string): string {
-  const a = RESEARCH_AREAS.find((r) => r.name === name);
-  return a
-    ? a.slug
-    : name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+/** The five-section ordering for the page (the "molecular-digital" section is
+ * deferred for launch — the live site has no such grouping yet). */
+export const PUBLICATION_SECTIONS: { slug: string; heading: string }[] = [
+  { slug: "optical-imaging", heading: "Optical Imaging" },
+  { slug: "skin-cancer-genetics", heading: "Skin Cancer and Genetics" },
+  { slug: "neurofibromatosis", heading: "Neurofibromatosis" },
+  {
+    slug: "autoimmune-systemic",
+    heading: "Autoimmune, Inflammatory, and Systemic Disease",
+  },
+];
+
+export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
+  // ---- optical-imaging ----
+  {
+    title:
+      "Noninvasive virtual biopsy using micro-registered optical coherence tomography (OCT) in human subjects",
+    authors: "Winetraub Y, Van Vleck A, Yuan E, et al.",
+    journal: "Science Advances",
+    year: 2024,
+    category: "optical-imaging",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/38598626/",
+    doiUrl: "https://doi.org/10.1126/sciadv.adi5794",
+    image: "/images/technologies/klear-oct.jpg",
+    imageAlt:
+      "Virtual-biopsy imaging pipeline: an OCT volume scan aligned to matched fluorescence and histology sections.",
+    featured: true,
+    displayOrder: 1,
+  },
+  {
+    title:
+      "Rapid Cellular-Resolution Skin Imaging with Optical Coherence Tomography Using All-Glass Multifocal Metasurfaces",
+    authors: "Zhao J, Van Vleck A, Winetraub Y, et al.",
+    journal: "ACS Nano",
+    year: 2023,
+    category: "optical-imaging",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/36745734/",
+    doiUrl: "https://doi.org/10.1021/acsnano.2c09542",
+    displayOrder: 2,
+  },
+  {
+    title:
+      "Flexible method for generating needle-shaped beams and its application in optical coherence tomography",
+    authors: "Zhao J, Winetraub Y, Du L, et al.",
+    journal: "Optica",
+    year: 2022,
+    category: "optical-imaging",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/37283722/",
+    doiUrl: "https://doi.org/10.1364/optica.456894",
+    displayOrder: 3,
+  },
+  {
+    title:
+      "Angular compounding for speckle reduction in optical coherence tomography using geometric image registration algorithm and digital focusing",
+    authors: "Zhao J, Winetraub Y, Yuan E, et al.",
+    journal: "Scientific Reports",
+    year: 2020,
+    category: "optical-imaging",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/32024946/",
+    doiUrl: "https://doi.org/10.1038/s41598-020-58454-0",
+    displayOrder: 4,
+  },
+
+  // ---- skin-cancer-genetics ----
+  {
+    title:
+      "Development of a MEK inhibitor, NFX-179, as a chemoprevention agent for squamous cell carcinoma",
+    authors: "Sarin KY, Kincaid J, Sell B, et al.",
+    journal: "Science Translational Medicine",
+    year: 2023,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/37820007/",
+    doiUrl: "https://doi.org/10.1126/scitranslmed.ade1844",
+    featured: true,
+    displayOrder: 1,
+  },
+  {
+    title: "Age-dependent cytokine surge in blood precedes cancer diagnosis",
+    authors: "Chen G, Mohsin A, Zheng H, et al.",
+    journal: "Proceedings of the National Academy of Sciences",
+    year: 2025,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/40117305/",
+    doiUrl: "https://doi.org/10.1073/pnas.2420502122",
+    displayOrder: 2,
+  },
+  {
+    title:
+      "Single-cell analysis of human basal cell carcinoma reveals novel regulators of tumor growth and the tumor microenvironment",
+    authors: "Guerrero-Juarez CF, Lee GH, Liu Y, et al.",
+    journal: "Science Advances",
+    year: 2022,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/35687691/",
+    doiUrl: "https://doi.org/10.1126/sciadv.abm7981",
+    displayOrder: 3,
+  },
+  {
+    title: "Advances in cutaneous squamous cell carcinoma",
+    authors: "Winge MCG, Kellman LN, Guo K, et al.",
+    journal: "Nature Reviews Cancer",
+    year: 2023,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/37286893/",
+    doiUrl: "https://doi.org/10.1038/s41568-023-00583-5",
+    displayOrder: 4,
+  },
+  {
+    title:
+      "Treatment of Cutaneous Squamous Cell Carcinoma With the Topical Histone Deacetylase Inhibitor Remetinostat",
+    authors: "Kilgour JM, Shah A, Eichstadt S, et al.",
+    journal: "JAMA Dermatology",
+    year: 2022,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/34787644/",
+    doiUrl: "https://doi.org/10.1001/jamadermatol.2021.4549",
+    displayOrder: 5,
+  },
+  {
+    title:
+      "Genome-wide meta-analysis identifies eight new susceptibility loci for cutaneous squamous cell carcinoma",
+    authors: "Sarin KY, Lin Y, Daneshjou R, et al.",
+    journal: "Nature Communications",
+    year: 2020,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/32041948/",
+    doiUrl: "https://doi.org/10.1038/s41467-020-14594-5",
+    displayOrder: 6,
+  },
+
+  // ---- neurofibromatosis ----
+  {
+    title:
+      "Stigmatization related to cutaneous neurofibromas in neurofibromatosis 1: development, validation and severity strata of the cNF-PUSH-D",
+    authors: "Fertitta L, Sarin KY, Romo CG, et al.",
+    journal: "British Journal of Dermatology",
+    year: 2026,
+    category: "neurofibromatosis",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/41290043/",
+    doiUrl: "https://doi.org/10.1093/bjd/ljaf479",
+    featured: true,
+    displayOrder: 1,
+  },
+  {
+    title:
+      "Measurement of the severity related to cutaneous neurofibromas in neurofibromatosis type 1: Development and validation of the Nef-ASI",
+    authors: "Fertitta L, Jannic A, Bergqvist C, et al.",
+    journal: "Journal of the American Academy of Dermatology",
+    year: 2026,
+    category: "neurofibromatosis",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/41061983/",
+    doiUrl: "https://doi.org/10.1016/j.jaad.2025.10.025",
+    displayOrder: 2,
+  },
+  {
+    title:
+      "Cutaneous Neurofibromas and Quality of Life in Adults With Neurofibromatosis Type 1",
+    authors: "Lin MJ, Yao H, Vera K, et al.",
+    journal: "JAMA Dermatology",
+    year: 2024,
+    category: "neurofibromatosis",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/39196570/",
+    doiUrl: "https://doi.org/10.1001/jamadermatol.2024.2912",
+    displayOrder: 3,
+  },
+  {
+    title:
+      "A core outcome domain set to assess cutaneous neurofibromas related to neurofibromatosis type 1 in clinical trials",
+    authors: "Fertitta L, Bergqvist C, Sarin KY, et al.",
+    journal: "British Journal of Dermatology",
+    year: 2024,
+    category: "neurofibromatosis",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/37877514/",
+    doiUrl: "https://doi.org/10.1093/bjd/ljad397",
+    displayOrder: 4,
+  },
+  {
+    title:
+      "Phenotypic heterogeneity of neurofibromatosis type 1 in a large international registry",
+    authors: "Tabata MM, Li S, Knight P, et al.",
+    journal: "JCI Insight",
+    year: 2020,
+    category: "neurofibromatosis",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/32814709/",
+    doiUrl: "https://doi.org/10.1172/jci.insight.136262",
+    displayOrder: 5,
+  },
+
+  // ---- autoimmune-systemic ----
+  {
+    title:
+      "The Type I Interferon Signature Reflects Multiple Phenotypic and Activity Measures in Dermatomyositis",
+    authors: "Tabata MM, Hodgkinson LM, Wu TT, et al.",
+    journal: "Arthritis & Rheumatology",
+    year: 2023,
+    category: "autoimmune-systemic",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/37096447/",
+    doiUrl: "https://doi.org/10.1002/art.42526",
+    displayOrder: 1,
+  },
+  {
+    title:
+      "Impaired innate and adaptive immune responses to BNT162b2 SARS-CoV-2 vaccination in systemic lupus erythematosus",
+    authors: "Sarin KY, Zheng H, Chaichian Y, et al.",
+    journal: "JCI Insight",
+    year: 2024,
+    category: "autoimmune-systemic",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/38456511/",
+    doiUrl: "https://doi.org/10.1172/jci.insight.176556",
+    displayOrder: 2,
+  },
+  {
+    title:
+      "A phase 2, double-blinded, placebo-controlled trial of toll-like receptor 7/8/9 antagonist, IMO-8400, in dermatomyositis",
+    authors: "Kim YJ, Schiopu E, Dankó K, et al.",
+    journal: "Journal of the American Academy of Dermatology",
+    year: 2021,
+    category: "autoimmune-systemic",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/32781178/",
+    doiUrl: "https://doi.org/10.1016/j.jaad.2020.07.122",
+    displayOrder: 3,
+  },
+  {
+    title:
+      "Transcriptomic Repositioning Analysis Identifies mTOR Inhibitor as Potential Therapy for Epidermolysis Bullosa Simplex",
+    authors: "Lee GH, Lekwuttikarn R, Tafoya E, et al.",
+    journal: "Journal of Investigative Dermatology",
+    year: 2022,
+    category: "autoimmune-systemic",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/34536484/",
+    doiUrl: "https://doi.org/10.1016/j.jid.2021.07.170",
+    displayOrder: 4,
+  },
+];
+
+/** Short research-area label shown on each publication card. */
+export const CATEGORY_LABELS: Record<string, string> = {
+  "optical-imaging": "Optical Imaging",
+  "skin-cancer-genetics": "Skin Cancer & Genetics",
+  neurofibromatosis: "Neurofibromatosis",
+  "autoimmune-systemic": "Autoimmune & Systemic",
+  "molecular-digital": "Molecular & Digital",
+};
+
+/** The three featured publications (representing different research areas). */
+export const FEATURED_SELECTED = SELECTED_PUBLICATIONS.filter((p) => p.featured);
+
+/** Selected publications in a section, sorted by displayOrder then file order. */
+export function selectedByCategory(category: string): SelectedPublication[] {
+  return SELECTED_PUBLICATIONS.filter((p) => p.category === category).sort(
+    (a, b) => (a.displayOrder ?? 999) - (b.displayOrder ?? 999),
+  );
 }
-
-/** Filter chips for the Publications page: the canonical areas that actually
- * have publications, in spec order, then "Other" if present. */
-export const PUBLICATION_FILTER_AREAS: { slug: string; name: string }[] = (() => {
-  const present = new Set(ALL_PUBLICATIONS.map((p) => p.researchArea));
-  const ordered = RESEARCH_AREAS.filter((a) => present.has(a.name)).map((a) => ({
-    slug: a.slug,
-    name: a.name,
-  }));
-  if (present.has("Other")) ordered.push({ slug: "other", name: "Other" });
-  return ordered;
-})();
-
-/** Distinct publication years, newest first (for the year filter). */
-export const PUBLICATION_YEARS: number[] = Array.from(
-  new Set(ALL_PUBLICATIONS.map((p) => p.year).filter(Boolean)),
-).sort((a, b) => b - a);
-
-/** Featured publications drawn from the full list (with figures). */
-export const FEATURED_FROM_ALL = ALL_PUBLICATIONS.filter((p) => p.featured);

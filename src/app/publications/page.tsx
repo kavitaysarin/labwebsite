@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { PublicationCard } from "@/components/cards/PublicationCard";
-import { PublicationsBrowser } from "@/components/sections/PublicationsBrowser";
-import { CTABand } from "@/components/sections/CTABand";
-import { FEATURED_PUBLICATIONS } from "@/content/publications";
+import { Button } from "@/components/ui/Button";
+import { FeaturedPublicationCard } from "@/components/cards/FeaturedPublicationCard";
+import { SelectedPublicationCard } from "@/components/cards/SelectedPublicationCard";
+import { SITE } from "@/content/site";
+import {
+  FEATURED_SELECTED,
+  PUBLICATION_SECTIONS,
+  selectedByCategory,
+} from "@/content/publications";
 
 export const metadata: Metadata = {
   title: "Publications",
   description:
-    "Peer-reviewed research from the Sarin Lab across genetic, molecular, imaging, and digital approaches to reading disease in the skin. Search and filter by research area and year.",
+    "Selected studies from the Sarin Lab spanning imaging, genetics, molecular biology, digital measurement, and clinical research.",
 };
 
 export default function PublicationsPage() {
@@ -17,7 +22,7 @@ export default function PublicationsPage() {
     <main id="main-content">
       <PageHero
         title="Publications"
-        subtitle="Peer-reviewed research reading the skin as a sensor for disease."
+        subtitle="Selected studies from the Sarin Lab spanning imaging, genetics, molecular biology, digital measurement, and clinical research."
         image="/images/hero/hero-secondary.png"
       />
 
@@ -25,57 +30,75 @@ export default function PublicationsPage() {
       <section className="bg-white">
         <div className="container-wide section-pad">
           <div className="max-w-3xl">
-            <SectionHeading title="Research Publications" />
-            <div className="mt-4 space-y-3 text-[17px] leading-relaxed text-gray-dark">
-              <p>
-                Our work spans the genetic, molecular, imaging, and digital
-                approaches the lab uses to detect, measure, and monitor disease
-                through the skin. The publications below are organized so you can
-                explore the science by the question it asks rather than by a
-                single disease.
-              </p>
-              <p>
-                Browse by research area or year, or search by title, author, or
-                journal. The list reflects records indexed in PubMed; the
-                complete, always-current list is available there.
-              </p>
+            <SectionHeading title="Selected Publications" />
+            <p className="mt-4 text-[17px] leading-relaxed text-gray-dark">
+              Explore selected publications that represent the lab&apos;s work in
+              optical imaging, skin cancer, neurofibromatosis, autoimmune and
+              inflammatory disease, molecular biology, and artificial
+              intelligence.
+            </p>
+            <div className="mt-6">
+              <Button href={SITE.pubmedUrl} external>
+                View All Publications on PubMed
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Featured */}
-      {FEATURED_PUBLICATIONS.length > 0 ? (
+      {FEATURED_SELECTED.length > 0 ? (
         <section className="bg-cream">
           <div className="container-wide section-pad-tight">
-            <SectionHeading
-              eyebrow="Recent Highlights"
-              title="Featured Publications"
-            />
+            <SectionHeading eyebrow="Highlights" title="Featured Publications" />
             <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {FEATURED_PUBLICATIONS.map((pub) => (
-                <PublicationCard key={pub.pmid ?? pub.title} pub={pub} />
+              {FEATURED_SELECTED.map((pub) => (
+                <FeaturedPublicationCard key={pub.pubmedUrl} pub={pub} />
               ))}
             </div>
           </div>
         </section>
       ) : null}
 
-      {/* Browse all */}
-      <section className="bg-white">
-        <div className="container-wide section-pad-tight">
-          <SectionHeading title="All Publications" />
-          <div className="mt-8">
-            <PublicationsBrowser />
+      {/* Selected publications by research area */}
+      {PUBLICATION_SECTIONS.map((section, i) => {
+        // The three featured papers are highlighted above; sections show the rest.
+        const pubs = selectedByCategory(section.slug).filter((p) => !p.featured);
+        if (pubs.length === 0) return null;
+        return (
+          <section
+            key={section.slug}
+            id={section.slug}
+            className={`scroll-mt-24 ${i % 2 === 0 ? "bg-white" : "bg-cream"}`}
+          >
+            <div className="container-wide section-pad-tight">
+              <SectionHeading title={section.heading} />
+              <div className="mt-8 grid gap-5 lg:grid-cols-2">
+                {pubs.map((pub) => (
+                  <SelectedPublicationCard key={pub.pubmedUrl} pub={pub} />
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })}
+
+      {/* Final PubMed CTA */}
+      <section className="bg-navy">
+        <div className="container-wide section-pad-tight text-center">
+          <h2 className="font-heading text-[24px] font-bold text-white">
+            Looking for the complete publication list?
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-[16px] leading-relaxed text-white/80">
+            View Dr. Kavita Sarin&apos;s complete bibliography on PubMed.
+          </p>
+          <div className="mt-6 flex justify-center">
+            <Button href={SITE.pubmedUrl} external variant="secondary-light">
+              View All Publications on PubMed
+            </Button>
           </div>
         </div>
       </section>
-
-      <CTABand
-        heading="Interested in collaborating or learning more?"
-        primary={{ label: "Contact Us", href: "/contact" }}
-        secondary={{ label: "Explore Our Research", href: "/research" }}
-      />
     </main>
   );
 }

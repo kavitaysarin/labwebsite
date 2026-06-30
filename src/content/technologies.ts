@@ -123,7 +123,7 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
       { name: "Yonatan Winetraub", url: "https://profiles.stanford.edu/yonatan-winetraub" },
     ],
     researchHref: "/research#imaging",
-    pubHref: "/publications?area=non-invasive-imaging",
+    pubHref: "/publications#optical-imaging",
   },
   {
     slug: "optical-transparency",
@@ -145,7 +145,7 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
       { name: "Guosong Hong", url: "https://profiles.stanford.edu/guosong-hong" },
     ],
     researchHref: "/research#imaging",
-    pubHref: "/publications?area=non-invasive-imaging",
+    pubHref: "/publications#optical-imaging",
   },
   {
     slug: "3d-molecular-pathology",
@@ -164,7 +164,7 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
       { name: "the Liu Lab" },
     ],
     researchHref: "/research#molecular",
-    pubHref: "/publications?area=skin-cancer",
+    pubHref: "/publications#skin-cancer-genetics",
   },
   {
     slug: "spatial-biology",
@@ -183,7 +183,7 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
       "Biomarker discovery",
     ],
     researchHref: "/research#molecular",
-    pubHref: "/publications?area=autoimmune-and-systemic-disease",
+    pubHref: "/publications#autoimmune-systemic",
   },
   {
     slug: "ai-and-data-science",
@@ -198,6 +198,6 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
       "Reproducible measurements of lesion number, disease burden, and treatment response.",
     appliedTo: ["Neurofibromatosis type 1", "Skin cancer", "Clinical-trial endpoints"],
     researchHref: "/research#digital",
-    pubHref: "/publications?area=neurofibromatosis",
+    pubHref: "/publications#neurofibromatosis",
   },
 ];

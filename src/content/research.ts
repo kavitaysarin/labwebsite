@@ -89,7 +89,7 @@ export const RESEARCH_PILLARS: ResearchPillar[] = [
     imageAlt:
       "Stylized DNA double helix representing genetic analysis of the skin.",
     lead: "Genetic changes shape a person's risk of skin disease and how tumors behave. We study patients, tumors, and skin findings to identify inherited and acquired variants linked to skin cancer, neurofibromatosis type 1, and treatment response.",
-    pubHref: "/publications?area=skin-cancer",
+    pubHref: "/publications#skin-cancer-genetics",
     projects: [
       "Identifying genetic factors associated with basal and squamous cell carcinoma risk",
       "Studying genes that influence tumor development and treatment response",
@@ -135,7 +135,7 @@ export const RESEARCH_PILLARS: ResearchPillar[] = [
     imageAlt:
       "Multiplex fluorescence image of skin tissue revealing molecular and cellular organization.",
     lead: "Skin contains molecular and immune signals that can reflect disease activity and response to treatment. We analyze RNA, proteins, immune pathways, and tissue structure to identify biomarkers in autoimmune and inflammatory skin disease.",
-    pubHref: "/publications?area=autoimmune-and-systemic-disease",
+    pubHref: "/publications#autoimmune-systemic",
     projects: [
       "Measuring molecular signatures in dermatomyositis, lupus, and systemic sclerosis",
       "Studying inflammatory pathways in hidradenitis suppurativa and related disorders",
@@ -186,7 +186,7 @@ export const RESEARCH_PILLARS: ResearchPillar[] = [
     imageAlt:
       "Optical coherence tomography cross-sectional scan showing the layered structure of skin.",
     lead: "Non-invasive imaging allows us to examine skin structure and function without relying only on biopsy. We develop and apply optical imaging methods, including optical coherence tomography and KLEAR optical clearing, to visualize disease at cellular and tissue scales.",
-    pubHref: "/publications?area=non-invasive-imaging",
+    pubHref: "/publications#optical-imaging",
     projects: [
       "Using OCT to detect and monitor skin cancer",
       "Increasing optical imaging depth with KLEAR",
@@ -231,7 +231,7 @@ export const RESEARCH_PILLARS: ResearchPillar[] = [
     imageAlt:
       "cNF-Vision output: cutaneous neurofibromas segmented in green on skin photographs, with depth maps and three-dimensional reconstructions.",
     lead: "Digital tools can turn photographs and imaging data into quantitative measures of disease. We use artificial intelligence and image analysis to count lesions, measure disease burden, and develop more reliable outcomes for clinical research.",
-    pubHref: "/publications?area=neurofibromatosis",
+    pubHref: "/publications#neurofibromatosis",
     projects: [
       "Developing cNF-Vision to measure cutaneous neurofibroma burden",
       "Using longitudinal and whole-body imaging to track disease over time",

@@ -138,6 +138,36 @@ export type IconName =
   | "users"
   | "link";
 
+/** Research-area buckets for the curated Selected Publications page. */
+export type PublicationCategory =
+  | "optical-imaging"
+  | "skin-cancer-genetics"
+  | "neurofibromatosis"
+  | "autoimmune-systemic"
+  | "molecular-digital";
+
+/**
+ * A curated "selected" publication shown on the Publications page. Sourced from
+ * the live Sarin Lab site and verified against PubMed. See
+ * PUBLICATIONS_MAINTENANCE.md for how to add/edit these.
+ */
+export type SelectedPublication = {
+  title: string;
+  authors: string;
+  journal: string;
+  year: number;
+  category: PublicationCategory;
+  pubmedUrl: string;
+  doiUrl?: string;
+  image?: string;
+  imageAlt?: string;
+  featured?: boolean;
+  /** Lower numbers sort first within a section (optional). */
+  displayOrder?: number;
+  /** Optional, approval-gated "why it matters" sentence. */
+  summary?: string;
+};
+
 /** A minimal, verified publication reference (links to PubMed). */
 export type PubRef = {
   title: string;
