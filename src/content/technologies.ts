@@ -114,7 +114,9 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
     lead: "We use high-resolution optical imaging, including optical coherence tomography, to examine living skin without removing tissue.",
     whatItReveals: "Skin structure and light scattering at near-cellular resolution.",
     appliedTo: ["Skin cancer", "Neurofibromatosis type 1"],
-    collaboration: "In collaboration with Yonatan Winetraub",
+    collaborators: [
+      { name: "Yonatan Winetraub", url: "https://profiles.stanford.edu/yonatan-winetraub" },
+    ],
     researchHref: "/research#imaging",
     pubHref: "/publications?area=non-invasive-imaging",
   },
@@ -134,7 +136,9 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
       "Optical imaging research",
       "Light-based therapy research",
     ],
-    collaboration: "In collaboration with Guosong Hong",
+    collaborators: [
+      { name: "Guosong Hong", url: "https://profiles.stanford.edu/guosong-hong" },
+    ],
     researchHref: "/research#imaging",
     pubHref: "/publications?area=non-invasive-imaging",
   },
@@ -150,7 +154,10 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
     whatItReveals:
       "The spatial organization of cells, structures, and molecular signals within tissue.",
     appliedTo: ["Skin tumors", "Neurofibromas", "Imaging-pathology comparison"],
-    collaboration: "In collaboration with Jonathan Liu and the Liu Lab",
+    collaborators: [
+      { name: "Jonathan Liu", url: "https://profiles.stanford.edu/jonliu" },
+      { name: "the Liu Lab" },
+    ],
     researchHref: "/research#molecular",
     pubHref: "/publications?area=skin-cancer",
   },

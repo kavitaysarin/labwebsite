@@ -23,6 +23,7 @@ export function TechnologyDetail({
           alt={program.imageAlt}
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"
+          loading="eager"
           className={contain ? "object-contain p-3" : "object-cover"}
         />
       </div>
@@ -52,8 +53,37 @@ export function TechnologyDetail({
           </div>
         </div>
 
-        {program.collaboration ? (
-          <p className="mt-4 text-[14px] text-gray-dark">{program.collaboration}</p>
+        {program.collaborators?.length ? (
+          <p className="mt-4 text-[14px] text-gray-dark">
+            In collaboration with{" "}
+            {program.collaborators.map((c, idx, arr) => {
+              const sep =
+                idx === 0
+                  ? ""
+                  : idx === arr.length - 1
+                    ? arr.length > 2
+                      ? ", and "
+                      : " and "
+                    : ", ";
+              return (
+                <span key={c.name}>
+                  {sep}
+                  {c.url ? (
+                    <a
+                      href={c.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-cardinal hover:underline"
+                    >
+                      {c.name}
+                    </a>
+                  ) : (
+                    c.name
+                  )}
+                </span>
+              );
+            })}
+          </p>
         ) : null}
 
         <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-[14px]">

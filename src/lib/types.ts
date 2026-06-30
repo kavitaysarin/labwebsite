@@ -173,7 +173,9 @@ export type TechnologyProgram = {
   lead: string;
   whatItReveals: string;
   appliedTo: string[];
-  collaboration?: string;
+  /** Collaborators credited on the "In collaboration with …" line. A missing
+   * `url` renders as plain text (e.g. "the Liu Lab"). */
+  collaborators?: { name: string; url?: string }[];
   researchHref?: string;
   pubHref?: string;
 };
