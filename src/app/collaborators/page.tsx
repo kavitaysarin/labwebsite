@@ -11,7 +11,7 @@ import {
 export const metadata: Metadata = {
   title: "Collaborators",
   description:
-    "The clinicians, pathologists, engineers, and imaging scientists the Sarin Lab works with to read the skin as a sensor for disease.",
+    "The clinicians, pathologists, engineers, imaging scientists, and data scientists the Sarin Lab works with to read the skin as a sensor for disease.",
 };
 
 export default function CollaboratorsPage() {
@@ -23,34 +23,14 @@ export default function CollaboratorsPage() {
         image="/images/hero/hero-secondary.png"
       />
 
-      {/* Intro */}
-      <section className="bg-white">
-        <div className="container-wide section-pad">
-          <div className="max-w-3xl">
-            <SectionHeading title="Working Across Disciplines" />
-            <p className="mt-4 text-[17px] leading-relaxed text-gray-dark">
-              Reading the skin as a sensor takes more than one lab. We work with
-              clinicians, pathologists, engineers, and imaging scientists who
-              each bring an essential piece — from surgical and diagnostic
-              expertise to the optics and microscopy that let us see the skin in
-              new ways.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Grouped collaborators */}
-      {COLLABORATOR_CATEGORY_ORDER.map((group, i) => {
-        const members = COLLABORATORS.filter((c) => c.category === group.category);
+      {COLLABORATOR_CATEGORY_ORDER.map((category, i) => {
+        const members = COLLABORATORS.filter((c) => c.category === category);
         if (members.length === 0) return null;
         return (
-          <section
-            key={group.category}
-            className={i % 2 === 0 ? "bg-cream" : "bg-white"}
-          >
-            <div className="container-wide section-pad-tight">
-              <SectionHeading title={group.category} intro={group.blurb} />
-              <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <section key={category} className={i % 2 === 0 ? "bg-white" : "bg-cream"}>
+            <div className="container-wide section-pad">
+              <SectionHeading title={category} />
+              <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {members.map((c) => (
                   <CollaboratorCard key={c.name} person={c} />
                 ))}

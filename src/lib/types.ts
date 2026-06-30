@@ -83,11 +83,14 @@ export type Collaborator = {
   institution: string;
   labName?: string;
   category: string;
+  /** One short sentence on relevant expertise. */
   expertise: string;
-  sharedProject: string;
-  collaborationSummary: string;
+  /** One short sentence on the collaboration with the Sarin Lab. */
+  collaboration: string;
   url?: string;
   image?: string;
+  /** CSS object-position for the 4:5 portrait crop (default "50% 30%"). */
+  objectPosition?: string;
   permissionConfirmed?: boolean;
   lastVerified?: string;
 };

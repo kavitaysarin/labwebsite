@@ -61,11 +61,12 @@ Items requiring **Dr. Sarin / lab-team verification or approval** before launch.
 - **Title/role flags:** Dr. Sarin (now **Principal Investigator · Professor of Dermatology**, MD, PhD; live site said Associate Professor / Lab Director); Marlayna Harris (set to **Clinical Research Coordinator** per request — not stated on live site, confirm); Haniya vs "Haniyah" spelling; Chenming Zhang vs email `czheng8@`; Audris Chang vs "Chiang" (image filename); Nethra Srinivasan (set to **Medical Student** per request — live site said B.S. candidate at Case Western; confirm current program).
 - **Filter labels** to review: "Faculty" maps to the PI; confirm wording (All / Faculty / Staff / Trainees / Students / Volunteers / Alumni).
 
-### Collaborators
-- **Shared-project specifics for Aasi, Fiorentino, Rieger are NOT verified** (the live site states none) — currently described at the research-area level and flagged TODO: VERIFY. Supply the real shared projects or approve the framing.
-- **Profile links go to Stanford Profiles** (verified to exist) rather than the LinkedIn links on the live site — confirm these are the approved destinations.
-- **Titles:** Rieger shown as "Clinical Professor" (Stanford Profiles) vs live "Clinical Assistant Professor"; Winetraub shown with no title — confirm.
-- Confirm permission/wording to list each collaborator.
+### Collaborators (redesigned 2026-06-30 — 8 collaborators, 2 groups, official photos)
+- **Official Stanford profile photos migrated** for 7 of 8 (all **350×350** — CAP's max size; slightly soft on 2× displays). Sources in `docs/collaborator-image-sources.md`. **Yonatan Winetraub** has no profile photo → initials fallback (still needs a headshot).
+- **Two new collaborators added** per request: **Adam de la Zerda** (card links to `med.stanford.edu/delazerda/adam-de-la-zerda.html` as supplied) and **Olivier Gevaert** — both with the supplied titles and expertise/collaboration copy. Approve wording.
+- **Titles to confirm:** Winetraub has no listed faculty title (shown with institution only); Aasi ("Professor of Dermatology; Director of Mohs and Dermatologic Surgery") and Fiorentino ("Professor of Dermatology") — confirm exact current wording. de la Zerda & Gevaert use the titles you supplied.
+- **Collaboration sentences** are concise factual one-liners (no "Why It Matters"); Aasi/Fiorentino/Rieger collaboration framing is still lab-level — approve or refine.
+- **Profile links** point to Stanford Profiles (de la Zerda → his Stanford Medicine lab page per request). Confirm destinations.
 
 ### Lab Photos
 - **The live gallery (~34–37 images) was deliberately NOT used** — uncaptioned, low-res/screenshot team & event snapshots of identifiable people with no consent info (a stop condition). **Supply a curated, captioned, consent-cleared set of team/event photos.**
