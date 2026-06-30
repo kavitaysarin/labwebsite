@@ -12,8 +12,11 @@ _Checkpoint: 2026-06-29. Homepage built & frozen; Research page planned (approve
 - **`/` Home — DONE, refined over 4 passes, responsive (320–1440), axe WCAG A/AA = 0 violations, FROZEN.** Treated as the approved foundation.
 - `/_not-found` — Next default (not yet customized).
 
+## Completed pages (continued)
+- **`/research` Research — DONE & FROZEN.** Compact `PageHero` + four signal pillars (genetic / molecular / imaging / digital); simplified and polished; axe WCAG A/AA = 0 violations; no overflow 320–1440. Digital pillar uses the real cNF-Vision image. New frozen components: `PageHero`, `ResearchPillar`.
+
 ## Current page
-- **Research (`/research`) — content plan APPROVED, NOT yet coded.** Pillars: Genetic / Molecular / Imaging / Digital signal sensors. **Dropped:** Educational Interface pillar, systemic sclerosis, neurodegeneration. Diseases as applications: skin cancer, NF1, dermatomyositis, lupus, hidradenitis suppurativa, epidermolysis bullosa simplex. New components planned: `PageHero` (compact navy), `ResearchPillar` — both compose the frozen system.
+- **Technologies (`/technologies`) — content outline stage** (awaiting approval before coding). Will reuse the frozen `PageHero` + design system. Anchors referenced from Research: `#optical-imaging`, `#3d-molecular-pathology`, `#ai-and-data-science`, `#spatial-biology`.
 
 ## Approved design decisions
 - Next.js static export → GitHub Pages; project kept outside Drive.
@@ -28,8 +31,8 @@ _Checkpoint: 2026-06-29. Homepage built & frozen; Research page planned (approve
 - Publications: research-area cards + PubMed; homepage "Recent Work" uses real recent PubMed pubs.
 
 ## Remaining tasks (priority order)
-1. **Build Research `/research`** (next; plan approved).
-2. Build Technologies, Publications (+ research-area drill-downs), Recognition, Team (+ profiles), Collaborators, Lab Photos, Contact, custom 404.
+1. **Build Technologies `/technologies`** (next; outline pending approval) — wires up the `#…` anchors that Research links to.
+2. Build Publications (+ research-area drill-downs and the `?area=` filter the Research page links to), Recognition, Team (+ profiles), Collaborators, Lab Photos, Contact, custom 404.
 3. Content data files still needed: `people.ts`, `collaborators.ts`, `recognition.ts`, `gallery.ts`, `research.ts` pillars.
 4. Full image scrape/integration: headshots, lab photos, microscopy, logo.
 5. Deliverables: `copy-before-after.md`, `redirect-map.md`, `CONTENT_EDITING_GUIDE.md`, README, image manifest. (`content-audit.md` + `CONTENT_REVIEW_NEEDED.md` now exist.)

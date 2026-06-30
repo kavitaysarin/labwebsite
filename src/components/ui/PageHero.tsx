@@ -1,3 +1,5 @@
+// FROZEN — shared interior-page hero (approved). Reuse as-is; do not modify
+// without re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import Image from "next/image";
 
 /**

@@ -29,3 +29,13 @@ This keeps every page on one consistent system.
 - Adding **new** page-specific components that compose the frozen ones.
 - Adding new content data files under `src/content`.
 - Adding new icons to `Icon.tsx` **in the same outline style**.
+
+## Also frozen (added after the Research page)
+| Concern | Location | Notes |
+|---|---|---|
+| Interior page hero | `src/components/ui/PageHero.tsx` | Compact navy hero for all subpages |
+| Research pillar block | `src/components/sections/ResearchPillar.tsx` | Image + eyebrow + title + lead + ≤3 projects + publications link |
+| Research page | `src/app/research/page.tsx` | Approved + frozen |
+| Research content | `src/content/research.ts` (`RESEARCH_INTRO`, `RESEARCH_PILLARS`) | Verified pillar copy/data |
+
+Reuse `PageHero` as-is for Technologies and every later interior page.

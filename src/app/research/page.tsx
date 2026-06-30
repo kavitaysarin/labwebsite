@@ -1,3 +1,5 @@
+// FROZEN — approved Research page. Reuse as-is; do not modify without
+// re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { ResearchPillar } from "@/components/sections/ResearchPillar";
