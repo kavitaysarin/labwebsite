@@ -12,9 +12,9 @@ function initials(name: string): string {
 /**
  * Collaborator card: 4:5 official portrait (object-cover + per-person
  * object-position) or initials fallback; name + credentials; title +
- * institution; one expertise sentence; one collaboration sentence; and a
- * "View Stanford Profile" link that stretches over the whole card (fully
- * clickable) while remaining the accessible link label. Composes `.card-surface`.
+ * institution; one expertise sentence; and a "View Stanford Profile" link that
+ * stretches over the whole card (fully clickable) while remaining the
+ * accessible link label. Composes `.card-surface`.
  */
 export function CollaboratorCard({ person }: { person: Collaborator }) {
   return (
@@ -55,7 +55,6 @@ export function CollaboratorCard({ person }: { person: Collaborator }) {
         <p className="mt-0.5 text-[13px] leading-snug text-gray-dark">{person.institution}</p>
 
         <p className="mt-3 text-[14px] leading-relaxed text-gray-dark">{person.expertise}</p>
-        <p className="mt-2 text-[14px] leading-relaxed text-gray-dark">{person.collaboration}</p>
 
         {person.url ? (
           <div className="mt-auto pt-4">

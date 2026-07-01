@@ -17,11 +17,7 @@ export const metadata: Metadata = {
 export default function CollaboratorsPage() {
   return (
     <main id="main-content">
-      <PageHero
-        title="Collaborators"
-        subtitle="The science is a team effort across disciplines and institutions."
-        image="/images/hero/hero-secondary.png"
-      />
+      <PageHero title="Collaborators" image="/images/hero/hero-secondary.png" />
 
       {COLLABORATOR_CATEGORY_ORDER.map((category, i) => {
         const members = COLLABORATORS.filter((c) => c.category === category);
