@@ -14,8 +14,12 @@ import type { Person } from "@/lib/types";
  *   said B.S. candidate, Case Western) — confirm current program.
  * - Marlayna Harris: role set to "Clinical Research Coordinator" per request
  *   (not stated on the live site) — confirm.
- * - Haniya vs "Haniyah" spelling; Chenming Zhang vs email czheng8@; Audris
- *   Chang vs "Chiang" (image filename); Dr. Sarin title (live: Associate Prof).
+ * - Haniya vs "Haniyah" spelling; Chenming Zhang vs email czheng8@; Dr. Sarin
+ *   title (live: Associate Prof).
+ * - Audris Chiang: surname set to "Chiang" per request (2026-07-01; matches the
+ *   image filename) — was "Chang"; slug/image kept as audris-chang. Confirm.
+ * - Margarita Golod email set to margarita.golod@gmail.com (supplied as
+ *   "maragarita.golod@…", a likely typo) — confirm.
  * - Alumni: live site lists Medicine/Industry/Research headings but no names.
  */
 export const PEOPLE: Person[] = [
@@ -55,6 +59,26 @@ export const PEOPLE: Person[] = [
     bio: "Coordinates the lab's clinical research while studying computational, systems-level approaches to biology, building on undergraduate work that modeled cellular senescence and epithelial change in disease.",
     active: true,
   },
+  {
+    slug: "angelina-chekmareva",
+    name: "Angelina Chekmareva",
+    role: "Research Administrator",
+    category: "Research Staff",
+    email: "achek@stanford.edu",
+    bio: "Provides administrative and research management support for the lab.",
+    active: true,
+  },
+  {
+    slug: "kat-israel",
+    name: "Kat Israel",
+    role: "Senior Associate Director, Major Gifts",
+    category: "Research Staff",
+    email: "katharynisrael@stanford.edu",
+    image: "/images/team/kat-israel.jpg",
+    objectPosition: "50% 25%",
+    bio: "Provides strategic leadership and fundraising development to elevate the Sarin Lab's research programs.",
+    active: true,
+  },
 
   // ----- Trainees -----
   {
@@ -77,17 +101,6 @@ export const PEOPLE: Person[] = [
     image: "/images/team/jeffrey-sagun.jpg",
     objectPosition: "50% 16%",
     bio: "Studying the genetics of rare and complex disease as a postbaccalaureate scholar. He earned a degree in neuroscience and spent three years at the NIH studying xeroderma pigmentosum.",
-    active: true,
-  },
-  {
-    slug: "sahar-caravan",
-    name: "Sahar Caravan",
-    role: "Medical Student",
-    category: "Trainees",
-    email: "caravan@stanford.edu",
-    image: "/images/team/sahar-caravan.jpg",
-    objectPosition: "50% 38%",
-    bio: "Studying hidradenitis suppurativa, large-scale clinical data, and refugee health as a medical student. Her work connects population-scale data with everyday clinical care, building on a background in biochemistry and geography.",
     active: true,
   },
   {
@@ -124,19 +137,9 @@ export const PEOPLE: Person[] = [
     active: true,
   },
   {
-    slug: "victoria-harbour",
-    name: "Victoria Harbour",
-    role: "Medical Student",
-    category: "Trainees",
-    email: "vharbour@stanford.edu",
-    image: "/images/team/victoria-harbour.jpg",
-    objectPosition: "50% 35%",
-    bio: "Studying immunological markers and environmental risk factors that trigger hidradenitis suppurativa flares. An NSF Graduate Research Fellow and former chemical engineer, she goes by Tori.",
-    active: true,
-  },
-  {
     slug: "audris-chang",
-    name: "Audris Chang",
+    name: "Audris Chiang",
+    credentials: "MD",
     role: "Postdoctoral Fellow",
     category: "Trainees",
     email: "audrisc@stanford.edu",
@@ -185,17 +188,24 @@ export const PEOPLE: Person[] = [
   {
     slug: "sally-glaser",
     name: "Sally Glaser",
-    role: "Volunteer", // TODO: VERIFY (no role/bio stated on live site)
+    credentials: "PhD",
+    role: "Volunteer, Scientific Editor",
     category: "Volunteers",
-    bio: "A volunteer supporting the lab's research and day-to-day activities.",
+    image: "/images/team/sally-glaser.jpg",
+    objectPosition: "50% 22%",
+    bio: "A renowned epidemiologist and former CEO of the Cancer Prevention Institute of California (CPIC). She reviews select grants and publications to improve the rigor and quality of the lab's work.",
     active: true,
   },
   {
     slug: "margarita-golod",
     name: "Margarita Golod",
-    role: "Volunteer", // TODO: VERIFY (no role/bio stated on live site)
+    credentials: "MBA",
+    role: "Volunteer, Outreach and Engagement",
     category: "Volunteers",
-    bio: "A volunteer supporting the lab's research and day-to-day activities.",
+    email: "margarita.golod@gmail.com", // TODO: VERIFY — supplied as "maragarita.golod@..." (likely typo)
+    image: "/images/team/margarita-golod.jpg",
+    objectPosition: "50% 25%",
+    bio: "Marketing advisor with an MBA from Harvard Business School and two decades of marketing experience spanning startups and established companies. She now lends her expertise to help share our research with the world.",
     active: true,
   },
 ];

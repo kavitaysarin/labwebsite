@@ -36,7 +36,13 @@ Base: `https://images.squarespace-cdn.com/content/v1/58df29fb6a4963762c662cf5/`
 | Victoria Harbour | victoria-harbour | 800×800 | ok | `875a38af-c886-43cb-b641-c84333b99383/1727140736461.jpeg` |
 | Audris Chang | audris-chang | 500×500 | low-ish | `5a61b7e6-9361-49b9-a438-951ca3225b49/ChiangAudrisPhoto2-min+(2).webp` |
 
-**No headshot (initials fallback):** Sally Glaser, Margarita Golod — the live site
-used a generic `Placeholder.png` for volunteers. Added to the missing-headshots list.
+**Lab-supplied photos (2026-07-01):** Sally Glaser (`sallyglaser.jpg`), Margarita
+Golod (`margarita.png` — auto-cropped out of a phone screenshot to isolate the
+headshot), and Kat Israel (`KatIsrael.png`). All from the redesign package.
+
+**No headshot (initials fallback):** now only **Angelina Chekmareva** (new staff,
+no photo supplied).
+
+**Removed 2026-07-01:** Victoria Harbour and Sahar Caravan (entries + images deleted).
 
 Do not hotlink these Squarespace URLs in production — local copies are committed.
