@@ -87,9 +87,6 @@ export default function PublicationsPage() {
           <h2 className="font-heading text-[24px] font-bold text-white">
             Looking for the complete publication list?
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-[16px] leading-relaxed text-white/80">
-            View Dr. Kavita Sarin&apos;s complete bibliography on PubMed.
-          </p>
           <div className="mt-6 flex justify-center">
             <Button href={SITE.pubmedUrl} external variant="secondary-light">
               View All Publications on PubMed

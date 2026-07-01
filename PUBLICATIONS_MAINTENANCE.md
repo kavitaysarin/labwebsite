@@ -14,7 +14,13 @@ for launch. After any change, rebuild the site (`npm run build`) to see it.
 > DOI list — **20 publications added** (each DOI resolved to a PMID and verified
 > against PubMed; `displayOrder` 7–26). Two supplied DOIs were incomplete
 > (`10.1158/1078-0432`, `10.1038/jid.2015`) and were **not** added — awaiting the
-> full DOIs. Two were already present and not duplicated. List is now ~40 papers.
+> full DOIs. Two were already present and not duplicated. Then **Neurofibromatosis
+> +5** (`displayOrder` 6–10) and **Autoimmune, Inflammatory, and Systemic Disease
+> +3** (`displayOrder` 6–8), all verified via PubMed; the supplied
+> `10.1093/bjd/ljaf479` was already present (cNF-PUSH-D) and not duplicated. Also
+> removed the "View Dr. Kavita Sarin's complete bibliography on PubMed" sentence
+> from the final CTA (the "View All Publications on PubMed" button remains). List
+> is now ~48 papers.
 
 ## Manual update process (at a glance)
 

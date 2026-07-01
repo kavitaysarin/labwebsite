@@ -143,8 +143,9 @@ export const FEATURED_PUBLICATIONS = RECENT_PUBLICATIONS.filter(
  * to the first author + "et al." (the live site shows no authors). Journal
  * names are normalized to their standard display form. Nothing here is invented.
  *
- * This is a CURATED highlight (~40 papers; the Skin Cancer and Genetics section
- * was expanded 2026-07-01), NOT the full archive. To add /
+ * This is a CURATED highlight (~48 papers; the Skin Cancer and Genetics,
+ * Neurofibromatosis, and Autoimmune sections were expanded 2026-07-01), NOT the
+ * full archive. To add /
  * remove / recategorize / feature / reorder entries, see
  * PUBLICATIONS_MAINTENANCE.md. The complete list lives on PubMed
  * (SITE.pubmedUrl).
@@ -554,6 +555,61 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
     doiUrl: "https://doi.org/10.1172/jci.insight.136262",
     displayOrder: 5,
   },
+  {
+    title:
+      "Phenotypic characterization of neurofibromatosis type 1 in a large Chinese cohort: A cross-sectional study",
+    authors: "Wang Z, et al.",
+    journal: "JAAD International",
+    year: 2026,
+    category: "neurofibromatosis",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/41399671/",
+    doiUrl: "https://doi.org/10.1016/j.jdin.2025.09.020",
+    displayOrder: 6,
+  },
+  {
+    title:
+      "Effect of NFX-179 MEK inhibitor on cutaneous neurofibromas in persons with neurofibromatosis type 1",
+    authors: "Sarin KY, et al.",
+    journal: "Science Advances",
+    year: 2024,
+    category: "neurofibromatosis",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/38691597/",
+    doiUrl: "https://doi.org/10.1126/sciadv.adk4946",
+    displayOrder: 7,
+  },
+  {
+    title:
+      "Perspectives of adolescents with neurofibromatosis 1 and cutaneous neurofibromas: Implications for clinical trials",
+    authors: "Cannon A, et al.",
+    journal: "Clinical Trials",
+    year: 2024,
+    category: "neurofibromatosis",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/37269078/",
+    doiUrl: "https://doi.org/10.1177/17407745231178839",
+    displayOrder: 8,
+  },
+  {
+    title:
+      "cNF-Skindex in Adults Living with Neurofibromatosis 1: Severity Strata in France and Validation in United States Adults",
+    authors: "Fertitta L, et al.",
+    journal: "Journal of Investigative Dermatology",
+    year: 2023,
+    category: "neurofibromatosis",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/37149083/",
+    doiUrl: "https://doi.org/10.1016/j.jid.2023.04.014",
+    displayOrder: 9,
+  },
+  {
+    title:
+      "Status and Recommendations for Incorporating Biomarkers for Cutaneous Neurofibromas Into Clinical Research",
+    authors: "Wallis D, et al.",
+    journal: "Neurology",
+    year: 2021,
+    category: "neurofibromatosis",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/34230199/",
+    doiUrl: "https://doi.org/10.1212/WNL.0000000000012426",
+    displayOrder: 10,
+  },
 
   // ---- autoimmune-systemic ----
   {
@@ -610,6 +666,39 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
     pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/34536484/",
     doiUrl: "https://doi.org/10.1016/j.jid.2021.07.170",
     displayOrder: 5,
+  },
+  {
+    title:
+      "TLR7/8 Activation in Immune Cells and Muscle by RNA-Containing Immune Complexes: Role in Inflammation and the Pathogenesis of Myositis",
+    authors: "Wu Y, et al.",
+    journal: "Arthritis & Rheumatology",
+    year: 2025,
+    category: "autoimmune-systemic",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/39279150/",
+    doiUrl: "https://doi.org/10.1002/art.42989",
+    displayOrder: 6,
+  },
+  {
+    title:
+      "Identification of Alpha-Adrenergic Agonists as Potential Therapeutic Agents for Dermatomyositis through Drug-Repurposing Using Public Expression Datasets",
+    authors: "Cho HG, et al.",
+    journal: "Journal of Investigative Dermatology",
+    year: 2016,
+    category: "autoimmune-systemic",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/26975725/",
+    doiUrl: "https://doi.org/10.1016/j.jid.2016.03.001",
+    displayOrder: 7,
+  },
+  {
+    title:
+      "The P2X7-NLRP3 inflammasome inhibitor AZD9056 has no significant effect on hidradenitis suppurativa clinical disease activity but restores cytokine production in peripheral blood mononuclear cells: Results of a phase 2 trial",
+    authors: "Kilgour JM, et al.",
+    journal: "Journal of the American Academy of Dermatology",
+    year: 2026,
+    category: "autoimmune-systemic",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/41022330/",
+    doiUrl: "https://doi.org/10.1016/j.jaad.2025.09.079",
+    displayOrder: 8,
   },
 ];
 
