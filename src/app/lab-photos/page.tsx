@@ -1,3 +1,6 @@
+// APPROVED — finalized Lab Photos page (2026-06-30). Layout approved; do not
+// redesign without re-approval. The photo LIST is content-managed in
+// src/content/gallery.ts (see LAB_PHOTO_INVENTORY.md). See docs/DESIGN_SYSTEM_FROZEN.md.
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";

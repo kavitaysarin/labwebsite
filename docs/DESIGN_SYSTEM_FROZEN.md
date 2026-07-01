@@ -74,3 +74,11 @@ The member **list** (`PEOPLE` in `src/content/people.ts`) is content-managed (NO
 | Collaborators page | `src/app/collaborators/page.tsx` | Approved layout: two domain groups, left-aligned 3/2/1 grid (incomplete rows start in column one, not centered) |
 
 The collaborator **list** (`COLLABORATORS` in `src/content/collaborators.ts`) is content-managed (NOT frozen). Portrait sources: `docs/collaborator-image-sources.md`.
+
+## Also approved (added after the Lab Photos page — 2026-06-30)
+| Concern | Location | Notes |
+|---|---|---|
+| Photo gallery | `src/components/sections/PhotoGallery.tsx` | Responsive people-focused masonry (1/2/3 cols, natural proportions, no forced crop, intrinsic dims → no CLS); optional category filter chips (default All); "Load More" (12 at a time, all on one page); accessible lightbox (full image, prev/next, arrow keys, Escape, focus trap, focus-return, touch swipe) |
+| Lab Photos page | `src/app/lab-photos/page.tsx` | Approved layout: `PageHero` (no subtitle) + "Life in the Lab" heading + gallery + CTA band |
+
+The photo **list** (`GALLERY` in `src/content/gallery.ts`) is content-managed (NOT frozen) — add/remove/reorder photos and edit captions/categories there. Inventory + rationale: `LAB_PHOTO_INVENTORY.md`. People-focused only; no scientific figures/OCT/histology/publication graphics.
