@@ -113,9 +113,10 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
     name: "Optical Imaging",
     shortName: "Optical Imaging",
     icon: "scan",
-    image: "/images/technologies/damae.jpg",
+    image: "/images/technologies/deeplive.webp",
     imageAlt:
-      "A DAMAE Medical deepLive optical imaging system used to examine skin non-invasively.",
+      "The DAMAE Medical deepLive optical imaging system, its screen showing a cross-sectional scan of skin.",
+    fit: "contain",
     lead: "We use high-resolution optical imaging, including optical coherence tomography, to examine living skin without removing tissue.",
     whatItReveals: "Skin structure and light scattering at near-cellular resolution.",
     appliedTo: ["Skin cancer", "Neurofibromatosis type 1"],
@@ -193,9 +194,14 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
     name: "AI & Computational Analysis",
     shortName: "AI & Computation",
     icon: "chip",
-    image: "/images/research/digital.jpg",
+    image: "/images/technologies/cnfvision-poster.jpg",
     imageAlt:
-      "cNF-Vision output: cutaneous neurofibromas segmented on skin photographs, with depth maps and three-dimensional reconstructions.",
+      "cNF-Vision output: cutaneous neurofibromas segmented on skin photographs (left), AI depth heat maps (center), and three-dimensional reconstructions (right).",
+    fit: "contain",
+    video: {
+      mp4: "/images/technologies/cnfvision.mp4",
+      webm: "/images/technologies/cnfvision.webm",
+    },
     lead: "We use artificial intelligence and quantitative image analysis to measure disease from clinical photographs, optical images, and pathology data.",
     whatItReveals:
       "Reproducible measurements of lesion number, disease burden, and treatment response.",
