@@ -71,7 +71,7 @@ Items requiring **Dr. Sarin / lab-team verification or approval** before launch.
 - **Profile links:** Stanford Profiles for most; de la Zerda, Bronte-Stewart, and Chung link to their `med.stanford.edu` profiles (per request / verified). Confirm destinations.
 
 ### Lab Photos (FULL carousel migrated 2026-06-30 — awaiting review)
-- **36 photos** migrated — the entire live `/lab-photos` carousel minus one screenshot (full inventory in `LAB_PHOTO_INVENTORY.md`). No scientific figures/OCT/histology/publication graphics. Masonry (natural proportions), four categories, "Load More", accessible lightbox with swipe.
+- **40 photos** total (33 carousel + 7 lab-supplied). Removed after review: **2 near-duplicates** (lp-18 ≈ lp-17 standing group; lp-21 ≈ lp-20 kitchen event) and **1 non-photo** (lp-08, a decorative map illustration, not a people photo). Full inventory in `LAB_PHOTO_INVENTORY.md`. No scientific figures/OCT/histology/publication graphics. Masonry (natural proportions), four categories, "Load More", accessible lightbox with swipe.
 - **Identification & consent:** every people photo shows identifiable lab members; no individuals named. **Confirm consent to display publicly.**
 - **Uncertain captions to review** (generic placeholders): lp-03, lp-14, lp-15, lp-16, lp-21, lp-26, lp-27 ("Sarin Lab members / gathering"). **Filename-derived captions to confirm:** lp-22 ("The Sarin Lab, 2023."), lp-35 ("…Society for Investigative Dermatology meeting, 2024."), lp-11 (Halloween), lp-24 (lunch), lp-25 (drinks).
 - **Low-resolution to replace if better versions exist:** lp-12, lp-14, lp-15, lp-16, lp-27, lp-35 (see inventory).

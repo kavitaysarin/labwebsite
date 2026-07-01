@@ -11,7 +11,10 @@ Captions are generic — no individual is named without evidence. **Identificati
 and permission for public display need lab confirmation** before launch (all
 "people" rows below).
 
-**Gallery total: 43** = 36 migrated carousel photos + **7 lab-supplied photos**
+**Gallery total: 40** = 33 carousel photos + **7 lab-supplied photos**. After a
+near-duplicate review, removed lp-18 (≈ lp-17, same standing-group event),
+lp-21 (≈ lp-20, same kitchen event), and lp-08 (a decorative map illustration,
+not a people photo). Earlier this was 36 carousel + 7 supplied = 43.
 (added 2026-06-30, shown first: `lp-new-01`…`lp-new-07` — bowling outing,
 group at a Stanford mural, a poster presentation, a lab dinner, a milkshake-bar
 outing, and two more conference photos). People-focused only; no scientific

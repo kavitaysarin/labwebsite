@@ -18,7 +18,7 @@ export default function LabPhotosPage() {
 
       <section className="bg-white">
         <div className="container-wide section-pad">
-          <SectionHeading title="Gallery" />
+          <SectionHeading title="Life in the Lab" />
           <div className="mt-8">
             <PhotoGallery images={GALLERY} categories={GALLERY_CATEGORIES} />
           </div>
