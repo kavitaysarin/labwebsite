@@ -24,7 +24,7 @@ Items requiring **Dr. Sarin / lab-team verification or approval** before launch.
 - **Clinical-readiness wording** — NFX-179 / MEK inhibitor (phase 2a), remetinostat (HDAC), virtual biopsy, and KLEAR-OCT are presented as **research / clinical-study stage**, not available treatments. Confirm phrasing.
 
 ## Images & reuse rights
-- **Official Stanford / Sarin Lab logo** — needed (currently a text lockup).
+- **Logo** — the header/footer now use the **official Stanford Medicine emblem**, reversed to white for the cardinal background (from the supplied `stanfordmedicinelogo.png`). "Sarin Lab" remains a text wordmark beside it — provide a dedicated Sarin Lab logo if one exists. Confirm the reversed treatment is acceptable for Stanford brand use.
 - **AI & Data Science** card image (homepage Technologies) is a **provisional iStock** neural-network graphic — replace with a real lab AI / skin-analysis visual, or confirm the license covers web use.
 - **cNF-Vision image** (Research → Digital Sensor) is a static frame extracted from the lab's `cnfvision.gif`, showing **patient skin photographs** with segmented cutaneous neurofibromas. **Confirm patient consent / de-identification for public display.** Also confirm the full 3×3 montage is the preferred presentation versus a single cleaner segmentation panel.
 - **3D Molecular Pathology** image (`molecular-3d.jpg`) is the lab-provided multiplex-fluorescence figure (`3Dmolecularpathology.png`; red nuclei / blue nerve fibers). Confirm it is the lab's own figure and cleared for web use.

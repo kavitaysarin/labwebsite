@@ -1,8 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 
 /**
- * Text lockup standing in for the official Stanford Medicine / Sarin Lab logo.
- * TODO: replace with the approved logo file when supplied (spec §7).
+ * Brand lockup: the official Stanford Medicine emblem — reversed to white for
+ * the cardinal header & footer — followed by a divider and "Sarin Lab".
+ * The white logo is generated from the supplied Stanford Medicine PNG
+ * (public/images/logo/stanford-medicine-white.png). It suits the cardinal
+ * background (tone="light"); if the Brand is ever placed on a light surface a
+ * colored variant would be needed.
  */
 export function Brand({
   onNavigate,
@@ -12,24 +17,23 @@ export function Brand({
   tone?: "light" | "dark";
 }) {
   const main = tone === "light" ? "text-white" : "text-navy";
-  const sub = tone === "light" ? "text-white/75" : "text-gray-dark";
   const rule = tone === "light" ? "bg-white/35" : "bg-navy/25";
   return (
     <Link
       href="/"
       onClick={onNavigate}
       className="group flex items-center gap-3"
-      aria-label="Sarin Lab — home"
+      aria-label="Sarin Lab at Stanford Medicine — home"
     >
-      <span className="flex flex-col leading-none">
-        <span className={`font-heading text-[22px] font-bold tracking-tight ${main}`}>
-          Stanford
-        </span>
-        <span className={`mt-0.5 text-[11px] font-semibold uppercase tracking-[0.18em] ${sub}`}>
-          Medicine
-        </span>
-      </span>
-      <span className={`h-9 w-px ${rule}`} aria-hidden="true" />
+      <Image
+        src="/images/logo/stanford-medicine-white.png"
+        alt="Stanford Medicine"
+        width={447}
+        height={124}
+        priority
+        className="h-[34px] w-auto"
+      />
+      <span className={`h-8 w-px ${rule}`} aria-hidden="true" />
       <span className={`font-heading text-[22px] font-bold tracking-tight ${main}`}>
         Sarin Lab
       </span>

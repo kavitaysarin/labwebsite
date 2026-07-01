@@ -65,7 +65,7 @@ Decided 2026-06-29 when the Publications page moved to a curated **Selected Publ
 
 ## Unresolved visual issues
 - AI technology card image is a generic iStock neural network — provisional; replace with a real lab AI/skin-analysis visual.
-- Logo is a text lockup — needs the official Stanford/Sarin Lab logo.
+- Logo: the header/footer now use the **official Stanford Medicine emblem**, reversed to white for the cardinal background (`public/images/logo/stanford-medicine-white.png`, generated from the supplied PNG). "Sarin Lab" is still a text wordmark alongside it — supply a dedicated Sarin Lab logo if one exists.
 - Research "Genetic Sensor" pillar image not yet sourced (need a genomics/DNA visual).
 - `recent-work/hedgehog.jpg` is low-res (375²).
 - Image optimization (WebP/AVIF + responsive sizes) not yet done — minor perf win (homepage ≈ 1.5 MB).
