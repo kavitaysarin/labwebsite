@@ -79,8 +79,31 @@ export const PEOPLE: Person[] = [
     bio: "Provides strategic leadership and fundraising development to elevate the Sarin Lab's research programs.",
     active: true,
   },
+  {
+    slug: "chris-sadee",
+    name: "Chris Sadee",
+    role: "AI Data Scientist",
+    category: "Research Staff",
+    email: "sadee@stanford.edu",
+    image: "/images/team/chris-sadee.jpg",
+    objectPosition: "50% 22%",
+    bio: "Data scientist in the Gevaert lab and Sarin lab working on neurofibromatosis and AI imaging projects.",
+    active: true,
+  },
 
   // ----- Trainees -----
+  {
+    slug: "akash-dhawan",
+    name: "Akash Dhawan",
+    credentials: "PhD",
+    role: "Postdoctoral Fellow", // TODO: VERIFY — no role/title was supplied
+    category: "Trainees",
+    email: "akash.s.dhawan@gmail.com",
+    image: "/images/team/akash-dhawan.jpg",
+    objectPosition: "50% 25%",
+    bio: "He conducted his doctoral research primarily in the Kornfield Lab under Prof. Julia Kornfield. His work centers on regenerative medicine, specifically using light to trigger collagen self-assembly into 3D cell scaffolds to improve wound healing applications.",
+    active: true,
+  },
   {
     slug: "sharon-loa",
     name: "Sharon Loa",
