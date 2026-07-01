@@ -4,6 +4,7 @@
 // Muted autoplay loop; pauses on the poster frame when the visitor prefers
 // reduced motion. The poster (a video frame) is also the no-JS fallback.
 import { useEffect, useRef } from "react";
+import { asset } from "@/lib/asset";
 
 export function TechVideo({
   mp4,
@@ -41,7 +42,7 @@ export function TechVideo({
     <video
       ref={ref}
       className={className}
-      poster={poster}
+      poster={asset(poster)}
       autoPlay
       muted
       loop
@@ -49,8 +50,8 @@ export function TechVideo({
       preload="metadata"
       aria-label={label}
     >
-      {webm ? <source src={webm} type="video/webm" /> : null}
-      <source src={mp4} type="video/mp4" />
+      {webm ? <source src={asset(webm)} type="video/webm" /> : null}
+      <source src={asset(mp4)} type="video/mp4" />
     </video>
   );
 }

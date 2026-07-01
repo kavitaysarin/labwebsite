@@ -1,6 +1,7 @@
 // FROZEN — approved Research pillar component. Reuse as-is; do not modify
 // without re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { Icon } from "@/components/ui/Icon";
 import { ArrowLink } from "@/components/ui/Button";
 import type { ResearchPillar as Pillar } from "@/lib/types";
@@ -21,7 +22,7 @@ export function ResearchPillar({
         }`}
       >
         <Image
-          src={pillar.image}
+          src={asset(pillar.image)}
           alt={pillar.imageAlt}
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"

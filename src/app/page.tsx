@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { HomeHero } from "@/components/sections/HomeHero";
 import { FeatureGrid } from "@/components/sections/FeatureGrid";
 import { CTABand } from "@/components/sections/CTABand";
@@ -63,7 +64,7 @@ export default function Home() {
           {/* Stanford Medicine building — desktop only, left edge faded into the page */}
           <div className="relative hidden min-h-[210px] overflow-hidden lg:block">
             <Image
-              src="/images/intro/stanford-building.jpg"
+              src={asset("/images/intro/stanford-building.jpg")}
               alt="Stanford Medicine building in Redwood City, California"
               fill
               sizes="25vw"

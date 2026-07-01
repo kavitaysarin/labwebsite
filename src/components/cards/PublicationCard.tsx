@@ -1,6 +1,7 @@
 // FROZEN — homepage-approved component (PublicationCard). Reuse as-is; do not
 // modify without re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { Icon } from "@/components/ui/Icon";
 import { Placeholder } from "@/components/ui/Placeholder";
 import type { Publication } from "@/lib/types";
@@ -34,7 +35,7 @@ export function PublicationCard({
       >
         {pub.image ? (
           <Image
-            src={pub.image}
+            src={asset(pub.image)}
             alt={pub.imageAlt ?? ""}
             fill
             loading="eager"

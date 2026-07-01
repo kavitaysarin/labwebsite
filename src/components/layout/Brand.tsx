@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 
 /**
  * Brand lockup: the official Stanford Medicine emblem — reversed to white for
@@ -26,7 +27,7 @@ export function Brand({
       aria-label="Sarin Lab at Stanford Medicine — home"
     >
       <Image
-        src="/images/logo/stanford-medicine-white.png"
+        src={asset("/images/logo/stanford-medicine-white.png")}
         alt="Stanford Medicine"
         width={447}
         height={124}

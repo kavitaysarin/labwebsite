@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { Button } from "@/components/ui/Button";
 import { SITE } from "@/content/site";
 
@@ -7,7 +8,7 @@ export function HomeHero() {
     <section className="relative isolate overflow-hidden bg-navy-deep text-white">
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/hero/hero-skin-sensor.jpg"
+          src={asset("/images/hero/hero-skin-sensor.jpg")}
           alt=""
           fill
           priority

@@ -3,6 +3,7 @@
 // re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import Image from "next/image";
 import Link from "next/link";
+import { asset } from "@/lib/asset";
 import { TechVideo } from "./TechVideo";
 import type { TechnologyProgram } from "@/lib/types";
 
@@ -32,7 +33,7 @@ export function TechnologyDetail({
           />
         ) : (
           <Image
-            src={program.image}
+            src={asset(program.image)}
             alt={program.imageAlt}
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"

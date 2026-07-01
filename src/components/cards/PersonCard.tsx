@@ -1,6 +1,7 @@
 // APPROVED — finalized Team-page component (2026-06-30). Reuse as-is; do not
 // redesign without re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { Icon } from "@/components/ui/Icon";
 import type { Person } from "@/lib/types";
 
@@ -24,7 +25,7 @@ export function PersonCard({ person }: { person: Person }) {
       <div className="relative aspect-[4/5] w-full overflow-hidden bg-blue-light">
         {person.image ? (
           <Image
-            src={person.image}
+            src={asset(person.image)}
             alt={`${person.name}, ${person.role}`}
             fill
             loading="eager"

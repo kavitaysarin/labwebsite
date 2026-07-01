@@ -4,6 +4,7 @@
 // redesign without re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { Icon } from "@/components/ui/Icon";
 import type { GalleryImage } from "@/lib/types";
 
@@ -128,7 +129,7 @@ export function PhotoGallery({
               aria-label={`View larger: ${img.caption ?? img.alt}`}
             >
               <Image
-                src={img.src}
+                src={asset(img.src)}
                 alt={img.alt}
                 width={img.width}
                 height={img.height}
@@ -195,7 +196,7 @@ export function PhotoGallery({
                 touchX.current = null;
               }}
             >
-              <Image src={current.src} alt={current.alt} fill sizes="100vw" className="object-contain" />
+              <Image src={asset(current.src)} alt={current.alt} fill sizes="100vw" className="object-contain" />
             </div>
 
             <div className="mt-3 flex items-center justify-between gap-4">

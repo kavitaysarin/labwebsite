@@ -2,6 +2,7 @@
 // modify without re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import Link from "next/link";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { Icon } from "@/components/ui/Icon";
 import { Placeholder } from "@/components/ui/Placeholder";
 import type { Technology, IconName } from "@/lib/types";
@@ -44,7 +45,7 @@ export function TechCard({
           className={`relative aspect-[16/9] w-full overflow-hidden bg-gray-light ${imgRow}`}
         >
           <Image
-            src={tech.image}
+            src={asset(tech.image)}
             alt={tech.imageAlt ?? ""}
             fill
             loading="eager"

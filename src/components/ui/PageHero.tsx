@@ -1,6 +1,7 @@
 // FROZEN — shared interior-page hero (approved). Reuse as-is; do not modify
 // without re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 
 /**
  * Compact navy hero for interior pages (spec §10/§17). Reusable across all
@@ -24,7 +25,7 @@ export function PageHero({
     <section className="relative isolate overflow-hidden bg-navy-deep text-white">
       <div className="absolute inset-0 -z-10">
         <Image
-          src={image}
+          src={asset(image)}
           alt={imageAlt}
           fill
           priority
