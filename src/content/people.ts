@@ -67,7 +67,7 @@ export const PEOPLE: Person[] = [
     email: "achek@stanford.edu",
     image: "/images/team/angelina-chekmareva.jpg",
     objectPosition: "50% 30%",
-    bio: "Provides administrative and research management support for the lab.",
+    bio: "Supports lab operations through research administrative coordination, research project management, financial tracking, documentation, and cross-functional communication with faculty, staff, and external partners.",
     active: true,
   },
   {
