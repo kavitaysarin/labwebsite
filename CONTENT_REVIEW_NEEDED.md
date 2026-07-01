@@ -75,7 +75,7 @@ Items requiring **Dr. Sarin / lab-team verification or approval** before launch.
 - **Identification & consent:** every people photo shows identifiable lab members; no individuals named. **Confirm consent to display publicly.**
 - **Uncertain captions to review** (generic placeholders): lp-03, lp-14, lp-15, lp-16, lp-21, lp-26, lp-27 ("Sarin Lab members / gathering"). **Filename-derived captions to confirm:** lp-22 ("The Sarin Lab, 2023."), lp-35 ("…Society for Investigative Dermatology meeting, 2024."), lp-11 (Halloween), lp-24 (lunch), lp-25 (drinks).
 - **Low-resolution to replace if better versions exist:** lp-12, lp-14, lp-15, lp-16, lp-27, lp-35 (see inventory).
-- **5 new photos requested but NOT yet added** (bowling outing, pizza dinner, group at a Stanford mural, two conference poster photos) — they are chat attachments, not on disk. Provide the files (save to Downloads) and they'll be added; proposed captions/categories on delivery.
+- **7 lab-supplied photos added** (2026-06-30), shown first: bowling outing, a milkshake-bar outing, a group at a Stanford mural, a lab dinner, and three conference photos (two poster presentations + one main-stage talk). **Total gallery = 43.** Captions are generic (people not named) — the two poster photos are of **Michelle Lin** and **Nethra Srinivasan** per the supplied filenames/posters; add names to captions if desired.
 
 ### Contact
 - **Form is intentionally disabled** (Formspree ID still `YOUR_FORMSPREE_ID`); it validates input but shows a "not connected — email us" message and never fakes a send. **Provide a real Formspree (or other) form ID to enable submissions.**

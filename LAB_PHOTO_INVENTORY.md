@@ -11,12 +11,15 @@ Captions are generic — no individual is named without evidence. **Identificati
 and permission for public display need lab confirmation** before launch (all
 "people" rows below).
 
-**Migrated for launch: 36** — the FULL carousel (all 37 unique minus 1
-screenshot). People-focused only; no scientific figures, OCT, histology, or
-publication graphics. Files are `public/images/lab-photos/lp-<NN>.jpg` (NN = the
-carousel index below; order preserved), display copies at long side ≤1600px,
-natural aspect; originals in `/originals`. (Updated from the earlier 15–25
-curation to a full migration per request.)
+**Gallery total: 43** = 36 migrated carousel photos + **7 lab-supplied photos**
+(added 2026-06-30, shown first: `lp-new-01`…`lp-new-07` — bowling outing,
+group at a Stanford mural, a poster presentation, a lab dinner, a milkshake-bar
+outing, and two more conference photos). People-focused only; no scientific
+figures, OCT, histology, or publication graphics. Carousel files are
+`public/images/lab-photos/lp-<NN>.jpg` (NN = the carousel index below; order
+preserved); display copies at long side ≤1600px, natural aspect; originals in
+`/originals`. The two poster photos are of Michelle Lin and Nethra Srinivasan
+(supplied) — captions kept generic.
 
 ## Inventory
 

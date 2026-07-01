@@ -15,6 +15,64 @@ import type { GalleryImage } from "@/lib/types";
  * CONTENT_REVIEW_NEEDED.md. Do not name people/dates/events unless supported.
  */
 export const GALLERY: GalleryImage[] = [
+  // --- Added photos (supplied by the lab, 2026-06-30) ---
+  {
+    src: "/images/lab-photos/lp-new-01.jpg",
+    width: 1200,
+    height: 1600,
+    alt: "Sarin Lab bowling outing.",
+    caption: "Sarin Lab bowling outing.",
+    category: "Celebrations & Milestones",
+  },
+  {
+    src: "/images/lab-photos/lp-new-02.jpg",
+    width: 1600,
+    height: 1200,
+    alt: "Members of the Sarin Lab.",
+    caption: "Members of the Sarin Lab.",
+    category: "Team & Community",
+  },
+  {
+    src: "/images/lab-photos/lp-new-03.jpg",
+    width: 1200,
+    height: 1600,
+    alt: "Presenting a poster at a research meeting.",
+    caption: "Presenting a poster at a research meeting.",
+    category: "Conferences & Talks",
+  },
+  {
+    src: "/images/lab-photos/lp-new-04.jpg",
+    width: 1600,
+    height: 1200,
+    alt: "A Sarin Lab dinner.",
+    caption: "A Sarin Lab dinner.",
+    category: "Celebrations & Milestones",
+  },
+  {
+    src: "/images/lab-photos/lp-new-05.jpg",
+    width: 1600,
+    height: 1205,
+    alt: "A Sarin Lab outing.",
+    caption: "A Sarin Lab outing.",
+    category: "Celebrations & Milestones",
+  },
+  {
+    src: "/images/lab-photos/lp-new-06.jpg",
+    width: 1200,
+    height: 1600,
+    alt: "Presenting a poster at the Society for Investigative Dermatology meeting.",
+    caption: "Presenting a poster at the Society for Investigative Dermatology meeting.",
+    category: "Conferences & Talks",
+  },
+  {
+    src: "/images/lab-photos/lp-new-07.jpg",
+    width: 1600,
+    height: 1200,
+    alt: "Presenting from the main stage at a conference.",
+    caption: "Presenting from the main stage at a conference.",
+    category: "Conferences & Talks",
+  },
+  // --- Carousel photos (original order) ---
   {
     src: "/images/lab-photos/lp-01.jpg",
     width: 1600,
