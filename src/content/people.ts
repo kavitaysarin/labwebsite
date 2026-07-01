@@ -95,8 +95,7 @@ export const PEOPLE: Person[] = [
   {
     slug: "akash-dhawan",
     name: "Akash Dhawan",
-    credentials: "PhD",
-    role: "Postdoctoral Fellow", // TODO: VERIFY — no role/title was supplied
+    role: "M.D.–Ph.D. Student, Medical Engineering",
     category: "Trainees",
     email: "akash.s.dhawan@gmail.com",
     image: "/images/team/akash-dhawan.jpg",
