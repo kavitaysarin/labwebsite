@@ -70,11 +70,12 @@ Items requiring **Dr. Sarin / lab-team verification or approval** before launch.
 - **Collaboration sentences** rewritten to be direct (no repeated "Works with / Collaborates with the Sarin Lab"). Approve the wording for each.
 - **Profile links:** Stanford Profiles for most; de la Zerda, Bronte-Stewart, and Chung link to their `med.stanford.edu` profiles (per request / verified). Confirm destinations.
 
-### Lab Photos (rebuilt 2026-06-30 from the live carousel — awaiting review)
-- **17 people-focused photos** curated from the live `/lab-photos` carousel (full inventory + selection rationale in `LAB_PHOTO_INVENTORY.md`). No scientific figures/OCT/histology/publication graphics. Masonry gallery, natural proportions, four categories, accessible lightbox.
-- **Captions are generic** (no individuals named without evidence). **Confirm identification and consent** to display these lab members publicly before launch. #3 (excluded) and any selected photo whose people/event you want confirmed are flagged in the inventory.
-- **Low-resolution to replace if better exists:** `sid-2024` (800×600); several low-res carousel images were excluded (see inventory).
-- **Captions to approve:** e.g. "The Sarin Lab, 2023.", "The Sarin Lab at the Society for Investigative Dermatology meeting, 2024." — confirm the years/events are correct.
+### Lab Photos (FULL carousel migrated 2026-06-30 — awaiting review)
+- **36 photos** migrated — the entire live `/lab-photos` carousel minus one screenshot (full inventory in `LAB_PHOTO_INVENTORY.md`). No scientific figures/OCT/histology/publication graphics. Masonry (natural proportions), four categories, "Load More", accessible lightbox with swipe.
+- **Identification & consent:** every people photo shows identifiable lab members; no individuals named. **Confirm consent to display publicly.**
+- **Uncertain captions to review** (generic placeholders): lp-03, lp-14, lp-15, lp-16, lp-21, lp-26, lp-27 ("Sarin Lab members / gathering"). **Filename-derived captions to confirm:** lp-22 ("The Sarin Lab, 2023."), lp-35 ("…Society for Investigative Dermatology meeting, 2024."), lp-11 (Halloween), lp-24 (lunch), lp-25 (drinks).
+- **Low-resolution to replace if better versions exist:** lp-12, lp-14, lp-15, lp-16, lp-27, lp-35 (see inventory).
+- **5 new photos requested but NOT yet added** (bowling outing, pizza dinner, group at a Stanford mural, two conference poster photos) — they are chat attachments, not on disk. Provide the files (save to Downloads) and they'll be added; proposed captions/categories on delivery.
 
 ### Contact
 - **Form is intentionally disabled** (Formspree ID still `YOUR_FORMSPREE_ID`); it validates input but shows a "not connected — email us" message and never fakes a send. **Provide a real Formspree (or other) form ID to enable submissions.**

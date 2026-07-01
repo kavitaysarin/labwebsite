@@ -11,10 +11,12 @@ Captions are generic — no individual is named without evidence. **Identificati
 and permission for public display need lab confirmation** before launch (all
 "people" rows below).
 
-**Selected for launch: 17** (people-focused only; no scientific figures, OCT,
-histology, or publication graphics). Display copies saved to
-`public/images/lab-photos/` (long side ≤1400px, natural aspect); originals in
-`/originals`.
+**Migrated for launch: 36** — the FULL carousel (all 37 unique minus 1
+screenshot). People-focused only; no scientific figures, OCT, histology, or
+publication graphics. Files are `public/images/lab-photos/lp-<NN>.jpg` (NN = the
+carousel index below; order preserved), display copies at long side ≤1600px,
+natural aspect; originals in `/originals`. (Updated from the earlier 15–25
+curation to a full migration per request.)
 
 ## Inventory
 
@@ -58,18 +60,27 @@ histology, or publication graphics). Display copies saved to
 | 36 | lab_photo_5.jpg | 1280×851 | Team & Community | group | no | Suitable; older; not selected |
 | 37 | dsc00912_3_0.jpg | 1900×950 | Lab & Campus | campus/building | **YES** | "Stanford, where the lab is based." |
 
-## Curation summary
-- **Selected (17):** #1, 4, 6, 8, 10, 11, 13, 17, 20, 22, 24, 25, 28, 29, 33, 35, 37.
-- **Excluded — screenshot:** #9.
-- **Excluded — slide / not people-focused:** #5.
-- **Excluded — low resolution:** #12, 14, 15, 16, 27 (and 35 is only 800×600 — usable but replace with higher-res if available).
-- **Excluded — duplicates / near-duplicates:** #2, 7, 18, 19, 21, 23.
-- **Excluded — suitable but not needed (older team group photos):** #26, 30, 31, 32, 34, 36.
+## Migration summary (full carousel)
+- **Migrated (36):** every carousel image **except #9** (a screenshot). #5 is a
+  talk photo (person at a podium + audience), not a figure, so it is included.
+- **Removed — screenshot:** #9 (`Screenshot 2026-05-13.png`).
+- **Exact duplicates removed:** the CDN listed `dsc00912_3_0.jpg` twice (same
+  URL) — kept once (#37). No other exact duplicates. Near-duplicates (e.g.
+  #17/#18, #20/#21) were KEPT (distinct files, per "remove only exact duplicates").
+- **Broken files:** none (all 36 downloaded and re-encoded successfully).
+- **Low-resolution (kept, but replace if better versions exist):** lp-12 (640×480),
+  lp-14 (481×640), lp-15 (640×480), lp-16 (640×480), lp-27 (932×530), lp-35
+  (800×600, SID 2024).
+- **Order:** the original carousel order is preserved (lp-01 … lp-37, skipping 09).
 
 ## Needs review before finalizing
-- **Identification** — confirm the people/events in every selected photo (no individuals were named). #3 in particular has unclear context.
-- **Permission** — confirm consent to display these lab members publicly.
-- **Low-resolution to replace if better versions exist:** #35 (SID 2024, 800×600); optionally the excluded low-res team photos (#12, 15, 16) if those specific moments are wanted.
+- **Identification & permission** — every people photo shows identifiable lab
+  members; no individuals were named. Confirm consent to display publicly.
+- **Uncertain captions** (proposed from filenames/visual context, flagged in
+  CONTENT_REVIEW_NEEDED.md): lp-03, 14, 15, 16, 21, 26, 27 use generic
+  "Sarin Lab members / gathering". Filename-derived captions to confirm:
+  lp-22 ("…2023"), lp-35 ("Society for Investigative Dermatology meeting, 2024"),
+  lp-11 (Halloween), lp-24 (lunch), lp-25 (drinks).
 
 ## Source URLs (all under the Squarespace base above)
 The exact per-file paths were captured during inventory (see `scratchpad/lab-photos-imgs.js` output); each URL is `…/<timestamp-or-uuid>/<filename>`. Local copies are committed under `public/images/lab-photos/` — **do not hotlink the Squarespace URLs in production.**

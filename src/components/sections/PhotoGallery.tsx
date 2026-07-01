@@ -5,11 +5,15 @@ import Image from "next/image";
 import { Icon } from "@/components/ui/Icon";
 import type { GalleryImage } from "@/lib/types";
 
+const INITIAL = 12; // photos shown before "Load More"
+
 /**
- * Responsive photo gallery with category filter and an accessible lightbox
- * (modal dialog: Esc to close, arrow keys to navigate, focus trapped while
- * open, body scroll locked, focus returned to the opening thumbnail). Mirrors
- * the frozen Header drawer's a11y pattern.
+ * Responsive people-focused masonry gallery. Natural landscape/portrait
+ * proportions (no forced crop); image dimensions are set to prevent layout
+ * shift. Shows the first group and a "Load More Photos" button (all photos stay
+ * on the same page). Accessible lightbox: full image + caption, prev/next,
+ * arrow-key navigation, Escape to close, focus trap, focus returned to the
+ * opening thumbnail, and swipe on touch devices.
  */
 export function PhotoGallery({
   images,
@@ -19,9 +23,11 @@ export function PhotoGallery({
   categories: string[];
 }) {
   const [cat, setCat] = useState<string>("all");
+  const [visible, setVisible] = useState(INITIAL);
   const [openIdx, setOpenIdx] = useState<number | null>(null);
   const triggerRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const dialogRef = useRef<HTMLDivElement>(null);
+  const touchX = useRef<number | null>(null);
 
   const shown = cat === "all" ? images : images.filter((i) => i.category === cat);
   const isOpen = openIdx !== null;
@@ -29,24 +35,27 @@ export function PhotoGallery({
 
   const close = useCallback(() => {
     setOpenIdx((idx) => {
-      if (idx !== null) {
-        requestAnimationFrame(() => triggerRefs.current[idx]?.focus());
-      }
+      if (idx !== null) requestAnimationFrame(() => triggerRefs.current[idx]?.focus());
       return null;
     });
   }, []);
 
   const step = useCallback(
     (delta: number) =>
-      setOpenIdx((idx) =>
-        idx === null ? idx : (idx + delta + shown.length) % shown.length,
-      ),
+      setOpenIdx((idx) => {
+        if (idx === null) return idx;
+        const next = (idx + delta + shown.length) % shown.length;
+        // keep the target thumbnail rendered so focus-return works
+        setVisible((v) => (next >= v ? next + 1 : v));
+        return next;
+      }),
     [shown.length],
   );
 
-  // Reset the lightbox when the filter changes (indices would no longer match).
+  // Reset when the filter changes.
   useEffect(() => {
     setOpenIdx(null);
+    setVisible(INITIAL);
   }, [cat]);
 
   useEffect(() => {
@@ -62,10 +71,10 @@ export function PhotoGallery({
         e.preventDefault();
         step(-1);
       } else if (e.key === "Tab") {
-        const focusables = dialogRef.current?.querySelectorAll<HTMLElement>("button");
-        if (!focusables || focusables.length === 0) return;
-        const first = focusables[0];
-        const last = focusables[focusables.length - 1];
+        const f = dialogRef.current?.querySelectorAll<HTMLElement>("button");
+        if (!f || f.length === 0) return;
+        const first = f[0];
+        const last = f[f.length - 1];
         if (e.shiftKey && document.activeElement === first) {
           e.preventDefault();
           last.focus();
@@ -77,10 +86,7 @@ export function PhotoGallery({
     };
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
-    // focus the dialog's first control
-    requestAnimationFrame(() =>
-      dialogRef.current?.querySelector<HTMLElement>("button")?.focus(),
-    );
+    requestAnimationFrame(() => dialogRef.current?.querySelector<HTMLElement>("button")?.focus());
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
@@ -90,40 +96,25 @@ export function PhotoGallery({
   const chipBase =
     "rounded-full border px-4 py-1.5 text-[14px] font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cardinal/50 focus-visible:ring-offset-1";
   const chipClass = (active: boolean) =>
-    `${chipBase} ${
-      active
-        ? "border-cardinal bg-cardinal text-white"
-        : "border-border bg-white text-navy hover:border-cardinal/40"
-    }`;
+    `${chipBase} ${active ? "border-cardinal bg-cardinal text-white" : "border-border bg-white text-navy hover:border-cardinal/40"}`;
 
   return (
     <div>
       {/* Filter */}
       <div role="group" aria-label="Filter photos by category" className="flex flex-wrap gap-2">
-        <button
-          type="button"
-          onClick={() => setCat("all")}
-          aria-pressed={cat === "all"}
-          className={chipClass(cat === "all")}
-        >
+        <button type="button" onClick={() => setCat("all")} aria-pressed={cat === "all"} className={chipClass(cat === "all")}>
           All
         </button>
         {categories.map((c) => (
-          <button
-            key={c}
-            type="button"
-            onClick={() => setCat(c)}
-            aria-pressed={cat === c}
-            className={chipClass(cat === c)}
-          >
+          <button key={c} type="button" onClick={() => setCat(c)} aria-pressed={cat === c} className={chipClass(cat === c)}>
             {c}
           </button>
         ))}
       </div>
 
-      {/* Masonry (natural proportions; landscape + portrait kept) */}
-      <ul className="mt-6 gap-4 [column-fill:_balance] columns-1 min-[500px]:columns-2 lg:columns-3">
-        {shown.map((img, i) => (
+      {/* Masonry (natural proportions) */}
+      <ul className="mt-6 gap-4 columns-1 min-[500px]:columns-2 lg:columns-3">
+        {shown.slice(0, visible).map((img, i) => (
           <li key={img.src} className="mb-4 break-inside-avoid">
             <button
               type="button"
@@ -151,6 +142,22 @@ export function PhotoGallery({
         ))}
       </ul>
 
+      {/* Load more */}
+      {visible < shown.length ? (
+        <div className="mt-8 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setVisible((v) => Math.min(v + INITIAL, shown.length))}
+            className="inline-flex items-center gap-2 rounded-md border border-navy/40 px-5 py-2.5 text-[15px] font-semibold text-navy transition-colors hover:bg-navy hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cardinal/50 focus-visible:ring-offset-2"
+          >
+            Load More Photos
+            <span className="text-[13px] font-normal text-gray-dark group-hover:text-white">
+              ({shown.length - visible} more)
+            </span>
+          </button>
+        </div>
+      ) : null}
+
       {/* Lightbox */}
       {isOpen && current ? (
         <div
@@ -177,14 +184,19 @@ export function PhotoGallery({
               </button>
             </div>
 
-            <div className="relative h-[68vh] w-full">
-              <Image
-                src={current.src}
-                alt={current.alt}
-                fill
-                sizes="100vw"
-                className="object-contain"
-              />
+            <div
+              className="relative h-[68vh] w-full"
+              onTouchStart={(e) => {
+                touchX.current = e.changedTouches[0].clientX;
+              }}
+              onTouchEnd={(e) => {
+                if (touchX.current === null) return;
+                const dx = e.changedTouches[0].clientX - touchX.current;
+                if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1);
+                touchX.current = null;
+              }}
+            >
+              <Image src={current.src} alt={current.alt} fill sizes="100vw" className="object-contain" />
             </div>
 
             <div className="mt-3 flex items-center justify-between gap-4">
