@@ -19,8 +19,13 @@ for launch. After any change, rebuild the site (`npm run build`) to see it.
 > +3** (`displayOrder` 6–8), all verified via PubMed; the supplied
 > `10.1093/bjd/ljaf479` was already present (cNF-PUSH-D) and not duplicated. Also
 > removed the "View Dr. Kavita Sarin's complete bibliography on PubMed" sentence
-> from the final CTA (the "View All Publications on PubMed" button remains). List
-> is now ~48 papers.
+> from the final CTA (the "View All Publications on PubMed" button remains). Then
+> the two previously-truncated DOIs were resolved by PMID: **PMID 34362809**
+> (`10.1158/1078-0432.CCR-21-0560`, Remetinostat BCC phase II, CCR 2021) was
+> **added** to Skin Cancer and Genetics; **PMID 26348826** (`10.1038/jid.2015.339`,
+> KNSTRN) was already present and not duplicated. Sections now display
+> **newest-first** (year desc) via `selectedByCategory`; long sections collapse to
+> two rows with a "Show more" toggle. List is now ~49 papers.
 
 ## Manual update process (at a glance)
 

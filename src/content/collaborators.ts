@@ -9,9 +9,9 @@ import type { Collaborator } from "@/lib/types";
  * by the lab. Each card carries one expertise sentence and one collaboration
  * sentence (no biographies).
  *
- * TODO: VERIFY before launch — the collaboration description for
- * Helen Bronte-Stewart (movement-disorders neurologist; the specific project
- * with the Sarin Lab is not independently confirmed).
+ * Note: Helen Bronte-Stewart and Lorinda Chung were removed 2026-07-01 ("may add
+ * back later"); their photos remain in public/images/collaborators/ for easy
+ * re-add.
  */
 export const COLLABORATORS: Collaborator[] = [
   // ---------------- Clinical & Translational ----------------
@@ -59,41 +59,6 @@ export const COLLABORATORS: Collaborator[] = [
       "Provides the dermatopathology that ties imaging and molecular findings to tissue diagnosis.",
     url: "https://profiles.stanford.edu/kerri-rieger",
     image: "/images/collaborators/kerri-rieger.jpg",
-    objectPosition: "50% 28%",
-    permissionConfirmed: false,
-    lastVerified: "June 2026",
-  },
-  {
-    name: "Helen Bronte-Stewart",
-    degree: "MD, MS",
-    title: "Professor of Neurology and Neurological Sciences",
-    institution: "Stanford University",
-    labName: "Human Motor Control and Neuromodulation Laboratory",
-    category: "Clinical & Translational",
-    expertise:
-      "Movement disorders and neuromodulation, with quantitative, sensor-based measurement of the motor signs of disease.",
-    collaboration:
-      "Contributes quantitative, sensor-based methods for measuring disease and clinical-trial outcomes.", // TODO: VERIFY specific collaboration
-    url: "https://med.stanford.edu/profiles/helen-bronte-stewart",
-    image: "/images/collaborators/helen-bronte-stewart.jpg",
-    objectPosition: "50% 28%",
-    permissionConfirmed: false,
-    lastVerified: "June 2026",
-  },
-  {
-    name: "Lorinda Chung",
-    degree: "MD, MS",
-    title:
-      "Professor of Medicine (Immunology and Rheumatology) and, by courtesy, of Dermatology",
-    institution: "Stanford University",
-    labName: "Stanford Scleroderma Program",
-    category: "Clinical & Translational",
-    expertise:
-      "Rheumatology and systemic sclerosis (scleroderma), including its skin and vascular manifestations.",
-    collaboration:
-      "Partners on systemic sclerosis and how the skin reflects rheumatologic disease.",
-    url: "https://med.stanford.edu/profiles/lorinda-chung-md-ms",
-    image: "/images/collaborators/lorinda-chung.jpg",
     objectPosition: "50% 28%",
     permissionConfirmed: false,
     lastVerified: "June 2026",

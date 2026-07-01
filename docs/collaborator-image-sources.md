@@ -31,7 +31,9 @@ site before launch (flagged in CONTENT_REVIEW_NEEDED.md).
 | Olivier Gevaert | olivier-gevaert | `profiles.stanford.edu/olivier-gevaert` | CAP id 15978 `…/350x350.1509531956338.jpg` | 350×350 |
 | Christina Curtis | christina-curtis | `profiles.stanford.edu/christina-curtis` | CAP id 61618 `med.stanford.edu/services/api/cap/profiles/photocache.61618.jpg` (added 2026-07-01) | 350×350 |
 
-**Missing portraits:** none — all 11 collaborators now have a photo.
+**Removed 2026-07-01 (may return):** Helen Bronte-Stewart and Lorinda Chung entries were removed from `collaborators.ts`; their `helen-bronte-stewart.jpg` / `lorinda-chung.jpg` files are retained for easy re-add. **Live collaborators: 9.**
+
+**Missing portraits:** none — all live collaborators have a photo.
 
 All portraits were visually checked against the person's profile page and matched
 correctly.

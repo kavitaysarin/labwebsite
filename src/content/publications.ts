@@ -497,6 +497,17 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
     doiUrl: "https://doi.org/10.1016/j.ccell.2015.02.001",
     displayOrder: 26,
   },
+  {
+    title:
+      "Phase II Open-Label, Single-Arm Trial to Investigate the Efficacy and Safety of Topical Remetinostat Gel in Patients with Basal Cell Carcinoma",
+    authors: "Kilgour JM, et al.",
+    journal: "Clinical Cancer Research",
+    year: 2021,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/34362809/",
+    doiUrl: "https://doi.org/10.1158/1078-0432.CCR-21-0560",
+    displayOrder: 27,
+  },
 
   // ---- neurofibromatosis ----
   {
