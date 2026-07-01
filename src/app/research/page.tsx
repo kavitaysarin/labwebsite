@@ -17,11 +17,7 @@ export const metadata: Metadata = {
 export default function ResearchPage() {
   return (
     <main id="main-content">
-      <PageHero
-        title="Research"
-        subtitle="Reading the skin as a sensor for disease."
-        image="/images/hero/hero-secondary.png"
-      />
+      <PageHero title="Research" image="/images/hero/hero-secondary.png" />
 
       {/* Intro + signal anchor cards */}
       <section className="bg-white">

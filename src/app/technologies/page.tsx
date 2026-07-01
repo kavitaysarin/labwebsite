@@ -16,11 +16,7 @@ export const metadata: Metadata = {
 export default function TechnologiesPage() {
   return (
     <main id="main-content">
-      <PageHero
-        title="Technologies"
-        subtitle="Tools that allow us to see, measure, and interpret signals in the skin."
-        image="/images/hero/hero-secondary.png"
-      />
+      <PageHero title="Technologies" image="/images/hero/hero-secondary.png" />
 
       {/* Intro + program anchor cards */}
       <section className="bg-white">

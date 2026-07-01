@@ -23,18 +23,13 @@ export const metadata: Metadata = {
 export default function PublicationsPage() {
   return (
     <main id="main-content">
-      <PageHero
-        title="Publications"
-        subtitle="Selected studies from the Sarin Lab spanning imaging, genetics, molecular biology, digital measurement, and clinical research."
-        image="/images/hero/hero-secondary.png"
-      />
+      <PageHero title="Publications" image="/images/hero/hero-secondary.png" />
 
       {/* Intro */}
       <section className="bg-white">
         <div className="container-wide section-pad">
           <div className="max-w-3xl">
-            <SectionHeading title="Selected Publications" />
-            <p className="mt-4 text-[17px] leading-relaxed text-gray-dark">
+            <p className="text-[17px] leading-relaxed text-gray-dark">
               Explore selected publications that represent the lab&apos;s work in
               optical imaging, skin cancer, neurofibromatosis, autoimmune and
               inflammatory disease, molecular biology, and artificial
