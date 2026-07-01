@@ -121,26 +121,27 @@ export function PhotoGallery({
         ))}
       </div>
 
-      {/* Grid */}
-      <ul className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+      {/* Masonry (natural proportions; landscape + portrait kept) */}
+      <ul className="mt-6 gap-4 [column-fill:_balance] columns-1 min-[500px]:columns-2 lg:columns-3">
         {shown.map((img, i) => (
-          <li key={img.src}>
+          <li key={img.src} className="mb-4 break-inside-avoid">
             <button
               type="button"
               ref={(el) => {
                 triggerRefs.current[i] = el;
               }}
               onClick={() => setOpenIdx(i)}
-              className="group relative block aspect-[4/3] w-full overflow-hidden rounded-[10px] border border-border bg-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cardinal focus-visible:ring-offset-2"
+              className="group block w-full overflow-hidden rounded-[10px] border border-border bg-blue-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cardinal focus-visible:ring-offset-2"
               aria-label={`View larger: ${img.caption ?? img.alt}`}
             >
               <Image
                 src={img.src}
                 alt={img.alt}
-                fill
+                width={img.width}
+                height={img.height}
                 loading="eager"
-                sizes="(max-width: 639px) 50vw, (max-width: 1023px) 33vw, 25vw"
-                className="object-cover transition-transform duration-200 group-hover:scale-105"
+                sizes="(max-width: 499px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                className="h-auto w-full transition-transform duration-200 group-hover:scale-[1.03]"
               />
             </button>
             {img.caption ? (

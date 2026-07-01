@@ -70,9 +70,11 @@ Items requiring **Dr. Sarin / lab-team verification or approval** before launch.
 - **Collaboration sentences** rewritten to be direct (no repeated "Works with / Collaborates with the Sarin Lab"). Approve the wording for each.
 - **Profile links:** Stanford Profiles for most; de la Zerda, Bronte-Stewart, and Chung link to their `med.stanford.edu` profiles (per request / verified). Confirm destinations.
 
-### Lab Photos
-- **The live gallery (~34–37 images) was deliberately NOT used** — uncaptioned, low-res/screenshot team & event snapshots of identifiable people with no consent info (a stop condition). **Supply a curated, captioned, consent-cleared set of team/event photos.**
-- Current gallery uses the lab's own science images (already on approved pages). **`klear-oct.jpg` appears to be a journal figure** — confirm reuse rights. Categories ("Imaging & Microscopy", "Lab & Campus") are provisional.
+### Lab Photos (rebuilt 2026-06-30 from the live carousel — awaiting review)
+- **17 people-focused photos** curated from the live `/lab-photos` carousel (full inventory + selection rationale in `LAB_PHOTO_INVENTORY.md`). No scientific figures/OCT/histology/publication graphics. Masonry gallery, natural proportions, four categories, accessible lightbox.
+- **Captions are generic** (no individuals named without evidence). **Confirm identification and consent** to display these lab members publicly before launch. #3 (excluded) and any selected photo whose people/event you want confirmed are flagged in the inventory.
+- **Low-resolution to replace if better exists:** `sid-2024` (800×600); several low-res carousel images were excluded (see inventory).
+- **Captions to approve:** e.g. "The Sarin Lab, 2023.", "The Sarin Lab at the Society for Investigative Dermatology meeting, 2024." — confirm the years/events are correct.
 
 ### Contact
 - **Form is intentionally disabled** (Formspree ID still `YOUR_FORMSPREE_ID`); it validates input but shows a "not connected — email us" message and never fakes a send. **Provide a real Formspree (or other) form ID to enable submissions.**

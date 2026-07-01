@@ -1,60 +1,161 @@
 import type { GalleryImage } from "@/lib/types";
 
 /**
- * Lab Photos gallery.
+ * Lab Photos gallery — curated from the live Sarin Lab photo carousel
+ * (sarinlab.stanford.edu/lab-photos) on 2026-06-30. People-focused photos only
+ * (team, conferences, celebrations, campus); no scientific figures, OCT,
+ * histology, or publication graphics. Originals preserved in
+ * public/images/lab-photos/originals/; display copies (JPEG, long side ≤1400px,
+ * natural aspect) in public/images/lab-photos/. See LAB_PHOTO_INVENTORY.md for
+ * the full carousel inventory, source URLs, and selection rationale.
  *
- * IMPORTANT (see CONTENT_REVIEW_NEEDED.md): the live site's photo gallery is a
- * set of ~34–37 UNCAPTIONED, low-resolution / screenshot team & event snapshots
- * of IDENTIFIABLE people with no consent information. Those are intentionally
- * NOT bundled here — identity/consent is unclear. This starter gallery uses only
- * the lab's own rights-cleared scientific imagery (already shown on the approved
- * Home/Research/Technologies pages), with accurate captions. A curated,
- * consent-cleared set of team/event photos must be supplied before launch.
- *
- * TODO: VERIFY captions and confirm reuse rights for any figure that originated
- * in a journal publication (e.g. the virtual-biopsy pipeline).
+ * NOTE (CONTENT_REVIEW_NEEDED.md): these show identifiable lab members at
+ * professional and social events. Captions are generic (no individuals named
+ * without evidence). Confirm identification/permission before launch.
  */
 export const GALLERY: GalleryImage[] = [
   {
-    src: "/images/technologies/klear.jpg",
-    alt: "Two photographs of a skin sample side by side; the right one is translucent after KLEAR optical clearing, with a 5 mm scale bar.",
-    caption: "Optical clearing with KLEAR — a skin sample before and after becoming transparent (5 mm scale).",
-    category: "Imaging & Microscopy",
-    featured: true,
+    src: "/images/lab-photos/team-group.jpg",
+    width: 1050,
+    height: 1400,
+    alt: "The Sarin Lab team.",
+    caption: "The Sarin Lab team.",
+    category: "Team & Community",
   },
   {
-    src: "/images/technologies/optical-imaging.jpg",
-    alt: "Grayscale optical coherence tomography scan showing the layered cross-section of skin.",
-    caption: "Optical coherence tomography reveals the layered structure of living skin, without a biopsy.",
-    category: "Imaging & Microscopy",
+    src: "/images/lab-photos/halloween.jpg",
+    width: 1400,
+    height: 1050,
+    alt: "Lab members celebrating Halloween.",
+    caption: "Lab members celebrating Halloween.",
+    category: "Celebrations & Milestones",
   },
   {
-    src: "/images/technologies/molecular-3d.jpg",
-    alt: "Multiplex fluorescence image of skin tissue with cell nuclei in red and nerve fibers in blue on a dark background.",
-    caption: "Multiplex fluorescence of skin — cell nuclei (red) and nerve fibers (blue).",
-    category: "Imaging & Microscopy",
+    src: "/images/lab-photos/poster-session-1.jpg",
+    width: 1400,
+    height: 1050,
+    alt: "Sharing research at a scientific poster session.",
+    caption: "Sharing research at a scientific poster session.",
+    category: "Conferences & Talks",
   },
   {
-    src: "/images/technologies/molecular-pathology.jpg",
-    alt: "Multiplex fluorescence image mapping molecular signals within skin tissue.",
-    caption: "Spatial molecular imaging maps where different signals sit within skin tissue.",
-    category: "Imaging & Microscopy",
+    src: "/images/lab-photos/lab-space.jpg",
+    width: 1050,
+    height: 1400,
+    alt: "The Sarin Lab's space at Stanford.",
+    caption: "The Sarin Lab's space at Stanford.",
+    category: "Lab & Campus",
   },
   {
-    src: "/images/technologies/klear-oct.jpg",
-    alt: "Multi-panel diagram of a virtual-biopsy pipeline: tissue excision, embedding, OCT volume scan, and matched fluorescence and histology sections.",
-    caption: "The virtual-biopsy imaging pipeline, from an OCT volume scan to matched histology.",
-    category: "Imaging & Microscopy",
+    src: "/images/lab-photos/team-gathering.jpg",
+    width: 1400,
+    height: 933,
+    alt: "A Sarin Lab team gathering.",
+    caption: "A Sarin Lab team gathering.",
+    category: "Team & Community",
   },
   {
-    src: "/images/intro/stanford-building.jpg",
-    alt: "Exterior of a Stanford Medicine building.",
-    caption: "The lab is based at Stanford University School of Medicine.",
+    src: "/images/lab-photos/lab-dinner.jpg",
+    width: 1400,
+    height: 1050,
+    alt: "A Sarin Lab dinner.",
+    caption: "A Sarin Lab dinner.",
+    category: "Celebrations & Milestones",
+  },
+  {
+    src: "/images/lab-photos/conference-talk.jpg",
+    width: 1050,
+    height: 1400,
+    alt: "Giving a talk at a research conference.",
+    caption: "Giving a talk at a research conference.",
+    category: "Conferences & Talks",
+  },
+  {
+    src: "/images/lab-photos/members-candid.jpg",
+    width: 1050,
+    height: 1400,
+    alt: "Members of the Sarin Lab.",
+    caption: "Members of the Sarin Lab.",
+    category: "Team & Community",
+  },
+  {
+    src: "/images/lab-photos/lab-lunch.jpg",
+    width: 1280,
+    height: 960,
+    alt: "A Sarin Lab lunch.",
+    caption: "A Sarin Lab lunch.",
+    category: "Celebrations & Milestones",
+  },
+  {
+    src: "/images/lab-photos/poster-session-2.jpg",
+    width: 1400,
+    height: 1050,
+    alt: "Presenting a poster at a dermatology meeting.",
+    caption: "Presenting a poster at a dermatology meeting.",
+    category: "Conferences & Talks",
+  },
+  {
+    src: "/images/lab-photos/team-portrait-bw.jpg",
+    width: 1400,
+    height: 693,
+    alt: "The Sarin Lab team.",
+    caption: "The Sarin Lab team.",
+    category: "Team & Community",
+  },
+  {
+    src: "/images/lab-photos/sid-2024.jpg",
+    width: 800,
+    height: 600,
+    alt: "The Sarin Lab at the Society for Investigative Dermatology meeting, 2024.",
+    caption: "The Sarin Lab at the Society for Investigative Dermatology meeting, 2024.",
+    category: "Conferences & Talks",
+  },
+  {
+    src: "/images/lab-photos/lab-celebration.jpg",
+    width: 1024,
+    height: 768,
+    alt: "The lab gathers to celebrate.",
+    caption: "The lab gathers to celebrate.",
+    category: "Celebrations & Milestones",
+  },
+  {
+    src: "/images/lab-photos/members-event.jpg",
+    width: 1400,
+    height: 1050,
+    alt: "Sarin Lab members at an event.",
+    caption: "Sarin Lab members at an event.",
+    category: "Team & Community",
+  },
+  {
+    src: "/images/lab-photos/podium-talk.jpg",
+    width: 1280,
+    height: 960,
+    alt: "A lab member presents from the podium.",
+    caption: "A lab member presents from the podium.",
+    category: "Conferences & Talks",
+  },
+  {
+    src: "/images/lab-photos/lab-2023.jpg",
+    width: 960,
+    height: 640,
+    alt: "The Sarin Lab, 2023.",
+    caption: "The Sarin Lab, 2023.",
+    category: "Team & Community",
+  },
+  {
+    src: "/images/lab-photos/stanford-campus.jpg",
+    width: 1400,
+    height: 700,
+    alt: "Stanford, where the lab is based.",
+    caption: "Stanford, where the lab is based.",
     category: "Lab & Campus",
   },
 ];
 
-/** Distinct categories, in first-seen order (for the gallery filter). */
-export const GALLERY_CATEGORIES: string[] = Array.from(
-  new Set(GALLERY.map((g) => g.category)),
-);
+/** Filter categories, in display order (the gallery UI prepends "All"). */
+export const GALLERY_CATEGORIES: string[] = [
+  "Team & Community",
+  "Conferences & Talks",
+  "Celebrations & Milestones",
+  "Lab & Campus",
+];

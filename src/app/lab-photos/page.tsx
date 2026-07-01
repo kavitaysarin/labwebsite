@@ -8,7 +8,7 @@ import { GALLERY, GALLERY_CATEGORIES } from "@/content/gallery";
 export const metadata: Metadata = {
   title: "Lab Photos",
   description:
-    "A look at the Sarin Lab — the imaging and science behind reading the skin as a sensor for disease.",
+    "A look at the people, places, and moments behind the work of the Sarin Lab at Stanford.",
 };
 
 export default function LabPhotosPage() {
@@ -16,7 +16,7 @@ export default function LabPhotosPage() {
     <main id="main-content">
       <PageHero
         title="Lab Photos"
-        subtitle="A look at the science and the place behind the work."
+        subtitle="A look at the people, places, and moments behind the work."
         image="/images/hero/hero-secondary.png"
       />
 
@@ -25,9 +25,9 @@ export default function LabPhotosPage() {
           <div className="max-w-3xl">
             <SectionHeading title="Gallery" />
             <p className="mt-4 text-[17px] leading-relaxed text-gray-dark">
-              A glimpse of the imaging and science behind the lab. Select a photo
-              to view it larger. Photos of the team and lab events are being
-              curated and will be added here.
+              A glimpse of life in the Sarin Lab, from conferences and
+              presentations to celebrations, lab gatherings, and everyday moments
+              at Stanford.
             </p>
           </div>
 

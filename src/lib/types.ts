@@ -109,6 +109,9 @@ export type Technology = {
 
 export type GalleryImage = {
   src: string;
+  /** Intrinsic dimensions of the display image (for natural-aspect layout). */
+  width: number;
+  height: number;
   alt: string;
   caption?: string;
   year?: string;
