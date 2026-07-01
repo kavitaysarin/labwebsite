@@ -10,6 +10,12 @@ src/content/publications.ts   →  the SELECTED_PUBLICATIONS list
 You edit that list by hand. No build scripts, PubMed sync, or database are involved
 for launch. After any change, rebuild the site (`npm run build`) to see it.
 
+> **Update log — 2026-07-01:** Skin Cancer and Genetics expanded from a supplied
+> DOI list — **20 publications added** (each DOI resolved to a PMID and verified
+> against PubMed; `displayOrder` 7–26). Two supplied DOIs were incomplete
+> (`10.1158/1078-0432`, `10.1038/jid.2015`) and were **not** added — awaiting the
+> full DOIs. Two were already present and not duplicated. List is now ~40 papers.
+
 ## Manual update process (at a glance)
 
 This is the launch process — entirely manual, no automation:

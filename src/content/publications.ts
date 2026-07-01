@@ -143,7 +143,8 @@ export const FEATURED_PUBLICATIONS = RECENT_PUBLICATIONS.filter(
  * to the first author + "et al." (the live site shows no authors). Journal
  * names are normalized to their standard display form. Nothing here is invented.
  *
- * This is a CURATED highlight (~20 papers), NOT the full archive. To add /
+ * This is a CURATED highlight (~40 papers; the Skin Cancer and Genetics section
+ * was expanded 2026-07-01), NOT the full archive. To add /
  * remove / recategorize / feature / reorder entries, see
  * PUBLICATIONS_MAINTENANCE.md. The complete list lives on PubMed
  * (SITE.pubmedUrl).
@@ -274,6 +275,226 @@ export const SELECTED_PUBLICATIONS: SelectedPublication[] = [
     pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/32041948/",
     doiUrl: "https://doi.org/10.1038/s41467-020-14594-5",
     displayOrder: 6,
+  },
+  {
+    title:
+      "Genome-wide association study identifies 14 novel risk alleles associated with basal cell carcinoma",
+    authors: "Chahal HS, et al.",
+    journal: "Nature Communications",
+    year: 2016,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/27539887/",
+    doiUrl: "https://doi.org/10.1038/ncomms12510",
+    displayOrder: 7,
+  },
+  {
+    title:
+      "Genome-wide association study identifies novel susceptibility loci for cutaneous squamous cell carcinoma",
+    authors: "Chahal HS, et al.",
+    journal: "Nature Communications",
+    year: 2016,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/27424798/",
+    doiUrl: "https://doi.org/10.1038/ncomms12048",
+    displayOrder: 8,
+  },
+  {
+    title:
+      "LY6D marks pre-existing resistant basosquamous tumor subpopulations",
+    authors: "Haensel D, et al.",
+    journal: "Nature Communications",
+    year: 2022,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/36473848/",
+    doiUrl: "https://doi.org/10.1038/s41467-022-35020-y",
+    displayOrder: 9,
+  },
+  {
+    title:
+      "AP-1 and TGFβ cooperativity drives non-canonical Hedgehog signaling in resistant basal cell carcinoma",
+    authors: "Yao CD, et al.",
+    journal: "Nature Communications",
+    year: 2020,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/33033234/",
+    doiUrl: "https://doi.org/10.1038/s41467-020-18762-5",
+    displayOrder: 10,
+  },
+  {
+    title:
+      "Clinical and Pathologic Phenotyping of Mesotheliomas Developing in Carriers of Germline BAP1 Mutations",
+    authors: "Carbone M, et al.",
+    journal: "Journal of Thoracic Oncology",
+    year: 2025,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/40582407/",
+    doiUrl: "https://doi.org/10.1016/j.jtho.2025.06.020",
+    displayOrder: 11,
+  },
+  {
+    title:
+      "Multiomics Profiling Distinguishes Sebaceous Carcinoma from Benign Sebaceous Neoplasms and Provides Insight into the Genetic Evolution of Sebaceous Carcinogenesis",
+    authors: "Starrett GJ, et al.",
+    journal: "Clinical Cancer Research",
+    year: 2024,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/39287419/",
+    doiUrl: "https://doi.org/10.1158/1078-0432.CCR-24-1327",
+    displayOrder: 12,
+  },
+  {
+    title:
+      "Germline BARD1 variants predispose to mesothelioma by impairing DNA repair and calcium signaling",
+    authors: "Novelli F, et al.",
+    journal: "Proceedings of the National Academy of Sciences",
+    year: 2024,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/38990952/",
+    doiUrl: "https://doi.org/10.1073/pnas.2405231121",
+    displayOrder: 13,
+  },
+  {
+    title:
+      "Clonal replacement of tumor-specific T cells following PD-1 blockade",
+    authors: "Yost KE, et al.",
+    journal: "Nature Medicine",
+    year: 2019,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/31359002/",
+    doiUrl: "https://doi.org/10.1038/s41591-019-0522-3",
+    displayOrder: 14,
+  },
+  {
+    title:
+      "Genetic Mutations Underlying Phenotypic Plasticity in Basosquamous Carcinoma",
+    authors: "Chiang A, et al.",
+    journal: "Journal of Investigative Dermatology",
+    year: 2019,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/31207229/",
+    doiUrl: "https://doi.org/10.1016/j.jid.2019.03.1163",
+    displayOrder: 15,
+  },
+  {
+    title:
+      "Loss of Primary Cilia Drives Switching from Hedgehog to Ras/MAPK Pathway in Resistant Basal Cell Carcinoma",
+    authors: "Kuonen F, et al.",
+    journal: "Journal of Investigative Dermatology",
+    year: 2019,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/30707899/",
+    doiUrl: "https://doi.org/10.1016/j.jid.2018.11.035",
+    displayOrder: 16,
+  },
+  {
+    title:
+      "Pembrolizumab for advanced basal cell carcinoma: An investigator-initiated, proof-of-concept study",
+    authors: "Chang ALS, et al.",
+    journal: "Journal of the American Academy of Dermatology",
+    year: 2019,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/30145186/",
+    doiUrl: "https://doi.org/10.1016/j.jaad.2018.08.017",
+    displayOrder: 17,
+  },
+  {
+    title:
+      "Frequent basal cell cancer development is a clinical marker for inherited cancer susceptibility",
+    authors: "Cho HG, et al.",
+    journal: "JCI Insight",
+    year: 2018,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/30089731/",
+    doiUrl: "https://doi.org/10.1172/jci.insight.122744",
+    displayOrder: 18,
+  },
+  {
+    title:
+      "TGFβ, Fibronectin and Integrin α5β1 Promote Invasion in Basal Cell Carcinoma",
+    authors: "Kuonen F, et al.",
+    journal: "Journal of Investigative Dermatology",
+    year: 2018,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/29758283/",
+    doiUrl: "https://doi.org/10.1016/j.jid.2018.04.029",
+    displayOrder: 19,
+  },
+  {
+    title:
+      "Noncanonical hedgehog pathway activation through SRF-MKL1 promotes drug resistance in basal cell carcinomas",
+    authors: "Whitson RJ, et al.",
+    journal: "Nature Medicine",
+    year: 2018,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/29400712/",
+    doiUrl: "https://doi.org/10.1038/nm.4476",
+    displayOrder: 20,
+  },
+  {
+    title:
+      "Genomic Stability in Syndromic Basal Cell Carcinoma",
+    authors: "Chiang A, et al.",
+    journal: "Journal of Investigative Dermatology",
+    year: 2018,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/29111235/",
+    doiUrl: "https://doi.org/10.1016/j.jid.2017.09.048",
+    displayOrder: 21,
+  },
+  {
+    title:
+      "Combined inhibition of atypical PKC and histone deacetylase 1 is cooperative in basal cell carcinoma treatment",
+    authors: "Mirza AN, et al.",
+    journal: "JCI Insight",
+    year: 2017,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/29093271/",
+    doiUrl: "https://doi.org/10.1172/jci.insight.97071",
+    displayOrder: 22,
+  },
+  {
+    title:
+      "Mutations in the Kinetochore Gene KNSTRN in Basal Cell Carcinoma",
+    authors: "Jaju PD, et al.",
+    journal: "Journal of Investigative Dermatology",
+    year: 2015,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/26348826/",
+    doiUrl: "https://doi.org/10.1038/jid.2015.339",
+    displayOrder: 23,
+  },
+  {
+    title:
+      "Squamous Change in Basal-Cell Carcinoma with Drug Resistance",
+    authors: "Ransohoff KJ, et al.",
+    journal: "New England Journal of Medicine",
+    year: 2015,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/26352826/",
+    doiUrl: "https://doi.org/10.1056/NEJMc1504261",
+    displayOrder: 24,
+  },
+  {
+    title:
+      "Smoothened variants explain the majority of drug resistance in basal cell carcinoma",
+    authors: "Atwood SX, et al.",
+    journal: "Cancer Cell",
+    year: 2015,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/25759020/",
+    doiUrl: "https://doi.org/10.1016/j.ccell.2015.02.002",
+    displayOrder: 25,
+  },
+  {
+    title:
+      "Genomic analysis of smoothened inhibitor resistance in basal cell carcinoma",
+    authors: "Sharpe HJ, et al.",
+    journal: "Cancer Cell",
+    year: 2015,
+    category: "skin-cancer-genetics",
+    pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/25759019/",
+    doiUrl: "https://doi.org/10.1016/j.ccell.2015.02.001",
+    displayOrder: 26,
   },
 
   // ---- neurofibromatosis ----
