@@ -138,8 +138,8 @@ export const RESEARCH_PILLARS: ResearchPillar[] = [
     pubHref: "/publications#autoimmune-systemic",
     projects: [
       "Measuring molecular signatures in dermatomyositis, lupus, and scleroderma",
-      "Studying inflammatory pathways in hidradenitis suppurativa and related disorders",
-      "Identifying tissue biomarkers associated with disease activity and treatment response",
+      "Studying inflammatory pathways in hidradenitis suppurativa",
+      "Identifying biomarkers associated with disease activity and treatment response",
     ],
     applications: [
       "Dermatomyositis",

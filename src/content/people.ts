@@ -119,7 +119,7 @@ export const PEOPLE: Person[] = [
   {
     slug: "jeffrey-sagun",
     name: "Jeffrey Penular Sagun",
-    role: "REACH Postbaccalaureate Scholar",
+    role: "Medical Student",
     category: "Trainees",
     email: "sagunjp@stanford.edu",
     image: "/images/team/jeffrey-sagun.jpg",
