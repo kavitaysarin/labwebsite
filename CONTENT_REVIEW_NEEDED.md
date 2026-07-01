@@ -32,6 +32,7 @@ Items requiring **Dr. Sarin / lab-team verification or approval** before launch.
 - **Optical Clearing with KLEAR** image (`klear.jpg`) is the before/after panel the lab supplied (labeled C/D, 5 mm scale) — the **only KLEAR image available is 528×163 px (28 KB)**. It is displayed `object-contain` (no stretching) but leaves whitespace in the 4:3 frame. **Provide a higher-resolution original if one exists**, and confirm the panel is the lab's own figure (it looks like a publication figure).
 - **Optical Imaging** image (`optical-imaging.jpg`) is a cropped OCT scan from a redesign-package asset — confirm acceptable or supply a preferred OCT image.
 - **Recent Work thumbnails are representative research-area figures**, NOT the exact 2026-paper figures (see `docs/recent-work-image-map.md`). Confirm acceptable, or provide each paper's own figure. Journal figures from Cancer Cell/Elsevier need reuse confirmation; Science Advances & JCI Insight are CC-BY (attribution advised).
+- **Homepage "Recent Work" — 3rd featured paper has no thumbnail.** Per request (2026-07-01) the featured set now ends with *"Phenotypic characterization of neurofibromatosis type 1 in a large Chinese cohort"* (JAAD International, PMID 41399671), which has no figure, so its card shows the "IMAGE PENDING" placeholder. Provide a representative Neurofibromatosis figure if a thumbnail is wanted. (It replaced the Nef-ASI paper, which remains listed but unfeatured.)
 - **Stanford Medicine building photo** (intro band) — confirm approved for use.
 
 ## Contact & configuration

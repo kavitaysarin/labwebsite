@@ -31,7 +31,7 @@ export const TECHNOLOGIES: Technology[] = [
     slug: "optical-imaging",
     name: "Optical Imaging",
     shortDescription:
-      "High-resolution, non-invasive optical imaging technologies—including OCT and KLEAR optical clearing—to reveal skin structure and disease at cellular and tissue scales.",
+      "High-resolution, non-invasive optical imaging technologies, including OCT and optical clearing, to reveal skin structure and disease at cellular and tissue scales.",
     longDescription:
       "The lab develops high-resolution optical imaging to assess living skin without traditional biopsy. This program spans optical coherence tomography (OCT), high-definition OCT, KLEAR-OCT, optical clearing, and imaging–pathology correlation, working toward non-invasive “virtual biopsies” for earlier detection and longitudinal monitoring.",
     category: "Optical Imaging",

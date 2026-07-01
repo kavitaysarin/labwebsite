@@ -90,7 +90,6 @@ export const RECENT_PUBLICATIONS: Publication[] = [
     image: "/images/recent-work/nef-asi.jpg",
     imageAlt:
       "Bland–Altman plot comparing cutaneous neurofibroma measurements across raters.",
-    featured: true,
   },
   {
     title:
@@ -124,6 +123,7 @@ export const RECENT_PUBLICATIONS: Publication[] = [
     researchArea: "Neurofibromatosis",
     pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/41399671/",
     doiUrl: "https://doi.org/10.1016/j.jdin.2025.09.020",
+    featured: true,
   },
 ];
 

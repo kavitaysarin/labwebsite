@@ -87,11 +87,8 @@ export default function Home() {
               <SectionHeading
                 eyebrow="Skin as a Sensor"
                 title="Why Skin?"
-                intro="The skin is uniquely suited to reveal what is happening inside the body — and to do so again and again over time."
+                intro="The skin is uniquely suited to reveal what is happening inside the body, and to do so again and again over time."
               />
-              <div className="mt-5">
-                <ArrowLink href="/research">Learn more about our approach</ArrowLink>
-              </div>
             </div>
             <div className="mt-8 lg:mt-0">
               <FeatureGrid items={WHY_SKIN} variant="plain" />
@@ -108,7 +105,7 @@ export default function Home() {
               <SectionHeading
                 eyebrow="Our Research Approach"
                 title="How We Read the Skin"
-                intro="We integrate complementary signals — genetic, molecular, imaging, and digital — and translate them into meaningful insights about disease."
+                intro="We integrate complementary signals, genetic, molecular, imaging, and digital, and translate them into meaningful insights about disease."
               />
               <div className="mt-5">
                 <ArrowLink href="/research">Explore our research</ArrowLink>
