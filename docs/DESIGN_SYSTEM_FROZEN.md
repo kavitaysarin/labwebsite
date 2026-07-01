@@ -66,3 +66,11 @@ The publication **list** (`SELECTED_PUBLICATIONS` in `src/content/publications.t
 | Team page | `src/app/team/page.tsx` | Approved unified-grid layout (no PI spotlight, no stacked sections, no intro heading) |
 
 The member **list** (`PEOPLE` in `src/content/people.ts`) is content-managed (NOT frozen) — edit roles/bios/headshots/`objectPosition` there. Headshot sources: `docs/team-image-sources.md`.
+
+## Also approved (added after the Collaborators page — 2026-06-30)
+| Concern | Location | Notes |
+|---|---|---|
+| Collaborator card | `src/components/cards/CollaboratorCard.tsx` | 4:5 portrait (object-cover + per-person `objectPosition`) or initials; navy name + credentials, cardinal title, gray institution, one expertise sentence, bottom "View Stanford Profile" link; full-card clickable |
+| Collaborators page | `src/app/collaborators/page.tsx` | Approved layout: two domain groups, left-aligned 3/2/1 grid (incomplete rows start in column one, not centered) |
+
+The collaborator **list** (`COLLABORATORS` in `src/content/collaborators.ts`) is content-managed (NOT frozen). Portrait sources: `docs/collaborator-image-sources.md`.

@@ -1,3 +1,6 @@
+// APPROVED — finalized Collaborators page (2026-06-30). Layout approved; do not
+// redesign without re-approval. The collaborator LIST is content-managed in
+// src/content/collaborators.ts. See docs/DESIGN_SYSTEM_FROZEN.md.
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
