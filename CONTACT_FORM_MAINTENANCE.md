@@ -38,8 +38,11 @@ filter/label:
 |---|---|
 | Joining the Lab | `[Website – Join the Lab]` |
 | Research Collaboration | `[Website – Research Collaboration]` |
+| Supporting the Lab | `[Website – Support Our Lab]` |
 | General Inquiry | `[Website – General Inquiry]` |
-| Patient or Clinical Question | **not submittable** — redirected to Stanford Health Care |
+
+(Clinical questions are not a form option; a small disclaimer near the cards
+points to Stanford Health Care Dermatology instead.)
 
 The email body contains: name, email (used as reply-to), affiliation (or
 "(not provided)"), reason, and message.

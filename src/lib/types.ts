@@ -149,7 +149,8 @@ export type IconName =
   | "users"
   | "link"
   | "alert"
-  | "check";
+  | "check"
+  | "heart";
 
 /** Research-area buckets for the curated Selected Publications page. */
 export type PublicationCategory =

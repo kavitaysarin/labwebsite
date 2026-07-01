@@ -26,14 +26,12 @@ const ENDPOINT = "https://api.web3forms.com/submit";
 const CLINICAL_URL =
   "https://stanfordhealthcare.org/medical-clinics/dermatology-clinic.html";
 
-const CLINICAL_REASON = "Patient or Clinical Question";
-
-// Reason options → email subject prefix. `null` = blocked (routed to the clinic).
-const REASONS: { value: string; prefix: string | null }[] = [
+// Reason options → email subject prefix.
+const REASONS: { value: string; prefix: string }[] = [
   { value: "Joining the Lab", prefix: "[Website – Join the Lab]" },
   { value: "Research Collaboration", prefix: "[Website – Research Collaboration]" },
+  { value: "Supporting the Lab", prefix: "[Website – Support Our Lab]" },
   { value: "General Inquiry", prefix: "[Website – General Inquiry]" },
-  { value: CLINICAL_REASON, prefix: null },
 ];
 
 const CARDS: {
@@ -42,7 +40,8 @@ const CARDS: {
   title: string;
   body: string;
   reason?: string;
-  href?: string;
+  href?: string; // set once a verified Stanford giving page is approved (Support card)
+  cta?: string;
 }[] = [
   {
     key: "join",
@@ -59,11 +58,14 @@ const CARDS: {
     reason: "Research Collaboration",
   },
   {
-    key: "clinical",
-    icon: "stethoscope",
-    title: "Patient & Clinical Questions",
-    body: "The Sarin Lab conducts research and cannot provide medical care through this website. For appointments or clinical questions, contact Stanford Health Care Dermatology.",
-    href: CLINICAL_URL,
+    key: "support",
+    icon: "heart",
+    title: "Support Our Lab",
+    body: "Philanthropic support helps advance research, train the next generation of scientists and clinicians, and develop new approaches for detecting and measuring disease through the skin.",
+    // No approved Stanford giving page yet (see CONTENT_REVIEW_NEEDED.md).
+    // Until one exists, this scrolls to the form and preselects "Supporting the Lab".
+    reason: "Supporting the Lab",
+    cta: "Learn About Supporting the Lab",
   },
 ];
 
@@ -109,8 +111,6 @@ export function ContactSection() {
     }
   }, [status]);
 
-  const isClinical = values.reason === CLINICAL_REASON;
-
   const set =
     (k: FieldKey) =>
     (
@@ -152,16 +152,6 @@ export function ContactSection() {
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (status === "submitting") return; // prevent duplicate submits
-
-    // Patient/clinical questions are never submitted through the lab form.
-    if (isClinical) {
-      setErrors({
-        reason:
-          "Patient and clinical questions can’t be submitted here. Please use the Stanford Health Care link above.",
-      });
-      reasonRef.current?.focus();
-      return;
-    }
 
     // Validate FIRST so real users always get feedback, even on a fast submit.
     const er = validate();
@@ -248,10 +238,10 @@ export function ContactSection() {
 
   return (
     <>
-      {/* How We Can Help */}
+      {/* Ways to Connect */}
       <section className="bg-cream">
         <div className="container-wide section-pad-tight">
-          <SectionHeading title="How We Can Help" />
+          <SectionHeading title="Ways to Connect" />
 
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {CARDS.map((c) => {
@@ -290,7 +280,7 @@ export function ContactSection() {
                 >
                   {inner}
                   <span className="mt-3 inline-flex items-center gap-1.5 text-[14px] font-semibold text-cardinal group-hover:underline">
-                    Start a message
+                    {c.cta ?? "Start a message"}
                     <Icon name="arrow-right" className="h-4 w-4" />
                   </span>
                 </button>
@@ -298,16 +288,22 @@ export function ContactSection() {
             })}
           </div>
 
-          {/* Medical notice */}
+          {/* Concise clinical disclaimer (secondary — not a primary pathway) */}
           <div
             role="note"
-            className="mx-auto mt-8 max-w-3xl rounded-lg border border-border bg-white p-5 text-[14px] leading-relaxed text-gray-dark"
+            className="mx-auto mt-8 max-w-3xl rounded-lg border border-border bg-white p-4 text-[13.5px] leading-relaxed text-gray-dark"
           >
-            <strong className="font-semibold text-navy">
-              This site is not monitored for urgent medical needs.
-            </strong>{" "}
-            The Sarin Lab cannot provide medical advice through this form. For medical care, contact
-            your physician or Stanford Health Care. In an emergency, call 911.
+            The Sarin Lab cannot provide medical advice or schedule appointments through this
+            website. For clinical care, contact{" "}
+            <a
+              href={CLINICAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-cardinal hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cardinal/50"
+            >
+              Stanford Health Care Dermatology
+            </a>
+            . In an emergency, call 911.
           </div>
         </div>
       </section>
@@ -423,9 +419,7 @@ export function ContactSection() {
                   onChange={set("reason")}
                   aria-required="true"
                   aria-invalid={!!errors.reason}
-                  aria-describedby={
-                    errors.reason ? "cf-reason-err" : isClinical ? "cf-clinical-note" : undefined
-                  }
+                  aria-describedby={errors.reason ? "cf-reason-err" : undefined}
                   className={`${field} ${borderFor("reason")}`}
                 >
                   <option value="">Select a reason…</option>
@@ -438,67 +432,40 @@ export function ContactSection() {
                 {errors.reason ? <ErrorText id="cf-reason-err">{errors.reason}</ErrorText> : null}
               </div>
 
-              {/* Clinical redirect — replaces the message/submit path */}
-              {isClinical ? (
-                <div
-                  id="cf-clinical-note"
-                  role="note"
-                  className="mt-4 rounded-lg border border-cardinal/30 bg-cardinal/5 p-5 text-[14.5px] leading-relaxed text-navy"
-                >
-                  <p className="font-semibold">
-                    For patient and clinical questions, please contact Stanford Health Care.
-                  </p>
-                  <p className="mt-1.5 text-gray-dark">
-                    The Sarin Lab conducts research and cannot provide medical care, diagnoses, or
-                    clinical advice through this website. Please don’t share medical history, photos,
-                    or personal health details here.
-                  </p>
-                  <a
-                    href={CLINICAL_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-flex min-h-[44px] items-center gap-2 rounded-lg bg-cardinal px-5 py-2.5 text-[15px] font-semibold text-white transition-colors hover:bg-cardinal-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cardinal/50 focus-visible:ring-offset-2"
-                  >
-                    Stanford Health Care Dermatology
-                    <Icon name="external" className="h-4 w-4" />
-                  </a>
+              <div className="mt-4">
+                <label htmlFor="cf-message" className={labelCls}>
+                  Message
+                  <Req />
+                </label>
+                <textarea
+                  id="cf-message"
+                  name="message"
+                  rows={6}
+                  maxLength={MAX_MESSAGE}
+                  value={values.message}
+                  onChange={set("message")}
+                  aria-required="true"
+                  aria-invalid={!!errors.message}
+                  aria-describedby={`cf-message-count${errors.message ? " cf-message-err" : ""}`}
+                  className={`${field} resize-y ${borderFor("message")}`}
+                />
+                <div className="mt-1 flex items-start justify-between gap-3">
+                  {errors.message ? (
+                    <ErrorText id="cf-message-err">{errors.message}</ErrorText>
+                  ) : (
+                    <span />
+                  )}
+                  <span id="cf-message-count" className="mt-1 flex-none text-[12px] text-gray-dark">
+                    {values.message.length}/{MAX_MESSAGE}
+                  </span>
                 </div>
-              ) : (
-                <div className="mt-4">
-                  <label htmlFor="cf-message" className={labelCls}>
-                    Message
-                    <Req />
-                  </label>
-                  <textarea
-                    id="cf-message"
-                    name="message"
-                    rows={6}
-                    maxLength={MAX_MESSAGE}
-                    value={values.message}
-                    onChange={set("message")}
-                    aria-required="true"
-                    aria-invalid={!!errors.message}
-                    aria-describedby={`cf-message-count${errors.message ? " cf-message-err" : ""}`}
-                    className={`${field} resize-y ${borderFor("message")}`}
-                  />
-                  <div className="mt-1 flex items-start justify-between gap-3">
-                    {errors.message ? (
-                      <ErrorText id="cf-message-err">{errors.message}</ErrorText>
-                    ) : (
-                      <span />
-                    )}
-                    <span id="cf-message-count" className="mt-1 flex-none text-[12px] text-gray-dark">
-                      {values.message.length}/{MAX_MESSAGE}
-                    </span>
-                  </div>
-                </div>
-              )}
+              </div>
 
               <div className="mt-5">
                 <button
                   type="submit"
-                  disabled={status === "submitting" || isClinical}
-                  aria-disabled={status === "submitting" || isClinical}
+                  disabled={status === "submitting"}
+                  aria-disabled={status === "submitting"}
                   className="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-cardinal px-6 py-2.5 text-[15px] font-semibold text-white transition-colors hover:bg-cardinal-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cardinal/50 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {status === "submitting" ? (
@@ -513,11 +480,6 @@ export function ContactSection() {
                     "Send message"
                   )}
                 </button>
-                {isClinical ? (
-                  <p className="mt-2 text-[13px] text-gray-dark">
-                    Submissions for patient or clinical questions aren’t accepted through this form.
-                  </p>
-                ) : null}
               </div>
 
               {/* Live status region — focus moves here after a submission attempt */}
