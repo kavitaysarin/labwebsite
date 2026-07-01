@@ -37,11 +37,16 @@ Base: `https://images.squarespace-cdn.com/content/v1/58df29fb6a4963762c662cf5/`
 | Audris Chang | audris-chang | 500×500 | low-ish | `5a61b7e6-9361-49b9-a438-951ca3225b49/ChiangAudrisPhoto2-min+(2).webp` |
 
 **Lab-supplied photos (2026-07-01):** Sally Glaser (`sallyglaser.jpg`), Margarita
-Golod (`margarita.png` — auto-cropped out of a phone screenshot to isolate the
-headshot), and Kat Israel (`KatIsrael.png`). All from the redesign package.
+Golod (`margarita.png` — auto-cropped out of a phone screenshot), Kat Israel
+(`KatIsrael.png`), Chris Sadee (`chrissadee.jpg`), Akash Dhawan (`akash.avif`),
+and Angelina Chekmareva (`angelina.jpg`, tight head-and-shoulders crop; full
+original in `/originals`). All from the redesign package.
 
-**No headshot (initials fallback):** now only **Angelina Chekmareva** (new staff,
-no photo supplied).
+**Re-cropped 2026-07-01** to center the face / match the others' framing:
+Angelina, Haniya Shareef (source was landscape), and Jeffrey Sagun (source was a
+full-length shot). Uncropped sources remain in `/originals`.
+
+**No headshot (initials fallback):** none — all live members now have a photo.
 
 **Removed 2026-07-01:** Victoria Harbour and Sahar Caravan (entries + images deleted).
 
