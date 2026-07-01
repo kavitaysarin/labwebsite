@@ -1,10 +1,9 @@
 # Project status — Sarin Lab website
 
-_Checkpoint: 2026-06-29 (evening). Homepage, Research, and Technologies built, QA-passed & FROZEN. Starting an authorized overnight DRAFT build of the remaining core pages on a feature branch (not approved, not production)._
+_Checkpoint: **2026-07-01 — ENTIRE WEBSITE FINALIZED.** All 8 launch pages approved & QA-passed in a full-site sweep: **axe WCAG 2.0/2.1 A & AA = 0 violations** (desktop + mobile), **no horizontal overflow 320–1440**, **0 broken images**, and every internal route resolves 200 (no stray 404s; Recognition intentionally deferred). Still on `feature/remaining-pages-draft` — **not merged, not pushed, not deployed** (local-first per user). Remaining before go-live: the **deployment workflow** and the **pre-launch content confirmations** in `CONTENT_REVIEW_NEEDED.md`._
 
 ## Snapshot
-- **Branch:** `main` · **Remote:** github.com/kavitaysarin/labwebsite — **nothing pushed yet** (local-first per user).
-- **Latest feature commit before this checkpoint:** `127aab6` (a checkpoint commit is added on top of it — run `git log -1` for the current hash).
+- **Branch:** `feature/remaining-pages-draft` · **Remote:** github.com/kavitaysarin/labwebsite — **nothing pushed / merged / deployed yet** (local-first per user). Run `git log -1` for the current hash.
 - **Stack:** Next.js 16 + TypeScript + Tailwind v4, static export → GitHub Pages. Repo at `C:\Users\ksarin\Projects\labwebsite` (outside Google Drive).
 - **Node:** portable at `C:\Users\ksarin\nodejs` (on user PATH).
 
@@ -18,8 +17,8 @@ _Checkpoint: 2026-06-29 (evening). Homepage, Research, and Technologies built, Q
 ## Completed pages (continued)
 - **`/technologies` Technologies — DONE, QA-passed & FROZEN.** Compact `PageHero` + 2-paragraph intro + 5 anchor cards + 5 program blocks (Optical Imaging / Optical Clearing with KLEAR / 3D Molecular Pathology / Spatial Biology / AI & Computational Analysis). Real lab images; collaborator names link to Stanford Profiles (Winetraub, Hong, Liu — Liu lab moved to Stanford Pathology Summer 2025). Section images eager-loaded (fixes tablet/mobile blank-image bug). axe WCAG A/AA = 0 violations; no overflow 320–1440. New frozen component: `TechnologyDetail`. Anchors used by Research: `#optical-imaging`, `#3d-molecular-pathology`, `#ai-and-data-science`, `#spatial-biology`.
 
-## Current work — OVERNIGHT DRAFT BUILD (authorized 2026-06-29) — COMPLETE, awaiting review
-- Branch **`feature/remaining-pages-draft`** (NOT `main`, NOT merged, NOT deployed). DRAFT (not approved) versions built, one commit each:
+## Launch pages — ALL APPROVED & FINALIZED (2026-07-01)
+- Branch **`feature/remaining-pages-draft`** (NOT `main`, NOT merged, NOT deployed). Home / Research / Technologies were frozen earlier; the pages below were finalized after review. Full-site QA sweep (2026-07-01): 0 axe violations, no overflow, 0 broken images/links across all 8 pages.
   - **Publications** — **APPROVED & FINALIZED** (curated **Selected Publications** model): hero, intro + "View All Publications on PubMed", 3 featured cards, and 4 research-area sections (Optical Imaging / Skin Cancer and Genetics / Neurofibromatosis / Autoimmune, Inflammatory, and Systemic Disease) with section anchors. **~40 papers** (Skin Cancer and Genetics expanded to ~25 on 2026-07-01 from a supplied DOI list), all verified against PubMed (PMID/DOI resolve; authors = first author + "et al."). Full database / search / filters / pagination intentionally excluded (post-launch). Research & Technologies "related publications" links point to `/publications#<section>` (verified in-view). Maintained by hand — see `PUBLICATIONS_MAINTENANCE.md`.
   - **Team** — **APPROVED & FINALIZED** (unified egalitarian grid): one grid of all current members (PI first, equal cards), optional filter chips (All / Faculty / Staff / Trainees / Students / Volunteers / Alumni), real headshots migrated from the live site (4:5, per-person `objectPosition`; 2 volunteers use initials), concise "Studying …" bios, Alumni filter "coming soon" note. Member list content-managed in `people.ts`; headshot sources in `docs/team-image-sources.md`.
   - **Collaborators** — **APPROVED & FINALIZED**: 10 collaborators in two groups (Clinical & Translational; Imaging, Engineering & Data Science); official Stanford portraits (Winetraub lab-supplied); one-sentence cards (navy name / cardinal title / gray institution); left-aligned 3/2/1 grid; full-card-clickable "View Stanford Profile". Titles verified against official Stanford pages. List content-managed in `collaborators.ts`; sources in `docs/collaborator-image-sources.md`.
@@ -40,14 +39,11 @@ _Checkpoint: 2026-06-29 (evening). Homepage, Research, and Technologies built, Q
 - Contact form → Formspree (placeholder ID).
 - Publications: research-area cards + PubMed; homepage "Recent Work" uses real recent PubMed pubs.
 
-## Remaining tasks (priority order)
-1. **Build Technologies `/technologies`** (next; outline pending approval) — wires up the `#…` anchors that Research links to.
-2. Build Publications (+ research-area drill-downs and the `?area=` filter the Research page links to), Recognition, Team (+ profiles), Collaborators, Lab Photos, Contact, custom 404.
-3. Content data files still needed: `people.ts`, `collaborators.ts`, `recognition.ts`, `gallery.ts`, `research.ts` pillars.
-4. Full image scrape/integration: headshots, lab photos, microscopy, logo.
-5. Deliverables: `copy-before-after.md`, `redirect-map.md`, `CONTENT_EDITING_GUIDE.md`, README, image manifest. (`content-audit.md` + `CONTENT_REVIEW_NEEDED.md` now exist.)
-6. QA: full a11y, responsive, link-check, Lighthouse; redirects; sitemap/robots/structured data.
-7. Deploy to GitHub Pages (basePath + Actions or gh-pages) — **only on approval**.
+## Remaining before go-live (all pages are finalized; these are launch-prep)
+1. **Deployment** — GitHub Pages via Actions (or gh-pages), incl. `basePath` and the **`NEXT_PUBLIC_WEB3FORMS_KEY` build secret** so the deployed Contact form carries the key. **Only on approval.**
+2. **Pre-launch content confirmations** — everything in `CONTENT_REVIEW_NEEDED.md` (image reuse rights + patient consent for clinical photos/video; a few titles/emails/spellings; Dr. Sarin's title; production domain; social links).
+3. **Optional polish** — custom 404 page; sitemap/robots/structured data; image optimization (WebP/AVIF + responsive sizes); official Stanford/Sarin logo (Stanford Medicine emblem is in place, "Sarin Lab" is a text wordmark).
+4. **Deliverables (optional):** `copy-before-after.md`, `redirect-map.md`, `CONTENT_EDITING_GUIDE.md`, README. (`content-audit.md`, `CONTENT_REVIEW_NEEDED.md`, `PUBLICATIONS_MAINTENANCE.md`, `CONTACT_FORM_MAINTENANCE.md`, `LAB_PHOTO_INVENTORY.md`, `docs/DESIGN_SYSTEM_FROZEN.md` already exist.)
 
 ## Post-launch enhancements (deferred — do NOT build before launch)
 
