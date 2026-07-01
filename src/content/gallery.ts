@@ -33,14 +33,6 @@ export const GALLERY: GalleryImage[] = [
     category: "Team & Community",
   },
   {
-    src: "/images/lab-photos/lp-new-03.jpg",
-    width: 1200,
-    height: 1600,
-    alt: "Presenting a poster at a research meeting.",
-    caption: "Presenting a poster at a research meeting.",
-    category: "Conferences & Talks",
-  },
-  {
     src: "/images/lab-photos/lp-new-04.jpg",
     width: 1600,
     height: 1200,
@@ -55,14 +47,6 @@ export const GALLERY: GalleryImage[] = [
     alt: "A Sarin Lab outing.",
     caption: "A Sarin Lab outing.",
     category: "Celebrations & Milestones",
-  },
-  {
-    src: "/images/lab-photos/lp-new-06.jpg",
-    width: 1200,
-    height: 1600,
-    alt: "Presenting a poster at the Society for Investigative Dermatology meeting.",
-    caption: "Presenting a poster at the Society for Investigative Dermatology meeting.",
-    category: "Conferences & Talks",
   },
   {
     src: "/images/lab-photos/lp-new-07.jpg",
@@ -112,14 +96,6 @@ export const GALLERY: GalleryImage[] = [
     alt: "Delivering a podium talk at a scientific meeting.",
     caption: "Delivering a podium talk at a scientific meeting.",
     category: "Conferences & Talks",
-  },
-  {
-    src: "/images/lab-photos/lp-06.jpg",
-    width: 1200,
-    height: 1600,
-    alt: "Members of the Sarin Lab.",
-    caption: "Members of the Sarin Lab.",
-    category: "Team & Community",
   },
   {
     src: "/images/lab-photos/lp-07.jpg",
@@ -200,14 +176,6 @@ export const GALLERY: GalleryImage[] = [
     alt: "At a research poster session.",
     caption: "At a research poster session.",
     category: "Conferences & Talks",
-  },
-  {
-    src: "/images/lab-photos/lp-20.jpg",
-    width: 1600,
-    height: 1066,
-    alt: "A Sarin Lab team gathering.",
-    caption: "A Sarin Lab team gathering.",
-    category: "Team & Community",
   },
   {
     src: "/images/lab-photos/lp-22.jpg",

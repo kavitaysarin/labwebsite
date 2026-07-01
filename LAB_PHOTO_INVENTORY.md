@@ -11,13 +11,16 @@ Captions are generic — no individual is named without evidence. **Identificati
 and permission for public display need lab confirmation** before launch (all
 "people" rows below).
 
-**Gallery total: 40** = 33 carousel photos + **7 lab-supplied photos**. After a
-near-duplicate review, removed lp-18 (≈ lp-17, same standing-group event),
-lp-21 (≈ lp-20, same kitchen event), and lp-08 (a decorative map illustration,
-not a people photo). Earlier this was 36 carousel + 7 supplied = 43.
-(added 2026-06-30, shown first: `lp-new-01`…`lp-new-07` — bowling outing,
-group at a Stanford mural, a poster presentation, a lab dinner, a milkshake-bar
-outing, and two more conference photos). People-focused only; no scientific
+**Gallery total: 36** = 31 carousel photos + **5 lab-supplied photos**. History:
+first migrated 36 carousel + 7 supplied = 43; a near-duplicate review removed
+lp-18 (≈ lp-17, same standing-group event), lp-21 (≈ lp-20, same kitchen event),
+and lp-08 (a decorative map illustration, not a people photo) → 40. Then, **per
+lab request (2026-06-30), removed four more:** lp-06 (Kavita Sarin posing next to
+her promotional banner — the banner photo), lp-20 (the green-apron cooking-class
+dinner), lp-new-03 (Michelle Lin's poster), and lp-new-06 (Nethra Srinivasan's
+poster) → **36**. Remaining supplied photos (`lp-new-01/02/04/05/07`): bowling
+outing, group at a Stanford mural, a restaurant dinner, a milkshake-bar outing,
+and a main-stage conference talk. People-focused only; no scientific
 figures, OCT, histology, or publication graphics. Carousel files are
 `public/images/lab-photos/lp-<NN>.jpg` (NN = the carousel index below; order
 preserved); display copies at long side ≤1600px, natural aspect; originals in
