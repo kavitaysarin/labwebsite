@@ -43,7 +43,8 @@ Reuse `PageHero` as-is for Technologies and every later interior page.
 ## Also frozen (added after the Technologies page — QA-passed 2026-06-29)
 | Concern | Location | Notes |
 |---|---|---|
-| Technology program block | `src/components/sections/TechnologyDetail.tsx` | 4:3 image (cover/contain) + name + lead + "What it reveals" + ≤3 application chips + linked collaborators + Related Research/Publications links |
+| Technology program block | `src/components/sections/TechnologyDetail.tsx` | 4:3 image (cover/contain) + name + lead + "What it reveals" + ≤3 application chips + linked collaborators + Related Research/Publications links. Optionally renders a looping video (`TechVideo`) in place of the image when `program.video` is set. |
+| Looping technique video | `src/components/sections/TechVideo.tsx` (2026-07-01) | Muted autoplay loop with poster + MP4/WebM sources; pauses on the poster when the visitor prefers reduced motion |
 | Technologies page | `src/app/technologies/page.tsx` | Approved + frozen; 5 programs, anchor cards (#optical-imaging, #optical-transparency, #3d-molecular-pathology, #spatial-biology, #ai-and-data-science) |
 | Technologies content | `src/content/technologies.ts` (`TECHNOLOGY_INTRO`, `TECHNOLOGY_PROGRAMS`) | Approved copy; collaborators link to Stanford Profiles |
 

@@ -1,7 +1,9 @@
-// FROZEN — approved Technologies page component (QA-passed 2026-06-29). Reuse
-// as-is; do not modify without re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
+// FROZEN — approved Technologies page component (QA-passed 2026-06-29; optional
+// looping video added 2026-07-01). Reuse as-is; do not modify without
+// re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import Image from "next/image";
 import Link from "next/link";
+import { TechVideo } from "./TechVideo";
 import type { TechnologyProgram } from "@/lib/types";
 
 export function TechnologyDetail({
@@ -20,14 +22,24 @@ export function TechnologyDetail({
           contain ? "bg-white" : "bg-navy"
         } ${reversed ? "lg:order-2" : ""}`}
       >
-        <Image
-          src={program.image}
-          alt={program.imageAlt}
-          fill
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          loading="eager"
-          className={contain ? "object-contain p-3" : "object-cover"}
-        />
+        {program.video ? (
+          <TechVideo
+            mp4={program.video.mp4}
+            webm={program.video.webm}
+            poster={program.image}
+            label={program.imageAlt}
+            className={`absolute inset-0 h-full w-full ${contain ? "object-contain p-3" : "object-cover"}`}
+          />
+        ) : (
+          <Image
+            src={program.image}
+            alt={program.imageAlt}
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            loading="eager"
+            className={contain ? "object-contain p-3" : "object-cover"}
+          />
+        )}
       </div>
 
       {/* Content */}

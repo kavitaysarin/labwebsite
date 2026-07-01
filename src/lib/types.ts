@@ -219,6 +219,10 @@ export type TechnologyProgram = {
   image: string;
   imageAlt: string;
   fit?: "cover" | "contain";
+  /** Optional looping video shown in place of the image (muted autoplay). When
+   * set, `image` is used as the poster / reduced-motion fallback. Provide MP4
+   * first, WebM optional. */
+  video?: { mp4: string; webm?: string };
   lead: string;
   whatItReveals: string;
   appliedTo: string[];

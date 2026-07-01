@@ -152,9 +152,13 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
     name: "3D Molecular Pathology",
     shortName: "3D Molecular Pathology",
     icon: "microscope",
-    image: "/images/technologies/molecular-3d.jpg",
+    image: "/images/technologies/molecular-3d-poster.jpg",
     imageAlt:
-      "Multiplex fluorescence image of skin tissue, with cell nuclei in red and nerve fibers in blue.",
+      "Three-dimensional multiplex-fluorescence reconstruction of skin tissue, with cell nuclei in red and nerve fibers in blue.",
+    video: {
+      mp4: "/images/technologies/molecular-3d.mp4",
+      webm: "/images/technologies/molecular-3d.webm",
+    },
     lead: "We combine tissue staining, three-dimensional imaging, and computational reconstruction to study intact skin and tumor architecture.",
     whatItReveals:
       "The spatial organization of cells, structures, and molecular signals within tissue.",
