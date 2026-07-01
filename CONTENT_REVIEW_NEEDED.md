@@ -77,9 +77,11 @@ Items requiring **Dr. Sarin / lab-team verification or approval** before launch.
 - **Low-resolution to replace if better versions exist:** lp-12, lp-14, lp-15, lp-16, lp-27, lp-35 (see inventory).
 - **5 lab-supplied photos remain** (2026-06-30), shown first: bowling outing, a milkshake-bar outing, a group at a Stanford mural, a restaurant dinner, and a main-stage conference talk. (The two individual poster photos of **Michelle Lin** and **Nethra Srinivasan** were removed per lab request, along with the Kavita-Sarin banner photo and the green-apron cooking-class dinner.) Captions are generic (people not named).
 
-### Contact
-- **Form is intentionally disabled** (Formspree ID still `YOUR_FORMSPREE_ID`); it validates input but shows a "not connected — email us" message and never fakes a send. **Provide a real Formspree (or other) form ID to enable submissions.**
-- **`ahoj@stanford.edu` is admin assistant Juniper Aho's address** (not a placeholder — it's the lab inbox). Confirm OK as the public contact.
-- Patient/clinical card links to `med.stanford.edu/dermatology` — confirm the preferred clinical/appointment path.
-- Confirm the "Not for medical emergencies" disclaimer wording (added per spec; absent on live site).
-- Social: only **Instagram** shown (LinkedIn/X/Facebook were bare-domain placeholders on the live site — omitted). Provide real URLs to add them.
+### Contact — refined 2026-06-30 (Web3Forms); STILL DRAFT until a real send is confirmed
+- **Provider = Web3Forms** (chosen). Delivery inbox = **`ksarin@stanford.edu`** (chosen). The form is fully built (fields, validation, submit/success/error states, honeypots, card→form preselect, Patient/Clinical block-and-redirect, a11y) but runs in **safe draft mode** because no key is configured yet. **REMAINING LAUNCH STEP:** create the Web3Forms key (registered to ksarin@stanford.edu), put it in `NEXT_PUBLIC_WEB3FORMS_KEY` (`.env.local` / prod build secret), and confirm a **real test message is delivered end-to-end** — only then does the draft notice disappear and the page become final. Full guide: `CONTACT_FORM_MAINTENANCE.md`.
+- **No secrets committed.** The key is public-by-design but still kept out of git (`.env*` gitignored except `.env.example`).
+- **Displayed public email** stays `ahoj@stanford.edu` (Juniper Aho / lab inbox) — separate from the delivery inbox. Confirm OK as the public contact. **Phone `(650) 497-8006` and the address** are used in `tel:`/map links — verify before launch.
+- **Patient/clinical redirect** now points to **Stanford Health Care Dermatology** (`stanfordhealthcare.org/medical-clinics/dermatology-clinic.html`, resolves 200) — confirm this is the preferred clinical/appointment path (vs. a specific booking page).
+- **Confirmation auto-reply** to the sender (spec §7) needs a **Web3Forms paid plan** (dashboard setting, suggested copy in the maintenance doc) — currently not enabled.
+- **Medical notice** wording updated per spec ("This site is not monitored for urgent medical needs…"). Confirm.
+- **"Follow us" row removed** from the Contact page (Instagram is already in the footer, per spec §13). Only Instagram is shown site-wide; provide real LinkedIn/X/Facebook URLs to add them.

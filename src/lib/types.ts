@@ -147,7 +147,9 @@ export type IconName =
   | "sparkles"
   | "search"
   | "users"
-  | "link";
+  | "link"
+  | "alert"
+  | "check";
 
 /** Research-area buckets for the curated Selected Publications page. */
 export type PublicationCategory =

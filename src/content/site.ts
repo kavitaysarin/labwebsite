@@ -49,10 +49,10 @@ export const SITE = {
   pubmedUrl:
     "https://pubmed.ncbi.nlm.nih.gov/?term=Kavita+Y+Sarin%5BAuthor%5D",
 
-  // Formspree form ID for the contact page (the form action is
-  // https://formspree.io/f/<id>). This is a public ID, not a secret.
-  // TODO: replace with the lab's real Formspree form ID.
-  formspreeId: "YOUR_FORMSPREE_ID",
+  // Contact form delivery is handled by Web3Forms. The public access key lives
+  // in the NEXT_PUBLIC_WEB3FORMS_KEY env var (see .env.example and
+  // CONTACT_FORM_MAINTENANCE.md), not here — so it is never committed and the
+  // form stays in safe draft mode until the key is configured.
 
   // Only display verified, active accounts (spec §8: no inactive platforms).
   // Instagram is confirmed from the live site; the others link to bare

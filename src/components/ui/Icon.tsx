@@ -156,6 +156,18 @@ const ICONS: Record<IconName, ReactNode> = {
       <path d="M14.5 9.5a3.5 3.5 0 0 1 0 5l-2 2a3.5 3.5 0 0 1-5-5l1-1" />
     </>
   ),
+  alert: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 8v4.5M12 16h.01" />
+    </>
+  ),
+  check: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M8.5 12.5l2.2 2.2 4.8-5.4" />
+    </>
+  ),
 };
 
 export function Icon({
