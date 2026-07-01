@@ -82,3 +82,11 @@ The collaborator **list** (`COLLABORATORS` in `src/content/collaborators.ts`) is
 | Lab Photos page | `src/app/lab-photos/page.tsx` | Approved layout: `PageHero` (no subtitle) + "Life in the Lab" heading + gallery + CTA band |
 
 The photo **list** (`GALLERY` in `src/content/gallery.ts`) is content-managed (NOT frozen) — add/remove/reorder photos and edit captions/categories there. Inventory + rationale: `LAB_PHOTO_INVENTORY.md`. People-focused only; no scientific figures/OCT/histology/publication graphics.
+
+## Also approved (added after the Contact page — 2026-07-01)
+| Concern | Location | Notes |
+|---|---|---|
+| Contact form + cards | `src/components/sections/ContactSection.tsx` | "Ways to Connect" cards (Join / Research Collaborations / Support Our Lab) that preselect a reason + scroll to the form; concise clinical disclaimer; connected form (name/email/affiliation/reason/message) with inline accessible validation, honeypots, Sending/Success/Error states (success only on provider confirmation), centered ~800px |
+| Contact page | `src/app/contact/page.tsx` | Approved layout: `PageHero` (no subtitle) + `ContactSection`. (Hero subtitle and the "Get in Touch" details block were removed 2026-07-01; contact details live in the footer.) |
+
+Delivery is via **Web3Forms**; the public key is read from `NEXT_PUBLIC_WEB3FORMS_KEY` (never committed — `.env.local` locally, a build secret in production). End-to-end delivery to `ksarin@stanford.edu` was confirmed. Maintenance: `CONTACT_FORM_MAINTENANCE.md`.

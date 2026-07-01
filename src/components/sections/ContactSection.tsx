@@ -1,5 +1,7 @@
 "use client";
 
+// APPROVED — finalized Contact-page component (2026-07-01). Reuse as-is; do not
+// redesign without re-approval. See docs/DESIGN_SYSTEM_FROZEN.md
 import { useEffect, useRef, useState } from "react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
@@ -7,9 +9,9 @@ import { SITE } from "@/content/site";
 import type { IconName } from "@/lib/types";
 
 /**
- * Contact experience: the "How We Can Help" inquiry cards, the medical notice,
- * and the message form — kept in one client component so a card can preselect
- * the form's reason and scroll to it.
+ * Contact experience: the "Ways to Connect" inquiry cards, the clinical
+ * disclaimer, and the message form — kept in one client component so a card can
+ * preselect the form's reason and scroll to it.
  *
  * Delivery: Web3Forms (https://web3forms.com). The access key is PUBLIC by
  * design (this is a static site with no server) and is read from
