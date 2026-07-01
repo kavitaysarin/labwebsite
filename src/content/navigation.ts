@@ -11,7 +11,8 @@ export const NAV: NavItem[] = [
   { label: "Research", href: "/research" },
   { label: "Technologies", href: "/technologies" },
   { label: "Publications", href: "/publications" },
-  { label: "Recognition", href: "/recognition" },
+  // "Recognition" (→ post-launch "News & Highlights") is DEFERRED from the launch
+  // nav. Content home: src/content/recognition.ts. See PROJECT_STATUS.md.
   { label: "Team", href: "/team" },
   { label: "Collaborators", href: "/collaborators" },
   { label: "Lab Photos", href: "/lab-photos" },

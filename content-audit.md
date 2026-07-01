@@ -39,11 +39,12 @@ Inventory of content from `sarinlab.stanford.edu` and how it is handled in the r
 | "Access all of our publications" | → "View All Publications on PubMed" | Rewrite |
 | "scleroderma" / "chemo-prevention" | → "systemic sclerosis" / "chemoprevention" | Rewrite |
 
-## Recognition (`/recognition`)
+## Recognition (`/recognition`) — DEFERRED to post-launch "News & Highlights"
+_Removed from the launch nav 2026-07-01. Structured content home preserved at `src/content/recognition.ts`; plan in PROJECT_STATUS.md → Post-launch enhancements. The rows below are the live-site source content to extract + verify when the page is built._
 | Live content | Handling | Status |
 |---|---|---|
-| Press ("As Seen In" + 8 stories) | Recognition page → Press & Media | Reuse + Verify (dates/outlets/links) |
-| Awards & Honors (Sagun, Sarin) | Recognition page → Awards/Grants/Talks | Reuse + Verify |
+| Press ("As Seen In" + 8 stories) | News & Highlights → Press & Media | Reuse + Verify (dates/outlets/links) |
+| Awards & Honors (Sagun, Sarin) | News & Highlights → Awards/Grants/Talks | Reuse + Verify |
 
 ## Contact (`/contact`)
 | Live content | Handling | Status |
