@@ -14,23 +14,11 @@ export const metadata: Metadata = {
 export default function LabPhotosPage() {
   return (
     <main id="main-content">
-      <PageHero
-        title="Lab Photos"
-        subtitle="A look at the people, places, and moments behind the work."
-        image="/images/hero/hero-secondary.png"
-      />
+      <PageHero title="Lab Photos" image="/images/hero/hero-secondary.png" />
 
       <section className="bg-white">
         <div className="container-wide section-pad">
-          <div className="max-w-3xl">
-            <SectionHeading title="Gallery" />
-            <p className="mt-4 text-[17px] leading-relaxed text-gray-dark">
-              A glimpse of life in the Sarin Lab, from conferences and
-              presentations to celebrations, lab gatherings, and everyday moments
-              at Stanford.
-            </p>
-          </div>
-
+          <SectionHeading title="Gallery" />
           <div className="mt-8">
             <PhotoGallery images={GALLERY} categories={GALLERY_CATEGORIES} />
           </div>

@@ -135,9 +135,6 @@ export function PhotoGallery({
                 className="h-auto w-full transition-transform duration-200 group-hover:scale-[1.03]"
               />
             </button>
-            {img.caption ? (
-              <p className="mt-2 text-[13px] leading-snug text-gray-dark">{img.caption}</p>
-            ) : null}
           </li>
         ))}
       </ul>
