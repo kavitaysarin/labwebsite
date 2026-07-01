@@ -40,7 +40,7 @@ _Checkpoint: **2026-07-01 — ENTIRE WEBSITE FINALIZED.** All 8 launch pages app
 - Publications: research-area cards + PubMed; homepage "Recent Work" uses real recent PubMed pubs.
 
 ## Remaining before go-live (all pages are finalized; these are launch-prep)
-1. **Deployment** — GitHub Pages via Actions (or gh-pages), incl. `basePath` and the **`NEXT_PUBLIC_WEB3FORMS_KEY` build secret** so the deployed Contact form carries the key. **Only on approval.**
+1. **Deployment** — **workflow is set up** (`.github/workflows/deploy.yml` → GitHub Pages via Actions; base path auto-detected; reads the `NEXT_PUBLIC_WEB3FORMS_KEY` secret). Remaining manual steps (see `DEPLOYMENT.md`): push to GitHub, enable Pages (Source = GitHub Actions), add the `NEXT_PUBLIC_WEB3FORMS_KEY` repo secret, then merge/push to `main`. **Nothing is pushed/deployed yet.**
 2. **Pre-launch content confirmations** — everything in `CONTENT_REVIEW_NEEDED.md` (image reuse rights + patient consent for clinical photos/video; a few titles/emails/spellings; Dr. Sarin's title; production domain; social links).
 3. **Optional polish** — custom 404 page; sitemap/robots/structured data; image optimization (WebP/AVIF + responsive sizes); official Stanford/Sarin logo (Stanford Medicine emblem is in place, "Sarin Lab" is a text wordmark).
 4. **Deliverables (optional):** `copy-before-after.md`, `redirect-map.md`, `CONTENT_EDITING_GUIDE.md`, README. (`content-audit.md`, `CONTENT_REVIEW_NEEDED.md`, `PUBLICATIONS_MAINTENANCE.md`, `CONTACT_FORM_MAINTENANCE.md`, `LAB_PHOTO_INVENTORY.md`, `docs/DESIGN_SYSTEM_FROZEN.md` already exist.)

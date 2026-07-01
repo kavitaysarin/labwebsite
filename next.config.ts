@@ -13,7 +13,11 @@ import type { NextConfig } from "next";
  *   NEXT_PUBLIC_BASE_PATH=/labwebsite at build time for that case, or leave it
  *   empty for a custom domain / local dev.
  */
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+// A lone "/" (what configure-pages emits for a root/custom-domain site) means
+// "no base path" to Next — normalize it to empty so basePath is only set for a
+// project subpath like "/labwebsite".
+const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const basePath = rawBasePath === "/" ? "" : rawBasePath;
 
 const nextConfig: NextConfig = {
   output: "export",
