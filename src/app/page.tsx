@@ -45,7 +45,7 @@ export default function Home() {
             {SITE.metrics.map((m, i) => (
               <div
                 key={m.label}
-                className="flex h-full flex-col items-center justify-center rounded-[10px] border border-border bg-off-white px-2 py-5 text-center shadow-card sm:px-4 sm:py-7"
+                className="flex h-full flex-col items-center justify-start rounded-[10px] border border-border bg-off-white px-2 py-5 text-center shadow-card sm:px-4 sm:py-7"
               >
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-light text-cardinal sm:h-[44px] sm:w-[44px]">
                   <Icon name={METRIC_ICONS[i]} className="h-5 w-5 sm:h-6 sm:w-6" />

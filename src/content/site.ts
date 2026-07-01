@@ -69,10 +69,6 @@ export const SITE = {
   metrics: [
     { value: "140+", label: "Publications", shortLabel: "Publications" },
     { value: "18+", label: "Years in Patient Care", shortLabel: "Years in Care" },
-    {
-      value: "40+",
-      label: "Students and Trainees Mentored",
-      shortLabel: "Trainees Mentored",
-    },
+    { value: "40+", label: "Trainees Mentored", shortLabel: "Trainees Mentored" },
   ] as Metric[],
 } as const;
