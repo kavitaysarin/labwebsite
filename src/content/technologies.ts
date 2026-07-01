@@ -96,8 +96,7 @@ export const HOMEPAGE_TECH: Technology[] = [
  */
 /** Technologies page intro (two short paragraphs). */
 export const TECHNOLOGY_INTRO: string[] = [
-  "We develop and apply technologies that allow us to see, measure, and interpret signals in the skin. Our work spans optical imaging, optical clearing, three-dimensional tissue analysis, spatial biology, and artificial intelligence.",
-  "These technologies are used in research studies and are not clinical tests unless otherwise noted.",
+  "We develop and apply technologies that allow us to see, measure, and interpret signals in the skin. Our work spans big data analysis, optical imaging, optical clearing, three-dimensional tissue analysis, spatial biology, and artificial intelligence.",
 ];
 
 /**
@@ -114,8 +113,9 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
     name: "Optical Imaging",
     shortName: "Optical Imaging",
     icon: "scan",
-    image: "/images/technologies/optical-imaging.jpg",
-    imageAlt: "Optical coherence tomography cross-sectional scan of skin.",
+    image: "/images/technologies/damae.jpg",
+    imageAlt:
+      "A DAMAE Medical deepLive optical imaging system used to examine skin non-invasively.",
     lead: "We use high-resolution optical imaging, including optical coherence tomography, to examine living skin without removing tissue.",
     whatItReveals: "Skin structure and light scattering at near-cellular resolution.",
     appliedTo: ["Skin cancer", "Neurofibromatosis type 1"],
@@ -127,14 +127,14 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
   },
   {
     slug: "optical-transparency",
-    name: "Optical Clearing with KLEAR",
+    name: "Optical Clearing",
     shortName: "Optical Clearing",
     icon: "sparkles",
     image: "/images/technologies/klear.jpg",
     imageAlt:
-      "Before-and-after photographs of a skin sample made optically transparent by KLEAR clearing (5 mm scale).",
+      "Before-and-after photographs of a skin sample made optically transparent by optical clearing (5 mm scale).",
     fit: "contain",
-    lead: "KLEAR temporarily reduces light scattering in skin, allowing optical imaging methods to visualize deeper tissue structures.",
+    lead: "Optical clearing technologies use refractive index manipulation to reduce light scattering in skin, allowing visualization of deeper tissue structures.",
     whatItReveals: "Structures below the usual imaging depth of standard optical methods.",
     appliedTo: [
       "Deeper non-invasive imaging",
@@ -161,7 +161,6 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
     appliedTo: ["Skin tumors", "Neurofibromas", "Imaging-pathology comparison"],
     collaborators: [
       { name: "Jonathan Liu", url: "https://profiles.stanford.edu/jonliu" },
-      { name: "the Liu Lab" },
     ],
     researchHref: "/research#molecular",
     pubHref: "/publications#skin-cancer-genetics",
@@ -197,6 +196,9 @@ export const TECHNOLOGY_PROGRAMS: TechnologyProgram[] = [
     whatItReveals:
       "Reproducible measurements of lesion number, disease burden, and treatment response.",
     appliedTo: ["Neurofibromatosis type 1", "Skin cancer", "Clinical-trial endpoints"],
+    collaborators: [
+      { name: "Olivier Gevaert", url: "https://profiles.stanford.edu/olivier-gevaert" },
+    ],
     researchHref: "/research#digital",
     pubHref: "/publications#neurofibromatosis",
   },
