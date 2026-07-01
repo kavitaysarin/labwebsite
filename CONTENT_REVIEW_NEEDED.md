@@ -61,12 +61,14 @@ Items requiring **Dr. Sarin / lab-team verification or approval** before launch.
 - **Title/role flags:** Dr. Sarin (now **Principal Investigator · Professor of Dermatology**, MD, PhD; live site said Associate Professor / Lab Director); Marlayna Harris (set to **Clinical Research Coordinator** per request — not stated on live site, confirm); Haniya vs "Haniyah" spelling; Chenming Zhang vs email `czheng8@`; Audris Chang vs "Chiang" (image filename); Nethra Srinivasan (set to **Medical Student** per request — live site said B.S. candidate at Case Western; confirm current program).
 - **Filter labels** to review: "Faculty" maps to the PI; confirm wording (All / Faculty / Staff / Trainees / Students / Volunteers / Alumni).
 
-### Collaborators (redesigned 2026-06-30 — 8 collaborators, 2 groups, official photos)
-- **Official Stanford profile photos migrated** for 7 of 8 (all **350×350** — CAP's max size; slightly soft on 2× displays). Sources in `docs/collaborator-image-sources.md`. **Yonatan Winetraub** has no profile photo → initials fallback (still needs a headshot).
-- **Two new collaborators added** per request: **Adam de la Zerda** (card links to `med.stanford.edu/delazerda/adam-de-la-zerda.html` as supplied) and **Olivier Gevaert** — both with the supplied titles and expertise/collaboration copy. Approve wording.
-- **Titles to confirm:** Winetraub has no listed faculty title (shown with institution only); Aasi ("Professor of Dermatology; Director of Mohs and Dermatologic Surgery") and Fiorentino ("Professor of Dermatology") — confirm exact current wording. de la Zerda & Gevaert use the titles you supplied.
-- **Collaboration sentences** are concise factual one-liners (no "Why It Matters"); Aasi/Fiorentino/Rieger collaboration framing is still lab-level — approve or refine.
-- **Profile links** point to Stanford Profiles (de la Zerda → his Stanford Medicine lab page per request). Confirm destinations.
+### Collaborators (revised 2026-06-30 — 10 collaborators, 2 groups, official photos)
+- **All 10 now have portraits.** Nine are official Stanford CAP profile photos (**350×350** — CAP's max; slightly soft on 2× displays); **Yonatan Winetraub** uses a **lab-supplied** high-res photo (1880×1880). No missing portraits. Sources in `docs/collaborator-image-sources.md`.
+- **Reuse permission:** confirm each collaborator is OK with their official Stanford profile photo being reused on the lab site (Winetraub's is lab-supplied — confirm it's cleared).
+- **Two collaborators added to Clinical & Translational per request:** **Helen Bronte-Stewart, MD, MS** (Professor of Neurology and Neurological Sciences) and **Lorinda Chung, MD, MS** (Professor of Medicine, Immunology & Rheumatology, and by courtesy of Dermatology) — titles verified against med.stanford.edu.
+- **Collaboration needing verification:** **Helen Bronte-Stewart** — she is a movement-disorders neurologist; the specific collaboration with the Sarin Lab is not independently confirmed. Current card sentence is domain-level ("quantitative, sensor-based methods for measuring disease and clinical-trial outcomes") — please confirm or supply the real project.
+- **Titles verified** against official Stanford pages: Winetraub now shown as "Instructor, Structural Biology"; Chung and Bronte-Stewart per med.stanford.edu; de la Zerda & Gevaert per supplied titles. Confirm Aasi's and Fiorentino's exact current wording.
+- **Collaboration sentences** rewritten to be direct (no repeated "Works with / Collaborates with the Sarin Lab"). Approve the wording for each.
+- **Profile links:** Stanford Profiles for most; de la Zerda, Bronte-Stewart, and Chung link to their `med.stanford.edu` profiles (per request / verified). Confirm destinations.
 
 ### Lab Photos
 - **The live gallery (~34–37 images) was deliberately NOT used** — uncaptioned, low-res/screenshot team & event snapshots of identifiable people with no consent info (a stop condition). **Supply a curated, captioned, consent-cleared set of team/event photos.**

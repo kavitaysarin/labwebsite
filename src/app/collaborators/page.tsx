@@ -30,9 +30,16 @@ export default function CollaboratorsPage() {
           <section key={category} className={i % 2 === 0 ? "bg-white" : "bg-cream"}>
             <div className="container-wide section-pad">
               <SectionHeading title={category} />
-              <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {/* flex-wrap + justify-center centers incomplete final rows and
+                  orphan cards without stretching card widths */}
+              <div className="mt-8 flex flex-wrap justify-center gap-6">
                 {members.map((c) => (
-                  <CollaboratorCard key={c.name} person={c} />
+                  <div
+                    key={c.name}
+                    className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
+                  >
+                    <CollaboratorCard person={c} />
+                  </div>
                 ))}
               </div>
             </div>
