@@ -55,7 +55,8 @@ Section images on interior pages load `loading="eager"` (static export has no op
 |---|---|---|
 | Featured publication card | `src/components/cards/FeaturedPublicationCard.tsx` | Image-free; subtle border + thin cardinal top accent; fully clickable (stretched title link → PubMed) with DOI raised above; category label + journal·year + links |
 | Selected publication card | `src/components/cards/SelectedPublicationCard.tsx` | Compact; fully clickable; category + title + author (first + "et al.") + journal·year + PubMed/DOI links |
-| Publications page | `src/app/publications/page.tsx` | Approved curated **Selected Publications** layout; section anchors `#optical-imaging`, `#skin-cancer-genetics`, `#neurofibromatosis`, `#autoimmune-systemic` |
+| Selected publication grid | `src/components/sections/SelectedPublicationGrid.tsx` (2026-07-01) | Per-section grid; shows the first 6 (two desktop rows) with a "Show more / Show fewer" toggle for longer sections |
+| Publications page | `src/app/publications/page.tsx` | Approved curated **Selected Publications** layout; section anchors `#optical-imaging`, `#skin-cancer-genetics`, `#neurofibromatosis`, `#autoimmune-systemic`. Sections are ordered **newest-first** (year desc, via `selectedByCategory`) |
 
 The publication **list** (`SELECTED_PUBLICATIONS` in `src/content/publications.ts`) is intentionally content-managed (NOT frozen) — edit it by hand per `PUBLICATIONS_MAINTENANCE.md`.
 

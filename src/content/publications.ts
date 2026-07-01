@@ -714,9 +714,10 @@ export const CATEGORY_LABELS: Record<string, string> = {
 /** The three featured publications (representing different research areas). */
 export const FEATURED_SELECTED = SELECTED_PUBLICATIONS.filter((p) => p.featured);
 
-/** Selected publications in a section, sorted by displayOrder then file order. */
+/** Selected publications in a section, newest first (year desc); ties broken by
+ * displayOrder then file order. */
 export function selectedByCategory(category: string): SelectedPublication[] {
   return SELECTED_PUBLICATIONS.filter((p) => p.category === category).sort(
-    (a, b) => (a.displayOrder ?? 999) - (b.displayOrder ?? 999),
+    (a, b) => b.year - a.year || (a.displayOrder ?? 999) - (b.displayOrder ?? 999),
   );
 }

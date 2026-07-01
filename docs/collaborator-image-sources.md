@@ -29,8 +29,9 @@ site before launch (flagged in CONTENT_REVIEW_NEEDED.md).
 | Jonathan Liu | jonathan-liu | `profiles.stanford.edu/jonliu` | CAP id 9961 `…/350x350.1739683350393.jpg` | 350×350 |
 | Adam de la Zerda | adam-de-la-zerda | photo via `profiles.stanford.edu/adam-de-la-zerda` (CAP 31795); **card links to** `med.stanford.edu/delazerda/adam-de-la-zerda.html` | CAP id 31795 `…/350x350.1509496050105.jpg` | 350×350 |
 | Olivier Gevaert | olivier-gevaert | `profiles.stanford.edu/olivier-gevaert` | CAP id 15978 `…/350x350.1509531956338.jpg` | 350×350 |
+| Christina Curtis | christina-curtis | `profiles.stanford.edu/christina-curtis` | CAP id 61618 `med.stanford.edu/services/api/cap/profiles/photocache.61618.jpg` (added 2026-07-01) | 350×350 |
 
-**Missing portraits:** none — all 10 collaborators now have a photo.
+**Missing portraits:** none — all 11 collaborators now have a photo.
 
 All portraits were visually checked against the person's profile page and matched
 correctly.

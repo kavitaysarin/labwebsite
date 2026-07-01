@@ -184,6 +184,23 @@ export const COLLABORATORS: Collaborator[] = [
     permissionConfirmed: false,
     lastVerified: "June 2026",
   },
+  {
+    name: "Christina Curtis",
+    degree: "PhD, MSc",
+    title:
+      "RZ Cao Professor of Medicine, Genetics, and Biomedical Data Science",
+    institution: "Stanford University",
+    category: "Imaging, Engineering & Data Science",
+    expertise:
+      "Computational cancer genomics and machine learning to model how tumors arise, evolve, and respond to therapy.",
+    collaboration:
+      "Applies AI and computational modeling to cancer genomics questions relevant to the lab's work.",
+    url: "https://profiles.stanford.edu/christina-curtis",
+    image: "/images/collaborators/christina-curtis.jpg",
+    objectPosition: "50% 25%",
+    permissionConfirmed: false,
+    lastVerified: "July 2026",
+  },
 ];
 
 /** Domain category headings shown on the Collaborators page (in order). */

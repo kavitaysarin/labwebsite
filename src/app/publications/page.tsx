@@ -6,7 +6,7 @@ import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { FeaturedPublicationCard } from "@/components/cards/FeaturedPublicationCard";
-import { SelectedPublicationCard } from "@/components/cards/SelectedPublicationCard";
+import { SelectedPublicationGrid } from "@/components/sections/SelectedPublicationGrid";
 import { SITE } from "@/content/site";
 import {
   FEATURED_SELECTED,
@@ -71,11 +71,7 @@ export default function PublicationsPage() {
           >
             <div className="container-wide section-pad-tight">
               <SectionHeading title={section.heading} />
-              <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-8 lg:gap-x-6 lg:gap-y-5 xl:grid-cols-3">
-                {pubs.map((pub) => (
-                  <SelectedPublicationCard key={pub.pubmedUrl} pub={pub} />
-                ))}
-              </div>
+              <SelectedPublicationGrid pubs={pubs} heading={section.heading} />
             </div>
           </section>
         );
