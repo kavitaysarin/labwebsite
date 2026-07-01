@@ -91,9 +91,9 @@ export const RESEARCH_PILLARS: ResearchPillar[] = [
     lead: "Genetic changes shape a person's risk of skin disease and how tumors behave. We study patients, tumors, and skin findings to identify inherited and acquired variants linked to skin cancer, neurofibromatosis type 1, and treatment response.",
     pubHref: "/publications#skin-cancer-genetics",
     projects: [
-      "Identifying genetic factors associated with basal and squamous cell carcinoma risk",
+      "Identifying genetic factors associated with skin cancer risk",
       "Studying genes that influence tumor development and treatment response",
-      "Defining genetic factors associated with cutaneous neurofibroma burden in NF1",
+      "Defining genetic factors associated with neurofibroma burden in NF1",
     ],
     // Preserved for future pages (not rendered on the Research page):
     applications: ["Skin cancer", "Neurofibromatosis type 1"],
@@ -137,7 +137,7 @@ export const RESEARCH_PILLARS: ResearchPillar[] = [
     lead: "Skin contains molecular and immune signals that can reflect disease activity and response to treatment. We analyze RNA, proteins, immune pathways, and tissue structure to identify biomarkers in autoimmune and inflammatory skin disease.",
     pubHref: "/publications#autoimmune-systemic",
     projects: [
-      "Measuring molecular signatures in dermatomyositis, lupus, and systemic sclerosis",
+      "Measuring molecular signatures in dermatomyositis, lupus, and scleroderma",
       "Studying inflammatory pathways in hidradenitis suppurativa and related disorders",
       "Identifying tissue biomarkers associated with disease activity and treatment response",
     ],
@@ -182,9 +182,9 @@ export const RESEARCH_PILLARS: ResearchPillar[] = [
     signal: "Imaging Signals",
     title: "Skin as an Imaging Sensor",
     icon: "scan",
-    image: "/images/technologies/optical-imaging.jpg",
+    image: "/images/research/oct-scan.jpg",
     imageAlt:
-      "Optical coherence tomography cross-sectional scan showing the layered structure of skin.",
+      "Optical coherence tomography cross-sectional scan of a skin lesion showing its microstructure.",
     lead: "Non-invasive imaging allows us to examine skin structure and function without relying only on biopsy. We develop and apply optical imaging methods, including optical coherence tomography and KLEAR optical clearing, to visualize disease at cellular and tissue scales.",
     pubHref: "/publications#optical-imaging",
     projects: [

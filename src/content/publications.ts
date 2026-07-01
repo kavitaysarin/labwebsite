@@ -123,6 +123,9 @@ export const RECENT_PUBLICATIONS: Publication[] = [
     researchArea: "Neurofibromatosis",
     pubmedUrl: "https://pubmed.ncbi.nlm.nih.gov/41399671/",
     doiUrl: "https://doi.org/10.1016/j.jdin.2025.09.020",
+    image: "/images/recent-work/chinesenf.jpg",
+    imageAlt:
+      "Clinical photograph showing numerous cutaneous neurofibromas across the back in neurofibromatosis type 1.",
     featured: true,
   },
 ];
