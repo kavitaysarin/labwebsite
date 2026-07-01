@@ -18,7 +18,7 @@ export const COLLABORATORS: Collaborator[] = [
   {
     name: "Sumaira Z. Aasi",
     degree: "MD",
-    title: "Professor of Dermatology; Director of Mohs and Dermatologic Surgery",
+    title: "Clinical Professor of Dermatology; Director of Mohs and Dermatologic Surgery",
     institution: "Stanford University",
     category: "Clinical & Translational",
     expertise:

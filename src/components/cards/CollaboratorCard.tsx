@@ -48,9 +48,11 @@ export function CollaboratorCard({ person }: { person: Collaborator }) {
           ) : null}
         </h3>
         {person.title ? (
-          <p className="mt-1 text-[13px] font-medium leading-snug text-navy">{person.title}</p>
+          <p className="mt-1 text-[13px] font-semibold leading-snug text-cardinal">
+            {person.title}
+          </p>
         ) : null}
-        <p className="mt-0.5 text-[12.5px] leading-snug text-gray-dark">{person.institution}</p>
+        <p className="mt-0.5 text-[13px] leading-snug text-gray-dark">{person.institution}</p>
 
         <p className="mt-3 text-[14px] leading-relaxed text-gray-dark">{person.expertise}</p>
         <p className="mt-2 text-[14px] leading-relaxed text-gray-dark">{person.collaboration}</p>
