@@ -109,6 +109,7 @@ export const PEOPLE: Person[] = [
     name: "Kiana Khalili",
     role: "Clinical Research Manager",
     category: "Research Staff",
+    email: "kianakhalili@stanford.edu",
     image: "/images/team/kiana-khalili.jpg",
     objectPosition: "50% 20%",
     bio: "Provides leadership and operational oversight for clinical research activities through study management, team supervision, regulatory coordination, financial stewardship, quality assurance, and partnership with investigators, research teams, sponsors, and external collaborators.",
