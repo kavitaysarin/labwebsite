@@ -104,6 +104,16 @@ export const PEOPLE: Person[] = [
     bio: "Studying novel techniques in skin diagnostic imaging to read the skin as a sensor for deeper pathologies. He trained in bioengineering at Rice before earning his Ph.D. in medical engineering as part of the University of Southern California–Caltech M.D./Ph.D. program.",
     active: true,
   },
+  {
+    slug: "kiana-khalili",
+    name: "Kiana Khalili",
+    role: "Clinical Research Manager",
+    category: "Research Staff",
+    image: "/images/team/kiana-khalili.jpg",
+    objectPosition: "50% 20%",
+    bio: "Provides leadership and operational oversight for clinical research activities through study management, team supervision, regulatory coordination, financial stewardship, quality assurance, and partnership with investigators, research teams, sponsors, and external collaborators.",
+    active: true,
+  },
 
   // ----- Trainees -----
   {
