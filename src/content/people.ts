@@ -198,17 +198,6 @@ export const PEOPLE: Person[] = [
 
   // ----- Students -----
   {
-    slug: "valerie-ta",
-    name: "Valerie Sarah Ta",
-    role: "Undergraduate Researcher, Human Biology",
-    category: "Students",
-    email: "vsta@stanford.edu",
-    image: "/images/team/valerie-ta.jpg",
-    objectPosition: "50% 25%",
-    bio: "Studying non-invasive tissue imaging and skin-clearing agents for light-based therapies, contributing to the lab's effort to see deeper into living skin without a biopsy.",
-    active: true,
-  },
-  {
     slug: "louiza-zughbaba",
     name: "Louiza Esther Zughbaba",
     role: "Undergraduate Researcher, Human Biology",
