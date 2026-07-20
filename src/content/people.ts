@@ -92,19 +92,20 @@ export const PEOPLE: Person[] = [
     bio: "Data scientist in the Gevaert lab and Sarin lab working on neurofibromatosis and AI imaging projects.",
     active: true,
   },
-
-  // ----- Trainees -----
   {
     slug: "akash-dhawan",
     name: "Akash Dhawan",
-    role: "M.D.–Ph.D. Student, Medical Engineering",
-    category: "Trainees",
+    credentials: "PhD",
+    role: "Visiting Researcher",
+    category: "Research Staff",
     email: "akash.s.dhawan@gmail.com",
     image: "/images/team/akash-dhawan.jpg",
-    objectPosition: "50% 25%",
-    bio: "He conducted his doctoral research primarily in the Kornfield Lab under Prof. Julia Kornfield. His work centers on regenerative medicine, specifically using light to trigger collagen self-assembly into 3D cell scaffolds to improve wound healing applications.",
+    objectPosition: "50% 20%",
+    bio: "Studying novel techniques in skin diagnostic imaging to read the skin as a sensor for deeper pathologies. He trained in bioengineering at Rice before earning his Ph.D. in medical engineering as part of the University of Southern California–Caltech M.D./Ph.D. program.",
     active: true,
   },
+
+  // ----- Trainees -----
   {
     slug: "sharon-loa",
     name: "Sharon Loa",
